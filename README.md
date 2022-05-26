@@ -107,7 +107,10 @@ An on-board microcontroller, which the host can communicate with either via IPMB
 
 <figure>
     <img src="/readme/figures/backplane.png"
-    	width="600"
+        style="display: block; 
+           margin-left: auto;
+           margin-right: auto;"
+    	width="700"
         alt="Backplane Topology">
     <figcaption><em>A backplane topology for one MicroTCA.4 system</em></figcaption>
 </figure>
@@ -117,7 +120,7 @@ users the possibility of implementing various other high-speed protocols besides
 
 Moreover, u4FCP connects 16 GTHs and 4 GTYs to RTM to further improve scalability.
 
-The u4FCP connects each FMC-HPC connector with 8 GTYs. Limited by the number of available IO pins of the FPGA, only LA[16:0] are connected, which can provide upto 34 single-ended or 17 differential user defined signals, the Vadj can be programmed to support 0.9V\~1.8V. In addition, HB[7:0] are connected to the ADC channels of FPGA.
+The u4FCP connects each FMC-HPC connector with 8 GTYs. Limited by the number of available IO pins of the FPGA, only LA[16:0] are connected, which can provide up to 34 single-ended or 17 differential user defined signals, the Vadj can be programmed to support 0.9V\~1.8V. In addition, HB[7:0] are connected to the ADC channels of FPGA.
 
 Finally, u4FCP hosts a [FireFly transceiver](https://www.samtec.com/optics/optical-cable/mid-board/firefly) with 4 fiber channels. 
 
@@ -128,7 +131,7 @@ The following figure shows the gigabyte transceiver connection on u4FCP.
     	width="800"
         alt="GT connection on u4FCP">
     <figcaption><em>56 GTY/GTH transceivers (6 GTY Quads and 8 GTH Quads)
-    	
+
 1. FMC HPC connector (8 GTY/GTH transceivers) x2
 2. 
 2. AMC ports (16 GTH transceivers)
