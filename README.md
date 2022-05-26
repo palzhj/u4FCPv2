@@ -130,7 +130,7 @@ The following figure shows the gigabyte transceiver connection on u4FCP.
 
 1. FMC HPC connector (8 GTY/GTH transceivers) x2
 2. AMC ports (16 GTH transceivers)
-3. RTM ports (20 GTY/GTH transceivers)</em></figcaption>
+3. RTM ports (20 GTY/GTH transceivers) </em></figcaption>
 </figure>
 
 :warning: **Warning:** Other than RTM[19:16](GTY 131) and FireFly(GTY132), every GT Quad else is in reverse order for PCIe connection (For instance, [3:0]=>[0:3]).
@@ -154,7 +154,7 @@ On-board memories are summarized below:
 
 <figure>
     <img src="/readme/figures/GTX_Quads.png"
-    	width="400"
+    	width="300"
         alt="GTX connection on uRTM">
     <figcaption><em>16 GTX transceivers</em></figcaption>
 </figure>
