@@ -159,9 +159,9 @@ To increase scalability, we design the uRTM with a cost-effective and still powe
 
 <figure>
     <img src="/readme/figures/GTX_Quads.png"
-    	width="300"
+    	width="200"
         alt="GTX connection on uRTM">
-    <figcaption><em>16 GTX transceivers</em></figcaption>
+    <figcaption><em>Connections for 16 GTX transceivers</em></figcaption>
 </figure>
 
 The same as u4FCP, uRTM have two FMC sockets, but there are the differences:
@@ -169,8 +169,8 @@ The same as u4FCP, uRTM have two FMC sockets, but there are the differences:
 :memo: **Note:** The RTM[15:0] are connected to DP[7:0] of two FMCs directly.
 
 Benefit from the large number of available IO pins on FPGA, both FMCs have LA[33:0] and HB[5:0], the FMC3 has additional HA[23:0], which is far more than the connections on u4FCP. 
-
 HB[5:0] are connected to the ADC (Dual 12-bit 1 MSPS) channels of FPGA.
+Vadj can be programmed to support 0.9V~3.3V.
 
 uRTM hosts a Gigabit Ethernet through RGMII interface, which may use for rapid prototyping in single-board mode. 
 
