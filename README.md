@@ -31,7 +31,7 @@ Based on cross-point switches and programmable clock multipliers, the clock dist
     <img src="/readme/figures/clock.png"
     	width="800"
         alt="Clock Generation & Distribution">
-    <figcaption><em>Clock generation and distribution in u4FCP & uRTM</em></figcaption>
+    <figcaption><em>Clock generation and distribution</em></figcaption>
 </figure>
 
 Whether you are using an internal or external clock, the signal must be cleaned to minimise jitter
@@ -39,11 +39,24 @@ and ensure stable performance. u4FCP & uRTM use dedicated chip ([Si5345](https:/
 
 ### Configuration
 
+#### JTAG
+
 Users can access to the FPGA through the MicroTCA crate or JTAG header. A configurable logic circuit acts as a bridge selecting the JTAG master source between the JTAG header and AMC/RTM JTAG lines. When an FMC card is attached to u4FCP & uRTM, the circuit automatically adds the attached device to the JTAG chain as determined by its FMC_PRSNT_M2C_B signal. It's recommended to implement a TDI to TDO connection via a device or bypass jumper for the JTAG chain to be completed on the attached FMC card. If not, the circuit can be configured by software to bypass the JTAG chain of FMC.
 
 <figure>
     <img src="/readme/figures/jtag.png"
     	width="600"
         alt=" JTAG programming connections">
-    <figcaption><em>JTAG programming connections in u4FCP & uRTM</em></figcaption>
+    <figcaption><em>JTAG programming connections</em></figcaption>
 </figure>
+
+#### I2C Bus
+
+I2C bus is used to configure the board and monitor the health information. Although each device on board has a different address, we add a multiplexer to prevent address collisions from the attached FMC. 
+
+<figure>
+    <img src="/readme/figures/i2c.png"
+        alt=" I2C connections">
+    <figcaption><em>I2C connections</em></figcaption>
+</figure>
+
