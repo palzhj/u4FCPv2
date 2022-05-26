@@ -172,7 +172,7 @@ Benefit from the large number of available IO pins on FPGA, both FMCs have LA[33
 HB[5:0] are connected to the ADC (Dual 12-bit 1 MSPS) channels of FPGA.
 Vadj can be programmed to support 0.9V~3.3V.
 
-uRTM hosts a Gigabit Ethernet through RGMII interface, which may use for rapid prototyping in single-board mode. 
+uRTM hosts a Gigabit Ethernet through RGMII interface, which may help for rapid prototyping in single-board mode. 
 
 On-board memories are summarized below:
 
