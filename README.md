@@ -1,3 +1,25 @@
-# u4FCP
-MicroTCA.4 fast control and process board
-The u4FCP is a double-width Advanced Mezzanine Card (AMC) conceived to serve a small and simple system residing either inside a MicroTCA crate or on a bench with a link to a PC and it is based on a high-performance Kintex UltraScale plus FPGA. The u4FCP I/O capability can be further enhanced with two FPGA Mezzanine Cards (FMCs) with the high-pin-count FMC sockets. Each provide up to 8 GTY/GTH transceivers and 23 user-specific differential I/O pairs directly connected to the FPGA as well as differential clock input/outputs. Concerning the AMC high speed serial connectivity, the u4FCP provides two Gigabit Ethernet (GbE) and one 4nd generation four-lane PCI Express (PCIe x8 GEN4) interfaces. The u4FCP offers a large selection of input clock sources (AMC clocks, FMC clocks, front panel clock connector or on-board oscillators).
+# u4FCP & uRTM v2
+
+## Introduction
+
+MicroTCA.4 Fast Control and Process board (u4FCP) is an FPGA-based [MicroTCA.4](https://www.picmg.org/product/microtca-enhancements-rear-io-precision-timing-specification/) compatible Advanced Mezzanine Card (AMC) targeting generic clock, control and data acquisition in High-Energy Physics(HEP) experiments. 
+
+
+MicroTCA.4 Rear Transition Module (uRTM) is a rear transition module in the rear of the crate to increase the I/O capability of the u4FCP. The u4FCP and uRTM are connected through fabric connectors in the upper area above the standard µTCA backplane area, defined as Zone 3. The pin assignment is compatible with the [Zone 3 recommendation](https://techlab.desy.de/resources/zone_3_recommendation/index_eng.html) D1.4 for digital applications.
+
+
+u4FCP & uRTM are conceived to serve a midsized system residing either inside a MicroTCA crate or stand-alone on desktop with high-speed optical links or ethernet to PC.
+
+The I/O capability of u4FCP & uRTM can be further enhanced with four [VITA-57.1 FPGA Mezzanine Cards (FMCs)](https://ohwr.org/projects/fmc-projects/wiki/fmc-standard) through the high-pin-count FMC sockets. 
+
+## Block Diagram
+
+A block diagram of the u4FCP and uRTM is shown below.
+
+<figure>
+    <img src="/readme/figures/block_diagram.png"
+    	width="800"
+        alt="Block Giagram">
+    <figcaption>Block diagram of u4FCP & uRTM</figcaption>
+</figure>
+
