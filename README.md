@@ -22,29 +22,26 @@ The I/O capability of u4FCP & uRTM can be further enhanced with four [VITA-57.1 
 
 #### u4FCP
 
-Height: 180.6 mm 
-
-Length: 148.5 mm
+* Height: 180.6 mm 
+* Length: 148.5 mm
 
 #### uRTM
 
-Height: 182.5 mm 
-
-Length: 148.5 mm
+* Height: 182.5 mm 
+* Length: 148.5 mm
 
 ### Environmental Temperature
 
-Operating: 0°C to +45°C 
-
-Storage: -25°C to +60°C
+* Operating: 0°C to +45°C 
+* Storage: -25°C to +60°C
 
 ### Humidity
 
-10% to 90% non-condensing
+* 10% to 90% non-condensing
 
 ### Operating Voltage
 
-+12 VDC
+* +12 VDC
 
 ## System Architecture
 
