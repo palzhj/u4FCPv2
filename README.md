@@ -23,13 +23,27 @@ A block diagram of the u4FCP and uRTM is shown below. The red lines are high-spe
     <figcaption>Block diagram of u4FCP & uRTM</figcaption>
 </figure>
 
-### clock Features
+### Clock Features
 
-Based on cross-point switches and programmable clock multipliers, the clock distribution for u4FCP and uRTM offer a large selection of input clock sources (e.g. the LEMO connectors in the front/rear panel, the AMC clocks, the FMC clocks, or onboard oscillators). This makes the u4FCP & uRTM give users the possibility of implementing various high speed serial data protocols for custom applications.
+Based on cross-point switches and programmable clock multipliers, the clock distribution for u4FCP & uRTM offer a large selection of input clock sources (e.g. the LEMO connectors in the front/rear panel, the AMC clocks, the FMC clocks, or onboard oscillators). This makes the u4FCP & uRTM give users the possibility of implementing various high speed serial data protocols for custom applications.
 
 <figure>
     <img src="/readme/figures/clock.png"
     	width="800"
         alt="Clock Generation & Distribution">
     <figcaption>Clock generation and distribution in u4FCP & uRTM</figcaption>
+</figure>
+
+Whether you are using an internal or external clock, the signal must be cleaned to minimise jitter
+and ensure stable performance. u4FCP & uRTM use dedicated chip ([Si5345](https://www.skyworksinc.com/en/Products/Timing/High-Performance-Jitter-Attenuators/Si5345B)) for jitter cleaning.
+
+### Configuration
+
+Users can access to the FPGA through the MicroTCA crate or JTAG header. A configurable logic circuit acts as a bridge selecting the JTAG master source between the JTAG header and AMC/RTM JTAG lines. When an FMC card is attached to u4FCP & uRTM, the circuit automatically adds the attached device to the JTAG chain as determined by its FMC_PRSNT_M2C_B signal. It's recommended to implement a TDI to TDO connection via a device or bypass jumper for the JTAG chain to be completed on the attached FMC card. If not, the circuit can be configured by software to bypass the JTAG chain of FMC.
+
+<figure>
+    <img src="/readme/figures/jtag.png"
+    	width="600"
+        alt=" JTAG programming connections">
+    <figcaption> JTAG programming connections in u4FCP & uRTM</figcaption>
 </figure>
