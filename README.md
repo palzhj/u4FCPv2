@@ -12,7 +12,9 @@ u4FCP & uRTM are conceived to serve a midsized system residing either inside a M
 
 The I/O capability of u4FCP & uRTM can be further enhanced with four [VITA-57.1 FPGA Mezzanine Cards (FMC)](https://ohwr.org/projects/fmc-projects/wiki/fmc-standard) through the high-pin-count sockets. 
 
-> :memo: **Note:** Either of these two boards can be used independently bench-top prototyping.
+:memo: **Note:** Either of these two boards can be used independently bench-top prototyping.
+
+:warning: **Warning:** The u4FCP and uRTM board can be damaged by electrostatic discharge (ESD). Follow standard ESD prevention measures when handling the board.
 
 ## Board Specifications
 
@@ -107,9 +109,6 @@ An on-board microcontroller, which the host can communicate with either via IPMB
 
 <figure>
     <img src="/readme/figures/backplane.png"
-        style="display: block; 
-           margin-left: auto;
-           margin-right: auto;"
     	width="700"
         alt="Backplane Topology">
     <figcaption><em>A backplane topology for one MicroTCA.4 system</em></figcaption>
@@ -120,7 +119,7 @@ users the possibility of implementing various other high-speed protocols besides
 
 Moreover, u4FCP connects 16 GTHs and 4 GTYs to RTM to further improve scalability.
 
-The u4FCP connects each FMC-HPC connector with 8 GTYs. Limited by the number of available IO pins of the FPGA, only LA[16:0] are connected, which can provide up to 34 single-ended or 17 differential user defined signals, the Vadj can be programmed to support 0.9V\~1.8V. In addition, HB[7:0] are connected to the ADC channels of FPGA.
+The u4FCP connects each FMC-HPC connector with 8 GTYs. Limited by the number of available IO pins of the FPGA, only LA[16:0] are connected, which can provide up to 34 single-ended or 17 differential user defined signals, the Vadj can be programmed to support 0.9V\~1.8V. In addition, HB[7:0] are connected to the ADC (10-bit 0.2 MSPS) channels of FPGA.
 
 Finally, u4FCP hosts a [FireFly transceiver](https://www.samtec.com/optics/optical-cable/mid-board/firefly) with 4 fiber channels. 
 
@@ -133,13 +132,11 @@ The following figure shows the gigabyte transceiver connection on u4FCP.
     <figcaption><em>56 GTY/GTH transceivers (6 GTY Quads and 8 GTH Quads)
 
 1. FMC HPC connector (8 GTY/GTH transceivers) x2
-2. 
 2. AMC ports (16 GTH transceivers)
-3. 
 3. RTM ports (20 GTY/GTH transceivers)</em></figcaption>
 </figure>
 
-> :warning: **Warning:** Other than RTM[19:16](GTY 131) and FireFly(GTY132), every GT Quad else is in reverse order for PCIe connection (For instance, [3:0]=>[0:3]).
+:warning: **Warning:** Other than RTM[19:16](GTY 131) and FireFly(GTY132), every GT Quad else is in reverse order for PCIe connection (For instance, [3:0]=>[0:3]).
 
 On-board memories are summarized below:
 
@@ -150,3 +147,17 @@ On-board memories are summarized below:
 
 ## uRTM
 
+<figure>
+    <img src="/readme/figures/block_diagram_urtm.png"
+    	width="400"
+        alt="FPGA Block Giagram of uRTM">
+    <figcaption><em>FPGA Block diagram of uRTM</em></figcaption>
+</figure>
+
+
+<figure>
+    <img src="/readme/figures/GTX_Quads.png"
+    	width="400"
+        alt="GTX connection on uRTM">
+    <figcaption><em>16 GTX transceivers</em></figcaption>
+</figure>
