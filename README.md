@@ -10,11 +10,11 @@ MicroTCA.4 Rear Transition Module (uRTM) is a rear transition module in the rear
 
 u4FCP & uRTM are conceived to serve a midsized system residing either inside a MicroTCA crate or stand-alone on desktop with high-speed optical links or ethernet to PC.
 
-The I/O capability of u4FCP & uRTM can be further enhanced with four [VITA-57.1 FPGA Mezzanine Cards (FMCs)](https://ohwr.org/projects/fmc-projects/wiki/fmc-standard) through the high-pin-count FMC sockets. 
+The I/O capability of u4FCP & uRTM can be further enhanced with four [VITA-57.1 FPGA Mezzanine Cards (FMC)](https://ohwr.org/projects/fmc-projects/wiki/fmc-standard) through the high-pin-count sockets. 
 
 ## Block Diagram
 
-A block diagram of the u4FCP and uRTM is shown below.
+A block diagram of the u4FCP and uRTM is shown below. The red lines are high-speed serial links connceted to the [gigabyte transceivers (GTY/GTH/GTX)](https://docs.xilinx.com/r/en-US/ug440-xilinx-power-estimator/Using-the-Transceiver-Sheets-GTP-GTX-GTH-GTY-GTZ) of the FPGA. The blue lines are the general input/outputs connected to the High Performance(HP), High Range(HR) or High Density(HD) banks of the FPGA. 
 
 <figure>
     <img src="/readme/figures/block_diagram.png"
@@ -23,3 +23,13 @@ A block diagram of the u4FCP and uRTM is shown below.
     <figcaption>Block diagram of u4FCP & uRTM</figcaption>
 </figure>
 
+### clock Features
+
+Based on cross-point switches and programmable clock multipliers, the clock distribution for u4FCP and uRTM offer a large selection of input clock sources (e.g. the LEMO connectors in the front/rear panel, the AMC clocks, the FMC clocks, or onboard oscillators). This makes the u4FCP & uRTM give users the possibility of implementing various high speed serial data protocols for custom applications.
+
+<figure>
+    <img src="/readme/figures/clock.png"
+    	width="800"
+        alt="Clock Generation & Distribution">
+    <figcaption>Clock generation and distribution in u4FCP & uRTM</figcaption>
+</figure>
