@@ -126,23 +126,27 @@ The following figure shows the gigabyte transceiver connection on u4FCP.
     <img src="/readme/figures/GT_Quads.png"
     	width="800"
         alt="GT connection on u4FCP">
-    <figcaption><em>56 GTY/GTH transceivers (6 GTY Quads and 8 GTH Quads)
+    <figcaption><em>Connections for 56 GTY/GTH transceivers (6 GTY quads and 8 GTH quads)
 
-1. FMC HPC connector (8 GTY/GTH transceivers) x2
-2. AMC ports (16 GTH transceivers)
-3. RTM ports (20 GTY/GTH transceivers) </em></figcaption>
+1. FMC HPC connector (8 GTY) x2
+2. AMC ports (16 GTH)
+3. RTM ports (4 GTY and 16 GTH )
+4. FireFly (4 GTY)
+</em></figcaption>
 </figure>
 
 :warning: **Warning:** Other than RTM[19:16] (GTY131) and FireFly (GTY132), every GT Quad else is in reverse order for PCIe connection (For instance, [3:0]=>[0:3]).
 
 On-board memories are summarized below:
 
-1. Two up to 16G-Byte DDR4 SODIMM with 72-bit wide data bus
+1. Two up to 16G-Byte DDR4 SODIMM with 72-bit data bus
 2. 2K-bit I2C Serial EEPROM with EUI-48™ Identity, providing a unique node Ethernet MAC address for mass-production process
 3. 512k-bit I2C Serial EEPROM for MMC
 4. 512M-bit Quad SPI Flash for storing the FPGA firmware
 
 ## uRTM
+
+To increase scalability, we design the uRTM with a cost-effective and still powerful FPGA (Xlinx Kintex-7) supporting 16 gigabit transceivers (GTX).
 
 <figure>
     <img src="/readme/figures/block_diagram_urtm.png"
@@ -151,6 +155,7 @@ On-board memories are summarized below:
     <figcaption><em>FPGA Block diagram of uRTM</em></figcaption>
 </figure>
 
+2 GTX quads connect to FireFly, 1 GTX quad to MMCX connectors, and the last quad to RTM[19:16] to communicate with the u4FCP.
 
 <figure>
     <img src="/readme/figures/GTX_Quads.png"
@@ -158,3 +163,20 @@ On-board memories are summarized below:
         alt="GTX connection on uRTM">
     <figcaption><em>16 GTX transceivers</em></figcaption>
 </figure>
+
+The same as u4FCP, uRTM have two FMC sockets, but there are the differences:
+
+:memo: **Note:** The RTM[15:0] are connected to DP[7:0] of two FMCs directly.
+
+Benefit from the large number of available IO pins on FPGA, both FMCs have LA[33:0] and HB[5:0], the FMC3 has additional HA[23:0], which is far more than the connections on u4FCP. 
+
+HB[5:0] are connected to the ADC (Dual 12-bit 1 MSPS) channels of FPGA.
+
+uRTM hosts a Gigabit Ethernet through RGMII interface, which may use for rapid prototyping in single-board mode. 
+
+On-board memories are summarized below:
+
+1. Two up to 8G-Byte DDR3L SODIMM with 64-bit data bus
+2. 512k-bit I2C Serial EEPROM for MMC
+3. 256M-bit Quad SPI Flash for storing the FPGA firmware
+
