@@ -12,7 +12,7 @@ u4FCP & uRTM are conceived to serve a midsized system residing either inside a M
 
 The I/O capability of u4FCP & uRTM can be further enhanced with four [VITA-57.1 FPGA Mezzanine Cards (FMC)](https://ohwr.org/projects/fmc-projects/wiki/fmc-standard) through the high-pin-count sockets. 
 
-Either of these two boards can be used independently bench-top prototyping.
+> :memo: **Note:** Either of these two boards can be used independently bench-top prototyping.
 
 ## Board Specifications
 
@@ -21,16 +21,19 @@ Either of these two boards can be used independently bench-top prototyping.
 #### u4FCP
 
 Height: 180.6 mm 
+
 Length: 148.5 mm
 
 #### uRTM
 
 Height: 182.5 mm 
+
 Length: 148.5 mm
 
 ### Environmental Temperature
 
 Operating: 0°C to +45°C 
+
 Storage: -25°C to +60°C
 
 ### Humidity
@@ -109,14 +112,14 @@ An on-board microcontroller, which the host can communicate with either via IPMB
     <figcaption><em>A backplane topology for one MicroTCA.4 system</em></figcaption>
 </figure>
 
-Thr figure above shows one possible [backplane topology for the MicroTCA.4 system](https://schroff.nvent.com/en-us/products/enc11850-027). The functional definition of the port is project-specific, and depends heavily on the MCH selection. Generally speaking, port 0 is reserved for GbE, port 4~7 are reserved for PCI-Express. The u4FCP connects the GTHs to port 0~15 on chassis backplane. Taking advantage of the flexibility of the FPGA, the u4FCP gives
-users the possibility of implementing various other high-speed protocols besides PCI-Express. The u4FCP connects the MLVDS transceivers to port 17~20, which can be used as customized clock, trigger and interlock.
+Thr figure above shows one possible [backplane topology for the MicroTCA.4 system](https://schroff.nvent.com/en-us/products/enc11850-027). The functional definition of the port is project-specific, and depends heavily on the MCH selection. Generally speaking, port 0 is reserved for GbE, port 4\~7 are reserved for PCI-Express. The u4FCP connects the GTHs to port 0\~15 on chassis backplane. Taking advantage of the flexibility of the FPGA, the u4FCP gives
+users the possibility of implementing various other high-speed protocols besides PCI-Express. The u4FCP connects the MLVDS transceivers to port 17\~20, which can be used as customized clock, trigger and interlock.
 
 Moreover, u4FCP connects 16 GTHs and 4 GTYs to RTM to further improve scalability.
 
-The u4FCP connects each FMC-HPC connector with 8 GTYs. Limited by the number of available IO pins of the FPGA, only LA[16:0] are connected, which can provide upto 34 single-ended or 17 differential user defined signals, the Vadj can be programmed to support 0.9V~1.8V. In addition, HB[7:0] are connected to the ADC channels of FPGA.
+The u4FCP connects each FMC-HPC connector with 8 GTYs. Limited by the number of available IO pins of the FPGA, only LA[16:0] are connected, which can provide upto 34 single-ended or 17 differential user defined signals, the Vadj can be programmed to support 0.9V\~1.8V. In addition, HB[7:0] are connected to the ADC channels of FPGA.
 
-Finally, u4FCP hosts a [FireFly transceiver](https://www.samtec.com/optics/optical-cable/mid-board/firefly) with 4 channels. 
+Finally, u4FCP hosts a [FireFly transceiver](https://www.samtec.com/optics/optical-cable/mid-board/firefly) with 4 fiber channels. 
 
 The following figure shows the gigabyte transceiver connection on u4FCP.
 
@@ -125,8 +128,11 @@ The following figure shows the gigabyte transceiver connection on u4FCP.
     	width="800"
         alt="GT connection on u4FCP">
     <figcaption><em>56 GTY/GTH transceivers (6 GTY Quads and 8 GTH Quads)
+    	
 1. FMC HPC connector (8 GTY/GTH transceivers) x2
+2. 
 2. AMC ports (16 GTH transceivers)
+3. 
 3. RTM ports (20 GTY/GTH transceivers)</em></figcaption>
 </figure>
 
