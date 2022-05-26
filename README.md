@@ -20,7 +20,7 @@ A block diagram of the u4FCP and uRTM is shown below. The red lines are high-spe
     <img src="/readme/figures/block_diagram.png"
     	width="800"
         alt="Block Giagram">
-    <figcaption><center>Block diagram of u4FCP & uRTM</center></figcaption>
+    <figcaption><em>Block diagram of u4FCP & uRTM</em></figcaption>
 </figure>
 
 ### Clock Features
@@ -31,7 +31,7 @@ Based on cross-point switches and programmable clock multipliers, the clock dist
     <img src="/readme/figures/clock.png"
     	width="800"
         alt="Clock Generation & Distribution">
-    <figcaption><center>Clock generation and distribution in u4FCP & uRTM</center></figcaption>
+    <figcaption><em>Clock generation and distribution in u4FCP & uRTM</em></figcaption>
 </figure>
 
 Whether you are using an internal or external clock, the signal must be cleaned to minimise jitter
@@ -45,5 +45,5 @@ Users can access to the FPGA through the MicroTCA crate or JTAG header. A config
     <img src="/readme/figures/jtag.png"
     	width="600"
         alt=" JTAG programming connections">
-    <figcaption><center>JTAG programming connections in u4FCP & uRTM</center></figcaption>
+    <figcaption><em>JTAG programming connections in u4FCP & uRTM</em></figcaption>
 </figure>
