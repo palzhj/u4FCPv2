@@ -58,14 +58,14 @@ Although the FMC standard defines LA, HA, HB and DP differential ports, only par
 The table below summarize the conncections of FMC
 
 <table cellspacing="0" border="0">
-    <colgroup width="80"></colgroup>
-    <colgroup width="178"></colgroup>
-    <colgroup width="169"></colgroup>
-    <colgroup span="2" width="80"></colgroup>
-    <colgroup width="186"></colgroup>
-    <colgroup width="184"></colgroup>
-    <colgroup width="266"></colgroup>
-    <colgroup width="80"></colgroup>
+    <colgroup></colgroup>
+    <colgroup></colgroup>
+    <colgroup></colgroup>
+    <colgroup span="2"></colgroup>
+    <colgroup></colgroup>
+    <colgroup></colgroup>
+    <colgroup></colgroup>
+    <colgroup></colgroup>
     <tr>
         <td rowspan=3 align="center" valign=middle>FMC</td>
         <td colspan=8 align="center" valign=middle>HPC</td>
@@ -90,46 +90,46 @@ The table below summarize the conncections of FMC
     </tr>
     <tr>
         <td align="left" valign=middle>FMC0</td>
-        <td align="left" valign=middle>HP bank(1.0V~1.8V)</td>
+        <td align="left" valign=middle>HP bank (1.0V~1.8V)</td>
         <td align="left" valign=middle>-</td>
         <td align="left" valign=middle>1 GTY</td>
         <td align="left" valign=middle>7 GTY</td>
         <td align="left" valign=middle>-</td>
         <td align="left" valign=middle>-</td>
-        <td align="left" valign=middle>HD bank(3.3V), 8 ADC Channels</td>
+        <td align="left" valign=middle>HD bank (3.3V), 8 ADC Channels</td>
         <td align="left" valign=middle>-</td>
     </tr>
     <tr>
         <td align="left" valign=middle>FMC1</td>
-        <td align="left" valign=middle>HP bank(1.0V~1.8V)</td>
+        <td align="left" valign=middle>HP bank (1.0V~1.8V)</td>
         <td align="left" valign=middle>-</td>
         <td align="left" valign=middle>1 GTY</td>
         <td align="left" valign=middle>7 GTY</td>
         <td align="left" valign=middle>-</td>
         <td align="left" valign=middle>-</td>
-        <td align="left" valign=middle>HD bank(3.3V), 8 ADC Channels</td>
+        <td align="left" valign=middle>HD bank (3.3V), 8 ADC Channels</td>
         <td align="left" valign=middle>-</td>
     </tr>
     <tr>
         <td align="left" valign=middle>FMC2</td>
-        <td align="left" valign=middle>HR bank(1.2V~3.3V)</td>
-        <td align="left" valign=middle>HR bank(1.2V~3.3V)</td>
+        <td align="left" valign=middle>HR bank (1.2V~3.3V)</td>
+        <td align="left" valign=middle>HR bank (1.2V~3.3V)</td>
         <td align="left" valign=middle>1 GTH</td>
         <td align="left" valign=middle>7 GTH</td>
         <td align="left" valign=middle>-</td>
         <td align="left" valign=middle>-</td>
-        <td align="left" valign=middle>HR bank(2.5V), 5 ADC Channels</td>
+        <td align="left" valign=middle>HR bank (2.5V), 5 ADC Channels</td>
         <td align="left" valign=middle>-</td>
     </tr>
     <tr>
         <td align="left" valign=middle>FMC3</td>
-        <td align="left" valign=middle>HR bank(1.2V~3.3V)</td>
-        <td align="left" valign=middle>HR bank(1.2V~3.3V)</td>
+        <td align="left" valign=middle>HR bank (1.2V~3.3V)</td>
+        <td align="left" valign=middle>HR bank (1.2V~3.3V)</td>
         <td align="left" valign=middle>1 GTH</td>
         <td align="left" valign=middle>7 GTH</td>
-        <td align="left" valign=middle>HR bank(1.2V~3.3V)</td>
-        <td align="left" valign=middle>HR bank(1.2V~3.3V)</td>
-        <td align="left" valign=middle>HR bank(2.5V), 5 ADC Channels</td>
+        <td align="left" valign=middle>HR bank (1.2V~3.3V)</td>
+        <td align="left" valign=middle>HR bank (1.2V~3.3V)</td>
+        <td align="left" valign=middle>HR bank (2.5V), 5 ADC Channels</td>
         <td align="left" valign=middle>-</td>
     </tr>
 </table>
