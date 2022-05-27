@@ -4,9 +4,7 @@
 
 MicroTCA.4 Fast Control and Process board (u4FCP) is an FPGA-based [MicroTCA.4](https://www.picmg.org/product/microtca-enhancements-rear-io-precision-timing-specification/) compatible Advanced Mezzanine Card (AMC) targeting generic clock, control and data acquisition in High-Energy Physics(HEP) experiments. 
 
-
 MicroTCA.4 Rear Transition Module (uRTM) is a rear transition module in the rear of the crate to increase the I/O capability of the u4FCP. The u4FCP and uRTM are connected through fabric connectors in the upper area above the standard µTCA backplane area, defined as Zone 3. The pin assignment is compatible with the [Zone 3 recommendation](https://techlab.desy.de/resources/zone_3_recommendation/index_eng.html) D1.4 for digital applications.
-
 
 u4FCP & uRTM are conceived to serve a midsized system residing either inside a MicroTCA crate or stand-alone on desktop with high-speed optical links or ethernet to PC.
 
@@ -53,6 +51,88 @@ A block diagram of the u4FCP and uRTM is shown below. The red lines are high-spe
         alt="Block Giagram">
     <figcaption><em>Block diagram of u4FCP & uRTM</em></figcaption>
 </figure>
+
+### FMC conncection
+
+Although the FMC standard defines LA, HA, HB and DP differential ports, only parts of them are connected to FPGA duo to limited IO resources.
+The table below summarize the conncections of FMC
+
+<table cellspacing="0" border="0">
+    <colgroup width="80"></colgroup>
+    <colgroup width="178"></colgroup>
+    <colgroup width="169"></colgroup>
+    <colgroup span="2" width="80"></colgroup>
+    <colgroup width="186"></colgroup>
+    <colgroup width="184"></colgroup>
+    <colgroup width="266"></colgroup>
+    <colgroup width="80"></colgroup>
+    <tr>
+        <td rowspan=3 align="center" valign=middle>FMC</td>
+        <td colspan=8 align="center" valign=middle>HPC</td>
+        </tr>
+    <tr>
+        <td colspan=3 align="center" valign=middle>LPC</td>
+        <td align="left" valign=middle><br></td>
+        <td align="left" valign=middle><br></td>
+        <td align="left" valign=middle><br></td>
+        <td align="left" valign=middle><br></td>
+        <td align="left" valign=middle><br></td>
+    </tr>
+    <tr>
+        <td align="left" valign=middle>LA[16:0]</td>
+        <td align="left" valign=middle>LA[33:17]</td>
+        <td align="left" valign=middle>DP[0]</td>
+        <td align="left" valign=middle>DP[9:1]</td>
+        <td align="left" valign=middle>HA[16:0]</td>
+        <td align="left" valign=middle>HA[23:17]</td>
+        <td align="left" valign=middle>HB[16:0]</td>
+        <td align="left" valign=middle>HB[21:17]</td>
+    </tr>
+    <tr>
+        <td align="left" valign=middle>FMC0</td>
+        <td align="left" valign=middle>HP bank(1.0V~1.8V)</td>
+        <td align="left" valign=middle>-</td>
+        <td align="left" valign=middle>1 GTY</td>
+        <td align="left" valign=middle>7 GTY</td>
+        <td align="left" valign=middle>-</td>
+        <td align="left" valign=middle>-</td>
+        <td align="left" valign=middle>HD bank(3.3V), 8 ADC Channels</td>
+        <td align="left" valign=middle>-</td>
+    </tr>
+    <tr>
+        <td align="left" valign=middle>FMC1</td>
+        <td align="left" valign=middle>HP bank(1.0V~1.8V)</td>
+        <td align="left" valign=middle>-</td>
+        <td align="left" valign=middle>1 GTY</td>
+        <td align="left" valign=middle>7 GTY</td>
+        <td align="left" valign=middle>-</td>
+        <td align="left" valign=middle>-</td>
+        <td align="left" valign=middle>HD bank(3.3V), 8 ADC Channels</td>
+        <td align="left" valign=middle>-</td>
+    </tr>
+    <tr>
+        <td align="left" valign=middle>FMC2</td>
+        <td align="left" valign=middle>HR bank(1.2V~3.3V)</td>
+        <td align="left" valign=middle>HR bank(1.2V~3.3V)</td>
+        <td align="left" valign=middle>1 GTH</td>
+        <td align="left" valign=middle>7 GTH</td>
+        <td align="left" valign=middle>-</td>
+        <td align="left" valign=middle>-</td>
+        <td align="left" valign=middle>HR bank(2.5V), 5 ADC Channels</td>
+        <td align="left" valign=middle>-</td>
+    </tr>
+    <tr>
+        <td align="left" valign=middle>FMC3</td>
+        <td align="left" valign=middle>HR bank(1.2V~3.3V)</td>
+        <td align="left" valign=middle>HR bank(1.2V~3.3V)</td>
+        <td align="left" valign=middle>1 GTH</td>
+        <td align="left" valign=middle>7 GTH</td>
+        <td align="left" valign=middle>HR bank(1.2V~3.3V)</td>
+        <td align="left" valign=middle>HR bank(1.2V~3.3V)</td>
+        <td align="left" valign=middle>HR bank(2.5V), 5 ADC Channels</td>
+        <td align="left" valign=middle>-</td>
+    </tr>
+</table>
 
 ### Clock Features
 
@@ -116,7 +196,7 @@ users the possibility of implementing various other high-speed protocols besides
 
 Moreover, u4FCP connects 16 GTHs and 4 GTYs to RTM to further improve scalability.
 
-The u4FCP connects each FMC-HPC connector with 8 GTYs. Limited by the number of available IO pins of the FPGA, only LA[16:0] are connected, which can provide up to 34 single-ended or 17 differential user defined signals, the Vadj can be programmed to support 0.9V\~1.8V. In addition, HB[7:0] are connected to the ADC (10-bit 0.2 MSPS) channels of FPGA.
+The u4FCP connects each FMC-HPC connector with 8 GTYs. Limited by the number of available IO pins of the FPGA, only LA[16:0] are connected, which can provide up to 34 single-ended or 17 differential user defined signals, the Vadj can be programmed to support 1.0V\~1.8V. In addition, HB[7:0] are connected to the ADC (10-bit 0.2 MSPS) channels of FPGA.
 
 Finally, u4FCP hosts a [FireFly transceiver](https://www.samtec.com/optics/optical-cable/mid-board/firefly) with 4 fiber channels. 
 
@@ -135,7 +215,7 @@ The following figure shows the gigabyte transceiver connection on u4FCP.
 </em></figcaption>
 </figure>
 
-:warning: **Warning:** Other than RTM[19:16] (GTY131) and FireFly (GTY132), every GT Quad else is in reverse order for PCIe connection (For instance, [3:0]=>[0:3]).
+:warning: **Warning:** Other than RTM[19:16] (GTY131) and FireFly (GTY132), every other GT Quad is in reverse order for PCIe connection (For instance, [3:0]=>[0:3]).
 
 On-board memories are summarized below:
 
@@ -170,7 +250,7 @@ The same as u4FCP, uRTM have two FMC sockets, but there are the differences:
 
 Benefit from the large number of available IO pins on FPGA, both FMCs have LA[33:0] and HB[5:0], the FMC3 has additional HA[23:0], which is far more than the connections on u4FCP. 
 HB[5:0] are connected to the ADC (Dual 12-bit 1 MSPS) channels of FPGA.
-Vadj can be programmed to support 0.9V~3.3V.
+Vadj can be programmed to support 1.2V~3.3V.
 
 uRTM hosts a Gigabit Ethernet through RGMII interface, which may help for rapid prototyping in single-board mode. 
 
