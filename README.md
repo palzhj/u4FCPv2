@@ -191,7 +191,7 @@ An on-board microcontroller, which the host can communicate with either via IPMB
     <figcaption><em>A backplane topology for one MicroTCA.4 system</em></figcaption>
 </figure>
 
-Thr figure above shows one possible [backplane topology for the MicroTCA.4 system](https://schroff.nvent.com/en-us/products/enc11850-027). The functional definition of the port is project-specific, and depends heavily on the MCH selection. Generally speaking, port 0 is reserved for GbE, port 4\~7 are reserved for PCI-Express. The u4FCP connects the GTHs to port 0\~15 on chassis backplane. Taking advantage of the flexibility of the FPGA, the u4FCP gives
+The figure above shows one possible [backplane topology for the MicroTCA.4 system](https://schroff.nvent.com/en-us/products/enc11850-027). The functional definition of the port is project-specific, and depends heavily on the MCH selection. Generally speaking, port 0 is reserved for GbE, port 4\~7 are reserved for PCI-Express. The u4FCP connects the GTHs to port 0\~15 on chassis backplane. Taking advantage of the flexibility of the FPGA, the u4FCP gives
 users the possibility of implementing various other high-speed protocols besides PCI-Express. The u4FCP connects the MLVDS transceivers to port 17\~20, which can be used as customized clock, trigger and interlock.
 
 Moreover, u4FCP connects 16 GTHs and 4 GTYs to RTM to further improve scalability.
@@ -226,7 +226,7 @@ On-board memories are summarized below:
 
 ## uRTM
 
-To increase scalability, we design the uRTM with a cost-effective and still powerful FPGA (Xlinx Kintex-7) supporting 16 gigabit transceivers (GTX).
+To increase scalability, we design the uRTM with a cost-effective and still powerful FPGA (Xilinx Kintex-7) supporting 16 gigabit transceivers (GTX).
 
 <figure>
     <img src="/readme/block_diagram_urtm.png"
