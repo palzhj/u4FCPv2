@@ -145,14 +145,15 @@ Based on cross-point switches and programmable clock multipliers, the clock dist
     <figcaption><em>Clock generation and distribution</em></figcaption>
 </figure>
 
-Whether you are using an internal or external clock, the signal must be cleaned to minimize jitter
-and ensure stable performance. u4FCP & uRTM use dedicated chip ([Si5345](https://www.skyworksinc.com/en/Products/Timing/High-Performance-Jitter-Attenuators/Si5345B)) for jitter cleaning.
+Whether you are using an internal or external clock, the signal must be cleaned to minimize jitter and ensure stable performance. u4FCP & uRTM use dedicated chip ([Si5345](https://www.skyworksinc.com/en/Products/Timing/High-Performance-Jitter-Attenuators/Si5345B)) for jitter cleaning.
 
 ### Configuration
 
 #### JTAG
 
-Users can access to the FPGA through the MicroTCA crate or JTAG header. A configurable logic circuit acts as a bridge selecting the JTAG master source between the JTAG header and AMC/RTM JTAG lines. When an FMC card is attached to u4FCP & uRTM, the circuit automatically adds the attached device to the JTAG chain as determined by its FMC_PRSNT_M2C_B signal. It's recommended to implement a TDI to TDO connection via a device or bypass jumper for the JTAG chain to be completed on the attached FMC card. If not, the circuit can be configured by software to bypass the JTAG chain of FMC.
+Users can access to the FPGA through the MicroTCA crate or JTAG header. A configurable logic circuit acts as a bridge selecting the JTAG master source between the JTAG header and AMC/RTM JTAG lines. When an FMC card is attached to u4FCP & uRTM, the circuit automatically adds the attached device to the JTAG chain as determined by its FMC_PRSNT_M2C_B signal. 
+
+:memo: **Note:** It's recommended to implement a TDI to TDO connection via a device or bypass jumper for the JTAG chain to be completed on the attached FMC card. If not, the circuit can be configured by software to bypass the JTAG chain of FMC.
 
 <figure>
     <img src="/readme/jtag.png"
