@@ -371,8 +371,8 @@ set_property  IOSTANDARD  LVCMOS25      [get_ports "FMC2_HB_P[4]"]
 set_property  IOSTANDARD  LVCMOS25      [get_ports "FMC2_HB_N[4]"]
 
 # VP/VN
-set_property  PACKAGE_PIN R15           [get_ports "FMC2_HB_P[5]"]
-set_property  PACKAGE_PIN T14           [get_ports "FMC2_HB_N[5]"]
+# set_property  PACKAGE_PIN R15           [get_ports "FMC2_HB_P[5]"]
+# set_property  PACKAGE_PIN T14           [get_ports "FMC2_HB_N[5]"]
 
 ######################################################################
 # FMC3
@@ -1033,7 +1033,7 @@ set_property  IOSTANDARD  LVCMOS33      [get_ports "RTM_IO[2]"]
 set_property  PACKAGE_PIN U25           [get_ports "RTM_IO[3]"]
 set_property  IOSTANDARD  LVCMOS33      [get_ports "RTM_IO[3]"]
 
-set_property  PACKAGE_PIN T25           [get_ports "RTM_MODE"]
+set_property  PACKAGE_PIN U29           [get_ports "RTM_MODE"]
 set_property  IOSTANDARD  LVCMOS33      [get_ports "RTM_MODE"]
 set_property  PACKAGE_PIN U30           [get_ports "RTM_INTL"]
 set_property  IOSTANDARD  LVCMOS33      [get_ports "RTM_INTL"]
