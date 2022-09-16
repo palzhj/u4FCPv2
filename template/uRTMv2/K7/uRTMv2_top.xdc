@@ -71,14 +71,14 @@ set_property  PACKAGE_PIN R28           [get_ports "TESTPIN[3]"]
 set_property  IOSTANDARD  LVCMOS33      [get_ports "TESTPIN[3]"]
 
 # RED
-set_property  PACKAGE_PIN V29           [get_ports "RGBLED[0]"]
-set_property  IOSTANDARD  LVCMOS33      [get_ports "RGBLED[0]"]
+set_property  PACKAGE_PIN V29           [get_ports "RLED_B"]
+set_property  IOSTANDARD  LVCMOS33      [get_ports "RLED_B"]
 # GREEN
-set_property  PACKAGE_PIN P28           [get_ports "RGBLED[1]"]
-set_property  IOSTANDARD  LVCMOS33      [get_ports "RGBLED[1]"]
+set_property  PACKAGE_PIN P28           [get_ports "GLED_B"]
+set_property  IOSTANDARD  LVCMOS33      [get_ports "GLED_B"]
 # BLUE
-set_property  PACKAGE_PIN V30           [get_ports "RGBLED[2]"]
-set_property  IOSTANDARD  LVCMOS33      [get_ports "RGBLED[2]"]
+set_property  PACKAGE_PIN V30           [get_ports "BLED_B"]
+set_property  IOSTANDARD  LVCMOS33      [get_ports "BLED_B"]
 
 # LEMO interface
 set_property  PACKAGE_PIN K28           [get_ports "LEMO_IN_P"]
@@ -925,30 +925,40 @@ set_property  DCI_CASCADE {32 34} [get_iobanks 33]
 ######################################################################
 # Gigabit Ethernet PHY - RGMII
 set_property  PACKAGE_PIN L28           [get_ports "PHY_CLK"]
+set_property  IOSTANDARD  LVCMOS25 		[get_ports "PHY_CLK"]
 
 set_property  PACKAGE_PIN N25           [get_ports "PHY_TX_CLK"]
+set_property  IOSTANDARD  LVCMOS25 		[get_ports "PHY_TX_CLK"]
 set_property  PACKAGE_PIN N26           [get_ports "PHY_TX_CTRL"]
+set_property  IOSTANDARD  LVCMOS25 		[get_ports "PHY_TX_CTRL"]
 set_property  PACKAGE_PIN N27           [get_ports "PHY_TX_D[0]"]
 set_property  PACKAGE_PIN M27           [get_ports "PHY_TX_D[1]"]
 set_property  PACKAGE_PIN N29           [get_ports "PHY_TX_D[2]"]
 set_property  PACKAGE_PIN N30           [get_ports "PHY_TX_D[3]"]
+set_property  IOSTANDARD  LVCMOS25 		[get_ports "PHY_TX_D[*]"]
 
 set_property  PACKAGE_PIN M28           [get_ports "PHY_RX_CLK"]
+set_property  IOSTANDARD  LVCMOS25 		[get_ports "PHY_RX_CLK"]
 set_property  PACKAGE_PIN M29           [get_ports "PHY_RX_CTRL"]
+set_property  IOSTANDARD  LVCMOS25 		[get_ports "PHY_RX_CTRL"]
 set_property  PACKAGE_PIN N22           [get_ports "PHY_RX_D[0]"]
 set_property  PACKAGE_PIN N21           [get_ports "PHY_RX_D[1]"]
 set_property  PACKAGE_PIN N20           [get_ports "PHY_RX_D[2]"]
 set_property  PACKAGE_PIN N19           [get_ports "PHY_RX_D[3]"]
+set_property  IOSTANDARD  LVCMOS25 		[get_ports "PHY_RX_D[*]"]
 
 set_property  PACKAGE_PIN P23           [get_ports "PHY_GPIO[0]"]
 set_property  PACKAGE_PIN N24           [get_ports "PHY_GPIO[1]"]
+set_property  IOSTANDARD  LVCMOS25 		[get_ports "PHY_GPIO[*]"]
 set_property  PACKAGE_PIN M24           [get_ports "PHY_PWDN_B"]
+set_property  IOSTANDARD  LVCMOS25 		[get_ports "PHY_PWDN_B"]
 set_property  PACKAGE_PIN M25           [get_ports "PHY_RST_B"]
+set_property  IOSTANDARD  LVCMOS25 		[get_ports "PHY_RST_B"]
 
 set_property  PACKAGE_PIN P21           [get_ports "PHY_MDC"]
+set_property  IOSTANDARD  LVCMOS25 		[get_ports "PHY_MDC"]
 set_property  PACKAGE_PIN P22           [get_ports "PHY_MDIO"]
-
-set_property  IOSTANDARD  LVCMOS25 		[get_ports "PHY_*"]
+set_property  IOSTANDARD  LVCMOS25 		[get_ports "PHY_MDIO"]
 
 ######################################################################
 # FireFly
