@@ -1,13 +1,16 @@
-# Connectivity Test
+# Getting started
 
+Open vivado with GUI, use tcl console.
 
-## Getting started
+Or open vivado without GUI.
+```vivado -mode tcl```
 
-Open vivado
-Use tcl console
+then
 
+```
 cd scripts
 source ./create_project.tcl
 source ./run_implementation.tcl
+```
 
 All files should appear in the output folder.
