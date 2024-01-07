@@ -511,7 +511,7 @@ always@ (posedge CLK) begin
 end
 
 // System monitor
-xadc_wiz_0 xadc_wiz_0(
+xadc_wiz xadc_wiz(
   .dclk_in            (CLK),          // Clock input for the dynamic reconfiguration port
   .reset_in           (RST),          // Reset signal for the System Monitor control logic
   .daddr_in           (smonAddr[6:0]),// Address bus for the dynamic reconfiguration port

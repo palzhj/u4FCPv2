@@ -1,9 +1,8 @@
 # Getting started
 
-Open vivado with GUI, use tcl console.
+Vivado version: 2022.2
 
-Or open vivado without GUI.
-```vivado -mode tcl```
+Open the vivado with GUI, use the tcl console. Or open the vivado without GUI by ```vivado -mode tcl```
 
 then
 

@@ -1,4 +1,3 @@
-# This file is part of the altiroc_emulator project (https://gitlab.cern.ch/fschreud/altiroc-emulator).
 # Copyright (C) 2001-2021 CERN for the benefit of the ATLAS collaboration.
 # Authors:
 #               Frans Schreuder
@@ -44,10 +43,10 @@ set SIM_FILES ""
 set WCFG_FILES ""
 
 set XCI_FILES "\
-  ip/clk_wiz_0.xci \
-  ip/ila64_0.xci \
+  ip/clk_wiz.xci \
+  ip/ila64.xci \
   ip/sitcp_fifo.xci \
-  ip/xadc_wiz_0.xci"
+  ip/xadc_wiz.xci"
 
 set XDC_FILES "uRTMv2_top.xdc"
 

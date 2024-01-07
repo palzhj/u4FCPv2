@@ -376,7 +376,7 @@ BUFG BUFG_200 (
 );
 
 wire clk40_int, clk100_int, clk125_int, locked;
-clk_wiz_0 clk_wiz_0(
+clk_wiz clk_wiz(
   // Clock in ports
   .clk_in1    (clk200_int),
   // Clock out ports

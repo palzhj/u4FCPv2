@@ -259,7 +259,7 @@ assign mdio_mosi_tri = mdio_complete? ~mdio_i_sys_oe: 1'b0;
 generate
 if (USE_CHIPSCOPE == 1) begin
   wire [63:0] probe0;
-  ila64_0 ila64_0 (
+  ila64 ila64 (
       .clk(gmii_tx_clk),
       .probe0(probe0)
   );

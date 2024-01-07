@@ -1,4 +1,3 @@
-# This file is part of the altiroc_emulator project (https://gitlab.cern.ch/fschreud/altiroc-emulator).
 # Copyright (C) 2001-2021 CERN for the benefit of the ATLAS collaboration.
 # Authors:
 #               Frans Schreuder
