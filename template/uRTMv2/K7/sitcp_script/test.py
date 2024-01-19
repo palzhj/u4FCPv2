@@ -10,11 +10,13 @@ import rbcp
 import sysmon
 import spi
 import i2c
+import i2c_switch
 # import interface
 
 TEST_REG = 1
-TEST_SYSMON = 1
-TEST_I2C = 1
+TEST_SYSMON = 0
+TEST_I2C = 0
+TEST_CLK = 1
 
 # def shift_led():
 #     reg.write(LED_ADDR,'\x80')
@@ -79,3 +81,9 @@ if TEST_I2C:
     print("0x%x"%i2c_u19.read8(with_internal_addr = True, internal_addr = 1))
     print("0x%x"%i2c_u19.read8(with_internal_addr = True, internal_addr = 2))
     print("0x%x"%i2c_u19.read8(with_internal_addr = True, internal_addr = 3))
+
+#################################################################
+# i2c clk test
+if TEST_CLK:
+    i2c_switch = i2c_switch.i2c_switch()
+    i2c_switch.get_status()
