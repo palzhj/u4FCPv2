@@ -2,10 +2,8 @@
 # This is i2c_switch.py file
 # author: zhj@ihep.ac.cn
 # 2024-01-16 created
-
+import lib
 from lib import i2c
-
-switch_i2c_addr = 0xE2
 
 GPIO_PIN_0  = 0x01
 GPIO_PIN_1  = 0x02
@@ -26,80 +24,80 @@ FMC2_PIN      = GPIO_PIN_0
 
 class i2c_switch(object):
   """Class for communicating with an I2C switch using TCA9548."""
-  def __init__(self, base_address = 0x00020000, clk_freq = 125, i2c_freq = 100):
-    self.i2c = i2c.i2c(device_address = switch_i2c_addr, base_address = base_address,
+  def __init__(self, i2c_addr = 0b1110_0010, base_address = 0x00020000, clk_freq = 125, i2c_freq = 100):
+    self.i2c = i2c.i2c(device_address = i2c_addr, base_address = base_address,
                    clk_freq = clk_freq, i2c_freq = i2c_freq)
 
   def get_status(self):
     temp = self.i2c.read8()
     if(temp&DDR_PIN):
-      print("DDR I2C enable")
+        print("DDR I2C enable")
     if(temp&FPGA_PIN):
-      print("FPGA I2C enable")
+        print("FPGA I2C enable")
     if(temp&FIREFLY1_PIN):
-      print("FIREFLY1 I2C enable")
+        print("FIREFLY1 I2C enable")
     if(temp&FIREFLY0_PIN):
-      print("FIREFLY0 I2C enable")
+        print("FIREFLY0 I2C enable")
     if(temp&CLK_PIN):
-      print("CLK I2C enable")
+        print("CLK I2C enable")
     if(temp&FMC3_PIN):
-      print("FMC3 I2C enable")
+        print("FMC3 I2C enable")
     if(temp&FMC2_PIN):
-      print("FMC2 I2C enable")
+        print("FMC2 I2C enable")
 
-  def ddr_en(self):
+  def enable_ddr(self):
     temp = self.i2c.read8()
     self.i2c.write8(temp|DDR_PIN)
 
-  def fpga_en(self):
+  def enable_fpga(self):
     temp = self.i2c.read8()
     self.i2c.write8(temp|FPGA_PIN)
 
-  def firefly1_en(self):
+  def enable_firefly1(self):
     temp = self.i2c.read8()
     self.i2c.write8(temp|FIREFLY1_PIN)
 
-  def firefly0_en(self):
+  def enable_firefly0(self):
     temp = self.i2c.read8()
     self.i2c.write8(temp|FIREFLY0_PIN)
 
-  def clk_en(self):
+  def enable_clk(self):
     temp = self.i2c.read8()
     self.i2c.write8(temp|CLK_PIN)
 
-  def fmc3_en(self):
+  def enable_fmc3(self):
     temp = self.i2c.read8()
     self.i2c.write8(temp|FMC3_PIN)
 
-  def fmc2_en(self):
+  def enable_fmc2(self):
     temp = self.i2c.read8()
     self.i2c.write8(temp|FMC2_PIN)
 
 
-  def ddr_dis(self):
+  def disable_ddr(self):
     temp = self.i2c.read8()
     self.i2c.write8(temp&~DDR_PIN)
 
-  def fpga_en(self):
+  def disable_fpga(self):
     temp = self.i2c.read8()
     self.i2c.write8(temp&~FPGA_PIN)
 
-  def firefly1_en(self):
+  def disable_firefly1(self):
     temp = self.i2c.read8()
     self.i2c.write8(temp&~FIREFLY1_PIN)
 
-  def firefly0_en(self):
+  def disable_firefly0(self):
     temp = self.i2c.read8()
     self.i2c.write8(temp&~FIREFLY0_PIN)
 
-  def clk_en(self):
+  def disable_clk(self):
     temp = self.i2c.read8()
     self.i2c.write8(temp&~CLK_PIN)
 
-  def fmc3_en(self):
+  def disable_fmc3(self):
     temp = self.i2c.read8()
     self.i2c.write8(temp&~FMC3_PIN)
 
-  def fmc2_en(self):
+  def disable_fmc2(self):
     temp = self.i2c.read8()
     self.i2c.write8(temp&~FMC2_PIN)

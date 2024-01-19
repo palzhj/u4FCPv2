@@ -24,8 +24,8 @@ module RBCP_REG #(
   input             RBCP_WE,    // in : Write enable
   input   [7 :0]    RBCP_WD,    // in : Write data[7:0]
   input             RBCP_RE,    // in : Read enable
-  output  [7 :0]    RBCP_RD,    // out  : Read data[7:0]
-  output            RBCP_ACK,   // out  : Acknowledge
+  output  [7 :0]    RBCP_RD,    // out: Read data[7:0]
+  output            RBCP_ACK,   // out: Acknowledge
   // User IO
   input             VP_IN,
   input             VN_IN,
@@ -50,7 +50,7 @@ module RBCP_REG #(
 // system_monitor:  0x0001_0000 to 0x0001_FFFF (sub address:          0x0 to 0x3FC)
 // i2c  x I2C_NUM:  0x0002_0000 to 0x0002_FFFF (each i2c sub address: 0x0 to 0x4 or 0xFF )
 // spi  x SPI_NUM:  0x0003_0000 to 0x0003_FFFF (each spi sub address: 0x0 to 0x3 or 0xFF)
-// uart x UART_NUM: 0x0004_0000 to 0x0004_FFFF (each spi sub address: 0x0 to 0x6 or 0xFF)
+// uart x UART_NUM: 0x0004_0000 to 0x0004_FFFF (each uart sub address: 0x0 to 0x6 or 0xFF)
 
 // SiTCP:           0xFFFF_0000 to 0xFFFF_FDFF, Reserved
 //                  0xFFFF_FE00 to 0xFFFF_FEFF, Ethernet PHY MIF I/F

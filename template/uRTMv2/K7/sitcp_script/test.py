@@ -10,7 +10,10 @@ import rbcp
 import sysmon
 import spi
 import i2c
+sys.path.insert(0, "board")
 import i2c_switch
+import si5345
+
 # import interface
 
 TEST_REG = 1
@@ -63,27 +66,31 @@ if TEST_SYSMON:
 if TEST_I2C:
     U18_ADDR = 0x78
     i2c_u18 = i2c.i2c(U18_ADDR)
-    print("0x%x"%i2c_u18.read8(with_internal_addr = True, internal_addr = 0))
-    print("0x%x"%i2c_u18.read8(with_internal_addr = True, internal_addr = 1))
-    print("0x%x"%i2c_u18.read8(with_internal_addr = True, internal_addr = 2))
-    print("0x%x"%i2c_u18.read8(with_internal_addr = True, internal_addr = 3))
+    print("0x%x"%i2c_u18.read8(1, 0))
+    print("0x%x"%i2c_u18.read8(1, 1))
+    print("0x%x"%i2c_u18.read8(1, 2))
+    print("0x%x"%i2c_u18.read8(1, 3))
 
     U17_ADDR = 0x7A
     i2c_u17 = i2c.i2c(U17_ADDR)
-    print("0x%x"%i2c_u17.read8(with_internal_addr = True, internal_addr = 0))
-    print("0x%x"%i2c_u17.read8(with_internal_addr = True, internal_addr = 1))
-    print("0x%x"%i2c_u17.read8(with_internal_addr = True, internal_addr = 2))
-    print("0x%x"%i2c_u17.read8(with_internal_addr = True, internal_addr = 3))
+    print("0x%x"%i2c_u17.read8(1, 0))
+    print("0x%x"%i2c_u17.read8(1, 1))
+    print("0x%x"%i2c_u17.read8(1, 2))
+    print("0x%x"%i2c_u17.read8(1, 3))
 
     U19_ADDR = 0x7C
     i2c_u19 = i2c.i2c(U19_ADDR)
-    print("0x%x"%i2c_u19.read8(with_internal_addr = True, internal_addr = 0))
-    print("0x%x"%i2c_u19.read8(with_internal_addr = True, internal_addr = 1))
-    print("0x%x"%i2c_u19.read8(with_internal_addr = True, internal_addr = 2))
-    print("0x%x"%i2c_u19.read8(with_internal_addr = True, internal_addr = 3))
+    print("0x%x"%i2c_u19.read8(1, 0))
+    print("0x%x"%i2c_u19.read8(1, 1))
+    print("0x%x"%i2c_u19.read8(1, 2))
+    print("0x%x"%i2c_u19.read8(1, 3))
 
 #################################################################
 # i2c clk test
 if TEST_CLK:
     i2c_switch = i2c_switch.i2c_switch()
+    i2c_switch.enable_clk()
     i2c_switch.get_status()
+
+    si5345 = si5345.si5345()
+    si5345.load_config()
