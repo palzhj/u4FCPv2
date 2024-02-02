@@ -18,14 +18,16 @@ import i2c_switch
 import si5345
 import adn4604
 import eeprom
+import vio_max5478
 
 # import interface
 
-TEST_REG = 1
+TEST_REG    = 1
 TEST_SYSMON = 0
-TEST_I2C = 0
-TEST_CLK = 1
+TEST_I2C    = 0
+TEST_CLK    = 0
 TEST_EEPROM = 0
+TEST_VIO    = 0
 
 # def shift_led():
 #     reg.write(LED_ADDR,'\x80')
@@ -116,3 +118,9 @@ if TEST_EEPROM:
 
     eeprom.write(0, bytes_data)
     print(eeprom.read(0x0, 65536))
+
+#################################################################
+# FMC adjustable voltage test
+if TEST_VIO:
+    vio = vio_max5478.vio()
+    vio.set_nonvolatile(1200) # mV
