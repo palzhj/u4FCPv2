@@ -17,6 +17,7 @@ sys.path.insert(0, directory_path+"/board")
 import i2c_switch
 import si5345
 import adn4604
+import eeprom
 
 # import interface
 
@@ -24,6 +25,7 @@ TEST_REG = 1
 TEST_SYSMON = 0
 TEST_I2C = 0
 TEST_CLK = 1
+TEST_EEPROM = 0
 
 # def shift_led():
 #     reg.write(LED_ADDR,'\x80')
@@ -102,3 +104,15 @@ if TEST_CLK:
     adn4604 = adn4604.adn4604()
     adn4604.config()
     # adn4604.get_output_status()
+
+#################################################################
+# i2c eeprom test
+if TEST_EEPROM:
+    eeprom = eeprom.eeprom()
+
+    bytes_data = bytes([])
+    for i in range(256):
+        bytes_data += bytes([i]*256)
+
+    eeprom.write(0, bytes_data)
+    print(eeprom.read(0x0, 65536))
