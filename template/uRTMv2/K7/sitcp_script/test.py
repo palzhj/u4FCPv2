@@ -5,14 +5,18 @@
 
 from time import sleep
 import sys
-sys.path.insert(0, "lib")
+import os
+current_path = os.path.realpath(__file__)
+directory_path = os.path.dirname(current_path)
+sys.path.insert(0, directory_path+"/lib")
 import rbcp
 import sysmon
 import spi
 import i2c
-sys.path.insert(0, "board")
+sys.path.insert(0, directory_path+"/board")
 import i2c_switch
 import si5345
+import adn4604
 
 # import interface
 
@@ -94,3 +98,7 @@ if TEST_CLK:
 
     si5345 = si5345.si5345()
     si5345.load_config()
+
+    adn4604 = adn4604.adn4604()
+    adn4604.config()
+    # adn4604.get_output_status()

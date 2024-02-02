@@ -5,6 +5,7 @@
 import lib
 from lib import i2c
 import time
+import os
 
 class si5345(object):
     """Class for communicating with si5345 using i2c bus."""
@@ -12,7 +13,11 @@ class si5345(object):
         self.i2c = i2c.i2c(device_address = i2c_addr, base_address = base_address,
                     clk_freq = clk_freq, i2c_freq = i2c_freq)
 
-    def load_config(self, file_name = "../../CLK/default_registers.txt"):
+    def load_config(self, file_name = ""):
+        if(file_name == ""):
+            current_path = os.path.realpath(__file__)
+            directory_path = os.path.dirname(current_path)
+            file_name =  directory_path + "/../../../CLK/default_registers.txt"
         file = open(file_name, 'r')
         page_old = 0xFF
         for line in file:
