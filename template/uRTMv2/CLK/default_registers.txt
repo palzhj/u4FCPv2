@@ -6,7 +6,7 @@
 # Includes Pre/Post Download Control Register Writes: Yes
 # Device Revision: D
 # Creator: ClockBuilder Pro v4.11.0.1 [2023-09-14]
-# Created On: 2024-02-04 12:08:12 GMT+08:00
+# Created On: 2024-02-04 12:36:22 GMT+08:00
 Address,Data
 # 
 # Start configuration preamble
@@ -523,7 +523,7 @@ Address,Data
 0x0860,0x00
 0x0861,0x00
 0x090E,0x03
-0x0943,0x01
+0x0943,0x00
 0x0949,0x0B
 0x094A,0x0B
 0x094E,0x49
