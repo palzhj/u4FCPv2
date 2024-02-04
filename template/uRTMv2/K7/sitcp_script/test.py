@@ -20,6 +20,7 @@ import adn4604
 import eeprom
 import vio_max5478
 import gpio
+import ucd90124
 
 # import interface
 
@@ -29,7 +30,8 @@ TEST_I2C    = 0
 TEST_CLK    = 0
 TEST_EEPROM = 0
 TEST_VIO    = 0
-TEST_GPIO   = 1
+TEST_GPIO   = 0
+TEST_PMBUS   = 1
 
 # def shift_led():
 #     reg.write(LED_ADDR,'\x80')
@@ -188,3 +190,10 @@ if TEST_GPIO:
     print("FMC3 CLK DIR is %d"%gpio.get_fmc3_clk_dir())
     print("FMC3 PRSNT is %d"%gpio.get_fmc3_prsnt())
     print("FMC3_PG is %d"%gpio.get_fmc3_pg())
+
+############################################################
+# PMBUS test
+if TEST_PMBUS:
+    pmbus = ucd90124.ucd90124()
+    print(pmbus.read_device_id())
+    pmbus.print_info()
