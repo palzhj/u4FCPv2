@@ -5,7 +5,6 @@
 import lib
 from lib import i2c
 import time
-import os
 
 CH_FMC2 = 0x4
 CH_FMC3 = 0x8

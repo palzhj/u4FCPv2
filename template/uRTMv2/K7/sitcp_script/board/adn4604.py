@@ -4,7 +4,6 @@
 # 2024-02-01 created
 import lib
 from lib import i2c
-import time
 
 # User configuration defines for ADN4604 Clock switch output config
 

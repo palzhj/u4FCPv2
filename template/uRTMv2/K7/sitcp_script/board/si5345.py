@@ -25,7 +25,7 @@ class si5345(object):
             if(line[0]=='#'):
                 if line.find("msec") != -1:
                     time.sleep(0.3) # delay 300ms
-                    print("Clk confog delay 300ms")
+                    print("Clk config delay 300ms")
             elif(line[0]=='0'):
                 # print(line)
                 result = line.split(',')

@@ -19,6 +19,7 @@ import si5345
 import adn4604
 import eeprom
 import vio_max5478
+import gpio
 
 # import interface
 
@@ -28,6 +29,7 @@ TEST_I2C    = 0
 TEST_CLK    = 0
 TEST_EEPROM = 0
 TEST_VIO    = 0
+TEST_GPIO   = 1
 
 # def shift_led():
 #     reg.write(LED_ADDR,'\x80')
@@ -98,7 +100,7 @@ if TEST_I2C:
 if TEST_CLK:
     i2c_switch = i2c_switch.i2c_switch()
     i2c_switch.enable_clk()
-    i2c_switch.get_status()
+    # i2c_switch.get_status()
 
     si5345 = si5345.si5345()
     si5345.load_config()
@@ -124,3 +126,65 @@ if TEST_EEPROM:
 if TEST_VIO:
     vio = vio_max5478.vio()
     vio.set_nonvolatile(1200) # mV
+
+#################################################################
+# GPIO test
+if TEST_GPIO:
+    gpio = gpio.gpio()
+
+    sleep(0.5)
+    gpio.led_blue_on()
+    sleep(0.5)
+    gpio.led_red_on()
+    sleep(0.5)
+    gpio.led_green_on()
+    sleep(0.5)
+    gpio.led_blue_off()
+    gpio.led_red_off()
+    gpio.led_green_off()
+
+    print("PMBUS alert is %d"%gpio.get_pmbus_int())
+    print("CLK Int is %d"%gpio.get_clk_int())
+    print("PG is %d"%gpio.get_pg())
+
+    if(gpio.get_handle()):
+        print("RTM handler is open")
+    else:
+        print("RTM handler is closed")
+
+    # print("Re-program FPGA")
+    # gpio.fpga_prog()
+
+    print("FPGA INIT is %d"%gpio.get_fpga_init())
+    print("FPGA DONE is %d"%gpio.get_fpga_done())
+
+    # print("Reset FPGA")
+    # gpio.fpga_rst()
+
+    # print("Change JTAG to RTM")
+    # gpio.jtag_rtm_en()
+
+    print("Change JTAG to Con")
+    gpio.jtag_rtm_dis()
+
+    # print("Enable JTAG to FMC2")
+    # gpio.jtag_fmc2_en()
+
+    # print("Enable JTAG to FMC3")
+    # gpio.jtag_fmc3_en()
+
+    print("Disable JTAG to FMC2")
+    gpio.jtag_fmc2_dis()
+
+    print("Disable JTAG to FMC3")
+    gpio.jtag_fmc3_dis()
+
+    print("RTM MODE is %d"%gpio.get_rtm_mode())
+
+    print("FMC2 CLK DIR is %d"%gpio.get_fmc2_clk_dir())
+    print("FMC2 PRSNT is %d"%gpio.get_fmc2_prsnt())
+    print("FMC2_PG is %d"%gpio.get_fmc2_pg())
+
+    print("FMC3 CLK DIR is %d"%gpio.get_fmc3_clk_dir())
+    print("FMC3 PRSNT is %d"%gpio.get_fmc3_prsnt())
+    print("FMC3_PG is %d"%gpio.get_fmc3_pg())
