@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MultiProjectsData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Version>1</Version>
-  <Timestamp>2022-05-29T16:12:13.6696584+08:00</Timestamp>
-  <Creator>Texas Instruments Fusion Digital Power Designer v7.7.1.0 [2021-10-01]</Creator>
+  <Timestamp>2024-02-05T13:39:52.5238207+08:00</Timestamp>
+  <Creator>Texas Instruments Fusion Digital Power Designer v7.10.1.0 [2023-10-27]</Creator>
   <Project_Info_List>
     <ProjectInfo>
       <ProjectFile />
       <ProjectData>
         <Version>1</Version>
-        <Timestamp>2022-05-29T16:12:13.7614958+08:00</Timestamp>
-        <Creator>Texas Instruments Fusion Digital Power Designer v7.7.1.0 [2021-10-01]</Creator>
+        <Timestamp>2024-02-05T13:39:52.6151451+08:00</Timestamp>
+        <Creator>Texas Instruments Fusion Digital Power Designer v7.10.1.0 [2023-10-27]</Creator>
         <Devices>
           <Device>
             <PartID>UCD90124A</PartID>
@@ -2102,8 +2102,8 @@
                 <ID>VOUT_MODE</ID>
                 <Code>32</Code>
                 <IDAndCode>VOUT_MODE [0x20,Rail #1]</IDAndCode>
-                <ValueText>EXP =-10</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x16" />
+                <ValueText>EXP =-11</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x15" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>0</Page>
@@ -2152,9 +2152,9 @@
                 <ID>IOUT_OC_FAULT_LIMIT</ID>
                 <Code>70</Code>
                 <IDAndCode>IOUT_OC_FAULT_LIMIT [0x46,Rail #1]</IDAndCode>
-                <ValueText>2.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xC200" />
-                <ValueNumeric>2</ValueNumeric>
+                <ValueText>3.000 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xC300" />
+                <ValueNumeric>3</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>0</Page>
@@ -2165,9 +2165,9 @@
                 <ID>IOUT_OC_WARN_LIMIT</ID>
                 <Code>74</Code>
                 <IDAndCode>IOUT_OC_WARN_LIMIT [0x4A,Rail #1]</IDAndCode>
-                <ValueText>1.500 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xBB00" />
-                <ValueNumeric>1.5</ValueNumeric>
+                <ValueText>2.000 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xC200" />
+                <ValueNumeric>2</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>0</Page>
@@ -2178,9 +2178,9 @@
                 <ID>IOUT_UC_FAULT_LIMIT</ID>
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #1]</IDAndCode>
-                <ValueText>0.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
-                <ValueNumeric>0</ValueNumeric>
+                <ValueText>-0.500 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xAC00" />
+                <ValueNumeric>-0.5</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>0</Page>
@@ -2239,7 +2239,7 @@
                 <ID>OPERATION</ID>
                 <Code>1</Code>
                 <IDAndCode>OPERATION [0x01,Rail #1]</IDAndCode>
-                <ValueText>Unit: On; Margin: None</ValueText>
+                <ValueText>Unit: On (10b); Margin: None</ValueText>
                 <ValueEncoded xsi:type="PMBusByte" Hex="0x80" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
@@ -2277,9 +2277,9 @@
                 <ID>POWER_GOOD_OFF</ID>
                 <Code>95</Code>
                 <IDAndCode>POWER_GOOD_OFF [0x5F,Rail #1]</IDAndCode>
-                <ValueText>10.200 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x28CD" />
-                <ValueNumeric>10.2</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>0</Page>
@@ -2290,9 +2290,9 @@
                 <ID>POWER_GOOD_ON</ID>
                 <Code>94</Code>
                 <IDAndCode>POWER_GOOD_ON [0x5E,Rail #1]</IDAndCode>
-                <ValueText>10.800 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x2B33" />
-                <ValueNumeric>10.8</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>0</Page>
@@ -2480,9 +2480,9 @@
                 <ID>VOUT_COMMAND</ID>
                 <Code>33</Code>
                 <IDAndCode>VOUT_COMMAND [0x21,Rail #1]</IDAndCode>
-                <ValueText>12.000 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x3000" />
-                <ValueNumeric>12</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>0</Page>
@@ -2493,9 +2493,9 @@
                 <ID>VOUT_MARGIN_HIGH</ID>
                 <Code>37</Code>
                 <IDAndCode>VOUT_MARGIN_HIGH [0x25,Rail #1]</IDAndCode>
-                <ValueText>12.600 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x3266" />
-                <ValueNumeric>12.6</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>0</Page>
@@ -2506,9 +2506,9 @@
                 <ID>VOUT_MARGIN_LOW</ID>
                 <Code>38</Code>
                 <IDAndCode>VOUT_MARGIN_LOW [0x26,Rail #1]</IDAndCode>
-                <ValueText>11.400 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x2D9A" />
-                <ValueNumeric>11.4</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>0</Page>
@@ -2519,9 +2519,9 @@
                 <ID>VOUT_OV_FAULT_LIMIT</ID>
                 <Code>64</Code>
                 <IDAndCode>VOUT_OV_FAULT_LIMIT [0x40,Rail #1]</IDAndCode>
-                <ValueText>13.800 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x3733" />
-                <ValueNumeric>13.8</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>0</Page>
@@ -2532,9 +2532,9 @@
                 <ID>VOUT_OV_WARN_LIMIT</ID>
                 <Code>66</Code>
                 <IDAndCode>VOUT_OV_WARN_LIMIT [0x42,Rail #1]</IDAndCode>
-                <ValueText>13.200 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x34CD" />
-                <ValueNumeric>13.2</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>0</Page>
@@ -2545,9 +2545,9 @@
                 <ID>VOUT_SCALE_MONITOR</ID>
                 <Code>42</Code>
                 <IDAndCode>VOUT_SCALE_MONITOR [0x2A,Rail #1]</IDAndCode>
-                <ValueText>0.164 </ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xA2A0" />
-                <ValueNumeric>0.164</ValueNumeric>
+                <ValueText>1.000 </ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xBA00" />
+                <ValueNumeric>1</ValueNumeric>
                 <ParameterType>UnitlessThreeDigit</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>0</Page>
@@ -2558,9 +2558,9 @@
                 <ID>VOUT_UV_FAULT_LIMIT</ID>
                 <Code>68</Code>
                 <IDAndCode>VOUT_UV_FAULT_LIMIT [0x44,Rail #1]</IDAndCode>
-                <ValueText>10.200 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x28CD" />
-                <ValueNumeric>10.2</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>0</Page>
@@ -2571,9 +2571,9 @@
                 <ID>VOUT_UV_WARN_LIMIT</ID>
                 <Code>67</Code>
                 <IDAndCode>VOUT_UV_WARN_LIMIT [0x43,Rail #1]</IDAndCode>
-                <ValueText>10.800 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x2B33" />
-                <ValueNumeric>10.8</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>0</Page>
@@ -2584,8 +2584,8 @@
                 <ID>VOUT_MODE</ID>
                 <Code>32</Code>
                 <IDAndCode>VOUT_MODE [0x20,Rail #2]</IDAndCode>
-                <ValueText>EXP =-13</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x13" />
+                <ValueText>EXP =-12</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x14" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>1</Page>
@@ -2660,9 +2660,9 @@
                 <ID>IOUT_UC_FAULT_LIMIT</ID>
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #2]</IDAndCode>
-                <ValueText>0.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
-                <ValueNumeric>0</ValueNumeric>
+                <ValueText>-0.500 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xAC00" />
+                <ValueNumeric>-0.5</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>1</Page>
@@ -2733,9 +2733,9 @@
                 <ID>OT_FAULT_LIMIT</ID>
                 <Code>79</Code>
                 <IDAndCode>OT_FAULT_LIMIT [0x4F,Rail #2]</IDAndCode>
-                <ValueText>255 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xF3FC" />
-                <ValueNumeric>255</ValueNumeric>
+                <ValueText>140 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xF230" />
+                <ValueNumeric>140</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>1</Page>
@@ -2746,9 +2746,9 @@
                 <ID>OT_WARN_LIMIT</ID>
                 <Code>81</Code>
                 <IDAndCode>OT_WARN_LIMIT [0x51,Rail #2]</IDAndCode>
-                <ValueText>255 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xF3FC" />
-                <ValueNumeric>255</ValueNumeric>
+                <ValueText>120 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xEBC0" />
+                <ValueNumeric>120</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>1</Page>
@@ -2760,7 +2760,7 @@
                 <Code>95</Code>
                 <IDAndCode>POWER_GOOD_OFF [0x5F,Rail #2]</IDAndCode>
                 <ValueText>0.900 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x1CCD" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0E66" />
                 <ValueNumeric>0.9</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
@@ -2773,7 +2773,7 @@
                 <Code>94</Code>
                 <IDAndCode>POWER_GOOD_ON [0x5E,Rail #2]</IDAndCode>
                 <ValueText>1.013 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x206A" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x1035" />
                 <ValueNumeric>1.013</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
@@ -2885,9 +2885,9 @@
                 <ID>TEMPERATURE_CAL_OFFSET</ID>
                 <Code>229</Code>
                 <IDAndCode>TEMPERATURE_CAL_OFFSET [MFR 21,0xE5,Rail #2]</IDAndCode>
-                <ValueText>-170.00 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xF558" />
-                <ValueNumeric>-170</ValueNumeric>
+                <ValueText>-253.00 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xF40C" />
+                <ValueNumeric>-253</ValueNumeric>
                 <ParameterType>TemperatureCalibration</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>1</Page>
@@ -2963,7 +2963,7 @@
                 <Code>33</Code>
                 <IDAndCode>VOUT_COMMAND [0x21,Rail #2]</IDAndCode>
                 <ValueText>2.250 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x4800" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x2400" />
                 <ValueNumeric>2.25</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
@@ -2976,7 +2976,7 @@
                 <Code>37</Code>
                 <IDAndCode>VOUT_MARGIN_HIGH [0x25,Rail #2]</IDAndCode>
                 <ValueText>3.375 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x6C00" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x3600" />
                 <ValueNumeric>3.375</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
@@ -2989,7 +2989,7 @@
                 <Code>38</Code>
                 <IDAndCode>VOUT_MARGIN_LOW [0x26,Rail #2]</IDAndCode>
                 <ValueText>1.125 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x2400" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x1200" />
                 <ValueNumeric>1.125</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
@@ -3002,7 +3002,7 @@
                 <Code>64</Code>
                 <IDAndCode>VOUT_OV_FAULT_LIMIT [0x40,Rail #2]</IDAndCode>
                 <ValueText>3.600 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x7333" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x399A" />
                 <ValueNumeric>3.6</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -3015,7 +3015,7 @@
                 <Code>66</Code>
                 <IDAndCode>VOUT_OV_WARN_LIMIT [0x42,Rail #2]</IDAndCode>
                 <ValueText>3.488 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x6F9E" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x37CF" />
                 <ValueNumeric>3.488</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -3041,7 +3041,7 @@
                 <Code>68</Code>
                 <IDAndCode>VOUT_UV_FAULT_LIMIT [0x44,Rail #2]</IDAndCode>
                 <ValueText>0.900 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x1CCD" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0E66" />
                 <ValueNumeric>0.9</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -3054,7 +3054,7 @@
                 <Code>67</Code>
                 <IDAndCode>VOUT_UV_WARN_LIMIT [0x43,Rail #2]</IDAndCode>
                 <ValueText>1.013 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x206A" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x1035" />
                 <ValueNumeric>1.013</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -3116,9 +3116,9 @@
                 <ID>IOUT_OC_FAULT_LIMIT</ID>
                 <Code>70</Code>
                 <IDAndCode>IOUT_OC_FAULT_LIMIT [0x46,Rail #3]</IDAndCode>
-                <ValueText>4.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xCA00" />
-                <ValueNumeric>4</ValueNumeric>
+                <ValueText>5.000 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xCA80" />
+                <ValueNumeric>5</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>2</Page>
@@ -3129,9 +3129,9 @@
                 <ID>IOUT_OC_WARN_LIMIT</ID>
                 <Code>74</Code>
                 <IDAndCode>IOUT_OC_WARN_LIMIT [0x4A,Rail #3]</IDAndCode>
-                <ValueText>3.500 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xC380" />
-                <ValueNumeric>3.5</ValueNumeric>
+                <ValueText>4.000 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xCA00" />
+                <ValueNumeric>4</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>2</Page>
@@ -3142,9 +3142,9 @@
                 <ID>IOUT_UC_FAULT_LIMIT</ID>
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #3]</IDAndCode>
-                <ValueText>0.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
-                <ValueNumeric>0</ValueNumeric>
+                <ValueText>-0.500 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xAC00" />
+                <ValueNumeric>-0.5</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>2</Page>
@@ -3241,9 +3241,9 @@
                 <ID>POWER_GOOD_OFF</ID>
                 <Code>95</Code>
                 <IDAndCode>POWER_GOOD_OFF [0x5F,Rail #3]</IDAndCode>
-                <ValueText>2.805 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x2CE1" />
-                <ValueNumeric>2.805</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>2</Page>
@@ -3254,9 +3254,9 @@
                 <ID>POWER_GOOD_ON</ID>
                 <Code>94</Code>
                 <IDAndCode>POWER_GOOD_ON [0x5E,Rail #3]</IDAndCode>
-                <ValueText>2.970 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x2F85" />
-                <ValueNumeric>2.97</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>2</Page>
@@ -3444,9 +3444,9 @@
                 <ID>VOUT_COMMAND</ID>
                 <Code>33</Code>
                 <IDAndCode>VOUT_COMMAND [0x21,Rail #3]</IDAndCode>
-                <ValueText>3.300 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x34CD" />
-                <ValueNumeric>3.3</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>2</Page>
@@ -3457,9 +3457,9 @@
                 <ID>VOUT_MARGIN_HIGH</ID>
                 <Code>37</Code>
                 <IDAndCode>VOUT_MARGIN_HIGH [0x25,Rail #3]</IDAndCode>
-                <ValueText>3.465 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x3771" />
-                <ValueNumeric>3.465</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>2</Page>
@@ -3470,9 +3470,9 @@
                 <ID>VOUT_MARGIN_LOW</ID>
                 <Code>38</Code>
                 <IDAndCode>VOUT_MARGIN_LOW [0x26,Rail #3]</IDAndCode>
-                <ValueText>3.135 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x3229" />
-                <ValueNumeric>3.135</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>2</Page>
@@ -3483,9 +3483,9 @@
                 <ID>VOUT_OV_FAULT_LIMIT</ID>
                 <Code>64</Code>
                 <IDAndCode>VOUT_OV_FAULT_LIMIT [0x40,Rail #3]</IDAndCode>
-                <ValueText>3.795 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x3CB8" />
-                <ValueNumeric>3.795</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>2</Page>
@@ -3496,9 +3496,9 @@
                 <ID>VOUT_OV_WARN_LIMIT</ID>
                 <Code>66</Code>
                 <IDAndCode>VOUT_OV_WARN_LIMIT [0x42,Rail #3]</IDAndCode>
-                <ValueText>3.630 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x3A14" />
-                <ValueNumeric>3.63</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>2</Page>
@@ -3509,9 +3509,9 @@
                 <ID>VOUT_SCALE_MONITOR</ID>
                 <Code>42</Code>
                 <IDAndCode>VOUT_SCALE_MONITOR [0x2A,Rail #3]</IDAndCode>
-                <ValueText>0.500 </ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xB200" />
-                <ValueNumeric>0.5</ValueNumeric>
+                <ValueText>1.000 </ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xBA00" />
+                <ValueNumeric>1</ValueNumeric>
                 <ParameterType>UnitlessThreeDigit</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>2</Page>
@@ -3522,9 +3522,9 @@
                 <ID>VOUT_UV_FAULT_LIMIT</ID>
                 <Code>68</Code>
                 <IDAndCode>VOUT_UV_FAULT_LIMIT [0x44,Rail #3]</IDAndCode>
-                <ValueText>2.805 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x2CE1" />
-                <ValueNumeric>2.805</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>2</Page>
@@ -3535,9 +3535,9 @@
                 <ID>VOUT_UV_WARN_LIMIT</ID>
                 <Code>67</Code>
                 <IDAndCode>VOUT_UV_WARN_LIMIT [0x43,Rail #3]</IDAndCode>
-                <ValueText>2.970 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x2F85" />
-                <ValueNumeric>2.97</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>2</Page>
@@ -3548,8 +3548,8 @@
                 <ID>VOUT_MODE</ID>
                 <Code>32</Code>
                 <IDAndCode>VOUT_MODE [0x20,Rail #4]</IDAndCode>
-                <ValueText>EXP =-10</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x16" />
+                <ValueText>EXP =-11</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x15" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>3</Page>
@@ -3598,9 +3598,9 @@
                 <ID>IOUT_OC_FAULT_LIMIT</ID>
                 <Code>70</Code>
                 <IDAndCode>IOUT_OC_FAULT_LIMIT [0x46,Rail #4]</IDAndCode>
-                <ValueText>2.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xC200" />
-                <ValueNumeric>2</ValueNumeric>
+                <ValueText>3.000 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xC300" />
+                <ValueNumeric>3</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>3</Page>
@@ -3611,9 +3611,9 @@
                 <ID>IOUT_OC_WARN_LIMIT</ID>
                 <Code>74</Code>
                 <IDAndCode>IOUT_OC_WARN_LIMIT [0x4A,Rail #4]</IDAndCode>
-                <ValueText>1.500 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xBB00" />
-                <ValueNumeric>1.5</ValueNumeric>
+                <ValueText>2.000 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xC200" />
+                <ValueNumeric>2</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>3</Page>
@@ -3624,9 +3624,9 @@
                 <ID>IOUT_UC_FAULT_LIMIT</ID>
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #4]</IDAndCode>
-                <ValueText>0.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
-                <ValueNumeric>0</ValueNumeric>
+                <ValueText>-0.500 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xAC00" />
+                <ValueNumeric>-0.5</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>3</Page>
@@ -3723,9 +3723,9 @@
                 <ID>POWER_GOOD_OFF</ID>
                 <Code>95</Code>
                 <IDAndCode>POWER_GOOD_OFF [0x5F,Rail #4]</IDAndCode>
-                <ValueText>10.200 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x28CD" />
-                <ValueNumeric>10.2</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>3</Page>
@@ -3736,9 +3736,9 @@
                 <ID>POWER_GOOD_ON</ID>
                 <Code>94</Code>
                 <IDAndCode>POWER_GOOD_ON [0x5E,Rail #4]</IDAndCode>
-                <ValueText>10.800 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x2B33" />
-                <ValueNumeric>10.8</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>3</Page>
@@ -3926,9 +3926,9 @@
                 <ID>VOUT_COMMAND</ID>
                 <Code>33</Code>
                 <IDAndCode>VOUT_COMMAND [0x21,Rail #4]</IDAndCode>
-                <ValueText>12.000 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x3000" />
-                <ValueNumeric>12</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>3</Page>
@@ -3939,9 +3939,9 @@
                 <ID>VOUT_MARGIN_HIGH</ID>
                 <Code>37</Code>
                 <IDAndCode>VOUT_MARGIN_HIGH [0x25,Rail #4]</IDAndCode>
-                <ValueText>12.600 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x3266" />
-                <ValueNumeric>12.6</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>3</Page>
@@ -3952,9 +3952,9 @@
                 <ID>VOUT_MARGIN_LOW</ID>
                 <Code>38</Code>
                 <IDAndCode>VOUT_MARGIN_LOW [0x26,Rail #4]</IDAndCode>
-                <ValueText>11.400 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x2D9A" />
-                <ValueNumeric>11.4</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>3</Page>
@@ -3965,9 +3965,9 @@
                 <ID>VOUT_OV_FAULT_LIMIT</ID>
                 <Code>64</Code>
                 <IDAndCode>VOUT_OV_FAULT_LIMIT [0x40,Rail #4]</IDAndCode>
-                <ValueText>13.800 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x3733" />
-                <ValueNumeric>13.8</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>3</Page>
@@ -3978,9 +3978,9 @@
                 <ID>VOUT_OV_WARN_LIMIT</ID>
                 <Code>66</Code>
                 <IDAndCode>VOUT_OV_WARN_LIMIT [0x42,Rail #4]</IDAndCode>
-                <ValueText>13.200 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x34CD" />
-                <ValueNumeric>13.2</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>3</Page>
@@ -3991,9 +3991,9 @@
                 <ID>VOUT_SCALE_MONITOR</ID>
                 <Code>42</Code>
                 <IDAndCode>VOUT_SCALE_MONITOR [0x2A,Rail #4]</IDAndCode>
-                <ValueText>0.164 </ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xA2A0" />
-                <ValueNumeric>0.164</ValueNumeric>
+                <ValueText>1.000 </ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xBA00" />
+                <ValueNumeric>1</ValueNumeric>
                 <ParameterType>UnitlessThreeDigit</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>3</Page>
@@ -4004,9 +4004,9 @@
                 <ID>VOUT_UV_FAULT_LIMIT</ID>
                 <Code>68</Code>
                 <IDAndCode>VOUT_UV_FAULT_LIMIT [0x44,Rail #4]</IDAndCode>
-                <ValueText>10.200 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x28CD" />
-                <ValueNumeric>10.2</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>3</Page>
@@ -4017,9 +4017,9 @@
                 <ID>VOUT_UV_WARN_LIMIT</ID>
                 <Code>67</Code>
                 <IDAndCode>VOUT_UV_WARN_LIMIT [0x43,Rail #4]</IDAndCode>
-                <ValueText>10.800 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x2B33" />
-                <ValueNumeric>10.8</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>3</Page>
@@ -4030,8 +4030,8 @@
                 <ID>VOUT_MODE</ID>
                 <Code>32</Code>
                 <IDAndCode>VOUT_MODE [0x20,Rail #5]</IDAndCode>
-                <ValueText>EXP =-13</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x13" />
+                <ValueText>EXP =-12</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x14" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>4</Page>
@@ -4106,9 +4106,9 @@
                 <ID>IOUT_UC_FAULT_LIMIT</ID>
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #5]</IDAndCode>
-                <ValueText>0.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
-                <ValueNumeric>0</ValueNumeric>
+                <ValueText>-0.500 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xAC00" />
+                <ValueNumeric>-0.5</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>4</Page>
@@ -4179,9 +4179,9 @@
                 <ID>OT_FAULT_LIMIT</ID>
                 <Code>79</Code>
                 <IDAndCode>OT_FAULT_LIMIT [0x4F,Rail #5]</IDAndCode>
-                <ValueText>255 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xF3FC" />
-                <ValueNumeric>255</ValueNumeric>
+                <ValueText>140 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xF230" />
+                <ValueNumeric>140</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>4</Page>
@@ -4192,9 +4192,9 @@
                 <ID>OT_WARN_LIMIT</ID>
                 <Code>81</Code>
                 <IDAndCode>OT_WARN_LIMIT [0x51,Rail #5]</IDAndCode>
-                <ValueText>255 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xF3FC" />
-                <ValueNumeric>255</ValueNumeric>
+                <ValueText>120 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xEBC0" />
+                <ValueNumeric>120</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>4</Page>
@@ -4206,7 +4206,7 @@
                 <Code>95</Code>
                 <IDAndCode>POWER_GOOD_OFF [0x5F,Rail #5]</IDAndCode>
                 <ValueText>0.900 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x1CCD" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0E66" />
                 <ValueNumeric>0.9</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
@@ -4219,7 +4219,7 @@
                 <Code>94</Code>
                 <IDAndCode>POWER_GOOD_ON [0x5E,Rail #5]</IDAndCode>
                 <ValueText>1.013 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x206A" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x1035" />
                 <ValueNumeric>1.013</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
@@ -4331,9 +4331,9 @@
                 <ID>TEMPERATURE_CAL_OFFSET</ID>
                 <Code>229</Code>
                 <IDAndCode>TEMPERATURE_CAL_OFFSET [MFR 21,0xE5,Rail #5]</IDAndCode>
-                <ValueText>-170.00 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xF558" />
-                <ValueNumeric>-170</ValueNumeric>
+                <ValueText>-253.00 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xF40C" />
+                <ValueNumeric>-253</ValueNumeric>
                 <ParameterType>TemperatureCalibration</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>4</Page>
@@ -4409,7 +4409,7 @@
                 <Code>33</Code>
                 <IDAndCode>VOUT_COMMAND [0x21,Rail #5]</IDAndCode>
                 <ValueText>2.250 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x4800" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x2400" />
                 <ValueNumeric>2.25</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
@@ -4422,7 +4422,7 @@
                 <Code>37</Code>
                 <IDAndCode>VOUT_MARGIN_HIGH [0x25,Rail #5]</IDAndCode>
                 <ValueText>3.375 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x6C00" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x3600" />
                 <ValueNumeric>3.375</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
@@ -4435,7 +4435,7 @@
                 <Code>38</Code>
                 <IDAndCode>VOUT_MARGIN_LOW [0x26,Rail #5]</IDAndCode>
                 <ValueText>1.125 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x2400" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x1200" />
                 <ValueNumeric>1.125</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
@@ -4448,7 +4448,7 @@
                 <Code>64</Code>
                 <IDAndCode>VOUT_OV_FAULT_LIMIT [0x40,Rail #5]</IDAndCode>
                 <ValueText>3.600 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x7333" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x399A" />
                 <ValueNumeric>3.6</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -4461,7 +4461,7 @@
                 <Code>66</Code>
                 <IDAndCode>VOUT_OV_WARN_LIMIT [0x42,Rail #5]</IDAndCode>
                 <ValueText>3.488 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x6F9E" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x37CF" />
                 <ValueNumeric>3.488</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -4487,7 +4487,7 @@
                 <Code>68</Code>
                 <IDAndCode>VOUT_UV_FAULT_LIMIT [0x44,Rail #5]</IDAndCode>
                 <ValueText>0.900 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x1CCD" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0E66" />
                 <ValueNumeric>0.9</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -4500,7 +4500,7 @@
                 <Code>67</Code>
                 <IDAndCode>VOUT_UV_WARN_LIMIT [0x43,Rail #5]</IDAndCode>
                 <ValueText>1.013 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x206A" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x1035" />
                 <ValueNumeric>1.013</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -4562,9 +4562,9 @@
                 <ID>IOUT_OC_FAULT_LIMIT</ID>
                 <Code>70</Code>
                 <IDAndCode>IOUT_OC_FAULT_LIMIT [0x46,Rail #6]</IDAndCode>
-                <ValueText>4.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xCA00" />
-                <ValueNumeric>4</ValueNumeric>
+                <ValueText>5.000 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xCA80" />
+                <ValueNumeric>5</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>5</Page>
@@ -4575,9 +4575,9 @@
                 <ID>IOUT_OC_WARN_LIMIT</ID>
                 <Code>74</Code>
                 <IDAndCode>IOUT_OC_WARN_LIMIT [0x4A,Rail #6]</IDAndCode>
-                <ValueText>3.500 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xC380" />
-                <ValueNumeric>3.5</ValueNumeric>
+                <ValueText>4.000 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xCA00" />
+                <ValueNumeric>4</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>5</Page>
@@ -4588,9 +4588,9 @@
                 <ID>IOUT_UC_FAULT_LIMIT</ID>
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #6]</IDAndCode>
-                <ValueText>0.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
-                <ValueNumeric>0</ValueNumeric>
+                <ValueText>-0.500 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xAC00" />
+                <ValueNumeric>-0.5</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>5</Page>
@@ -4687,9 +4687,9 @@
                 <ID>POWER_GOOD_OFF</ID>
                 <Code>95</Code>
                 <IDAndCode>POWER_GOOD_OFF [0x5F,Rail #6]</IDAndCode>
-                <ValueText>2.805 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x2CE1" />
-                <ValueNumeric>2.805</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>5</Page>
@@ -4700,9 +4700,9 @@
                 <ID>POWER_GOOD_ON</ID>
                 <Code>94</Code>
                 <IDAndCode>POWER_GOOD_ON [0x5E,Rail #6]</IDAndCode>
-                <ValueText>2.970 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x2F85" />
-                <ValueNumeric>2.97</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>5</Page>
@@ -4890,9 +4890,9 @@
                 <ID>VOUT_COMMAND</ID>
                 <Code>33</Code>
                 <IDAndCode>VOUT_COMMAND [0x21,Rail #6]</IDAndCode>
-                <ValueText>3.300 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x34CD" />
-                <ValueNumeric>3.3</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>5</Page>
@@ -4903,9 +4903,9 @@
                 <ID>VOUT_MARGIN_HIGH</ID>
                 <Code>37</Code>
                 <IDAndCode>VOUT_MARGIN_HIGH [0x25,Rail #6]</IDAndCode>
-                <ValueText>3.465 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x3771" />
-                <ValueNumeric>3.465</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>5</Page>
@@ -4916,9 +4916,9 @@
                 <ID>VOUT_MARGIN_LOW</ID>
                 <Code>38</Code>
                 <IDAndCode>VOUT_MARGIN_LOW [0x26,Rail #6]</IDAndCode>
-                <ValueText>3.135 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x3229" />
-                <ValueNumeric>3.135</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>5</Page>
@@ -4929,9 +4929,9 @@
                 <ID>VOUT_OV_FAULT_LIMIT</ID>
                 <Code>64</Code>
                 <IDAndCode>VOUT_OV_FAULT_LIMIT [0x40,Rail #6]</IDAndCode>
-                <ValueText>3.795 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x3CB8" />
-                <ValueNumeric>3.795</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>5</Page>
@@ -4942,9 +4942,9 @@
                 <ID>VOUT_OV_WARN_LIMIT</ID>
                 <Code>66</Code>
                 <IDAndCode>VOUT_OV_WARN_LIMIT [0x42,Rail #6]</IDAndCode>
-                <ValueText>3.630 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x3A14" />
-                <ValueNumeric>3.63</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>5</Page>
@@ -4955,9 +4955,9 @@
                 <ID>VOUT_SCALE_MONITOR</ID>
                 <Code>42</Code>
                 <IDAndCode>VOUT_SCALE_MONITOR [0x2A,Rail #6]</IDAndCode>
-                <ValueText>0.500 </ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xB200" />
-                <ValueNumeric>0.5</ValueNumeric>
+                <ValueText>1.000 </ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xBA00" />
+                <ValueNumeric>1</ValueNumeric>
                 <ParameterType>UnitlessThreeDigit</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>5</Page>
@@ -4968,9 +4968,9 @@
                 <ID>VOUT_UV_FAULT_LIMIT</ID>
                 <Code>68</Code>
                 <IDAndCode>VOUT_UV_FAULT_LIMIT [0x44,Rail #6]</IDAndCode>
-                <ValueText>2.805 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x2CE1" />
-                <ValueNumeric>2.805</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>5</Page>
@@ -4981,9 +4981,9 @@
                 <ID>VOUT_UV_WARN_LIMIT</ID>
                 <Code>67</Code>
                 <IDAndCode>VOUT_UV_WARN_LIMIT [0x43,Rail #6]</IDAndCode>
-                <ValueText>2.970 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x2F85" />
-                <ValueNumeric>2.97</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
                 <Page>5</Page>
