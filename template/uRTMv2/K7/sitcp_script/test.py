@@ -195,5 +195,19 @@ if TEST_GPIO:
 # PMBUS test
 if TEST_PMBUS:
     pmbus = ucd90124.ucd90124()
-    print(pmbus.read_device_id())
+    # print(pmbus.read_device_id())
+    print("UCD internal temperature: %.2fC"%pmbus.read_device_temperature())
+    pmbus.fmc2_power_on()
+    pmbus.fmc3_power_on()
+
+    # pmbus.fmc2_power_off()
+    # pmbus.fmc3_power_off()
+
+    # pmbus.fmc2_power_3v3aux_on()
+    # pmbus.fmc3_power_3v3aux_on()
+
+    pmbus.fmc2_power_3v3aux_off()
+    pmbus.fmc3_power_3v3aux_off()
+
     pmbus.print_info()
+    pmbus.print_status()
