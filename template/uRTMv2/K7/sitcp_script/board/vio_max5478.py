@@ -33,7 +33,7 @@ class vio(object):
             dac = 0
         if dac > 0xFF:
             dac = 0xFF
-        print("0x%x"%dac)
+        # print("0x%x"%dac)
         return (dac & 0xFF)
 
     def set(self, voltage = 1200, channel = CH_FMC2|CH_FMC3):

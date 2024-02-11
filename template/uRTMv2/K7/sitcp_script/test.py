@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# This is server.py file
+# This is test.py file
 # author: zhj@ihep.ac.cn
 # 2019-06-18 created
 
