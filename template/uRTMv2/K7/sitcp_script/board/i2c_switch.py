@@ -30,20 +30,11 @@ class i2c_switch(object):
 
   def get_status(self):
     temp = self.i2c.read8()
-    if(temp&DDR_PIN):
-        print("DDR I2C enable")
-    if(temp&FPGA_PIN):
-        print("FPGA I2C enable")
-    if(temp&FIREFLY1_PIN):
-        print("FIREFLY1 I2C enable")
-    if(temp&FIREFLY0_PIN):
-        print("FIREFLY0 I2C enable")
-    if(temp&CLK_PIN):
-        print("CLK I2C enable")
-    if(temp&FMC3_PIN):
-        print("FMC3 I2C enable")
-    if(temp&FMC2_PIN):
-        print("FMC2 I2C enable")
+    print("I2C   \tDDR3\tFPGA\tOPT1\tOPT2\tCLK\tFMC2\tFMC3")
+    print("Switch\t%d  \t%d  \t%d      \t%d      \t%d \t%d  \t%d"%(\
+      1 if temp&DDR_PIN else 0, 1 if temp&FPGA_PIN else 0,
+      1 if temp&FIREFLY1_PIN else 0, 1 if temp&FIREFLY0_PIN else 0,
+      1 if temp&CLK_PIN else 0, 1 if temp&FMC2_PIN else 0, 1 if temp&FMC3_PIN else 0))
 
   def enable_ddr(self):
     temp = self.i2c.read8()

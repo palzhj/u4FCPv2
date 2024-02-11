@@ -65,13 +65,8 @@ if TEST_REG:
 # sysmon test
 if TEST_SYSMON:
     sysmon = sysmon.sysmon()
-    print("temperature(min,val,max)/degree:",sysmon.temperature_min(), sysmon.temperature(), sysmon.temperature_max())
-    print("vccint(min,val,max)/V:",sysmon.vccint_min(), sysmon.vccint(), sysmon.vccint_max())
-    print("vccaux(min,val,max)/V:",sysmon.vccaux_min(), sysmon.vccaux(), sysmon.vccaux_max())
-    print("vp-vn/V:",sysmon.vpvn())
-    print("vrefp/V:",sysmon.vrefp())
-    print("vrefn/V:",sysmon.vrefn())
-    print("vccbram(min,val,max)/V:",sysmon.vccbram_min(), sysmon.vccbram(), sysmon.vccbram_max())
+    sysmon.print_status()
+    print("")
 
 #################################################################
 # i2c test
@@ -133,6 +128,7 @@ if TEST_VIO:
 # GPIO test
 if TEST_GPIO:
     gpio = gpio.gpio()
+    gpio.gpio_config()
 
     sleep(0.5)
     gpio.led_blue_on()
@@ -196,7 +192,7 @@ if TEST_GPIO:
 if TEST_PMBUS:
     pmbus = ucd90124.ucd90124()
     # print(pmbus.read_device_id())
-    print("UCD internal temperature: %.2fC"%pmbus.read_device_temperature())
+    print("UCD internal temperature: %.2f C"%pmbus.read_device_temperature())
     pmbus.fmc2_power_on()
     pmbus.fmc3_power_on()
 

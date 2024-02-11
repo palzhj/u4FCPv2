@@ -539,11 +539,11 @@ class ucd90124:
         else:
             fmc3_temperature_status = "N"
 
-        print("    \tPRSNT\tPower\t3V3AUX\tTemp\t----Software Fault----\t----Hardware Fault----")
-        print("FMC \t     \t     \t      \t    \t12V0\t3V3\tVADJ\t12V0\t3V3\t3V3AUX")
-        print("FMC2\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s"%(fmc2_present, fmc2_power, fmc2_3v3aux,fmc2_temperature_status,
+        print("FMC  \tPRSNT\tPower \t3V3AUX\tTemp \t----Software Fault----\t----Hardware Fault----")
+        print("Power\tY/N  \tOn/Off\tOn/Off\tN/W/F\t12V0\t3V3\tVADJ\t12V0\t3V3\t3V3AUX")
+        print("FMC2 \t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s"%(fmc2_present, fmc2_power, fmc2_3v3aux,fmc2_temperature_status,
             fmc2_12v0_software_status, fmc2_3v3_software_status, fmc2_vadj_software_status,
             fmc2_12v0_hardware_fault, fmc2_3v3_hardware_fault, fmc2_3v3aux_hardware_fault))
-        print("FMC3\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s"%(fmc3_present, fmc3_power, fmc3_3v3aux,fmc3_temperature_status,
+        print("FMC3 \t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s"%(fmc3_present, fmc3_power, fmc3_3v3aux,fmc3_temperature_status,
             fmc3_12v0_software_status, fmc3_3v3_software_status, fmc3_vadj_software_status,
             fmc3_12v0_hardware_fault, fmc3_3v3_hardware_fault, fmc3_3v3aux_hardware_fault))

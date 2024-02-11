@@ -1,4 +1,4 @@
-#!/usr/bin/python           
+#!/usr/bin/python
 # This is i2c.py file
 # author: zhj@ihep.ac.cn
 # 2019-06-18 created
@@ -53,11 +53,11 @@ class sysmon(object):
         temp = (temp>>6) / 1024 * 3
         return temp
 
-    # On power-up or after reset, all minimum registers are set to FFFFh and all maximum registers 
-    # are set to 0000h. 
+    # On power-up or after reset, all minimum registers are set to FFFFh and all maximum registers
+    # are set to 0000h.
     # Each new measurement generated for an on-chip sensor is compared to the contents of its maximum
     # and minimum registers. If the measured value is greater than the contents of its maximum registers,
-    # the measured value is written to the maximum register. Similarly, for the minimum register, 
+    # the measured value is written to the maximum register. Similarly, for the minimum register,
     # if the measured value is less than the contents of its minimum register, the measured value is
     # written to the minimum register. This check is carried out every time a measurement result is
     # written to the status registers.
@@ -124,3 +124,17 @@ class sysmon(object):
             return self.vccbram()
         temp = (temp>>6) / 1024 * 3
         return temp
+
+    def print_status(self):
+        print("FPGA       \tMIN\tNOW\tMAX")
+        print("Temperature/C\t%.2f\t%.2f\t%.2f"%(self.temperature_min(),
+            self.temperature(), self.temperature_max()))
+        print("Vccint/V   \t%.2f\t%.2f\t%.2f"%(self.vccint_min(),
+            self.vccint(), self.vccint_max()))
+        print("Vccaux/V   \t%.2f\t%.2f\t%.2f"%(self.vccaux_min(),
+            self.vccaux(), self.vccaux_max()))
+        print("Vp-Vn/V    \t-\t%.2f\t-"%(self.vpvn()))
+        print("Vrefp/V    \t-\t%.2f\t-"%(self.vrefp()))
+        print("Vrefn/V    \t-\t%.2f\t-"%(self.vrefn()))
+        print("Vccbram/V  \t%.2f\t%.2f\t%.2f"%(self.vccbram_min(),
+            self.vccbram(), self.vccbram_max()))

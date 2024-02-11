@@ -146,6 +146,7 @@ class gpio(object):
         self.fpga = tca9554.tca9554(i2c_addr=FPGA_GPIO_ADDR)
         self.fmc  = tca9554.tca9554(i2c_addr=FMC_GPIO_ADDR)
 
+    def gpio_config(self):
         rtm_default_flag = \
             (RTM_GPIO_DEFAULT_0 << 0) | (RTM_GPIO_DEFAULT_1 << 1) | \
             (RTM_GPIO_DEFAULT_2 << 2) | (RTM_GPIO_DEFAULT_3 << 3) | \
@@ -311,6 +312,9 @@ class gpio(object):
     def jtag_rtm_en(self):
         self.fpga.write_pin(FPGA_PIN_JTAG_CON_DIS, 1)
 
+    def get_jtag_rtm(self):
+        return self.fpga.read_pin(FPGA_PIN_JTAG_CON_DIS)
+
     ############################################################
     # JTAG_FMC2
     def jtag_fmc2_dis(self):
@@ -319,6 +323,9 @@ class gpio(object):
     def jtag_fmc2_en(self):
         self.fpga.write_pin(FPGA_PIN_JTAG_FMC2_DIS, 0)
 
+    def get_jtag_fmc2(self):
+        return self.fpga.read_pin(FPGA_PIN_JTAG_FMC2_DIS)
+
     ############################################################
     # JTAG_FMC3
     def jtag_fmc3_dis(self):
@@ -326,6 +333,9 @@ class gpio(object):
 
     def jtag_fmc3_en(self):
         self.fpga.write_pin(FPGA_PIN_JTAG_FMC3_DIS, 0)
+
+    def get_jtag_fmc3(self):
+        return self.fpga.read_pin(FPGA_PIN_JTAG_FMC3_DIS)
 
     ############################################################
     # RTM_MODE
@@ -361,3 +371,26 @@ class gpio(object):
     # FMC3 PG
     def get_fmc3_pg(self):
         return self.fmc.read_pin(FMC_PIN_PG3)
+
+    ############################################################
+    def print_status(self):
+        print("JTAG\tMaster\tFMC2\tFMC3")
+        print("Status\t%s\t%s\t%s"%(\
+            "RTM" if self.get_jtag_rtm() else "CON",
+            "No" if self.get_jtag_fmc2() else "Yes",
+            "No" if self.get_jtag_fmc3() else "Yes"))
+        print("")
+
+        print("-----RTM-----\tPMBUS\tCLK\tPG\t----FPGA----\t")
+        print("Mode\tHandle\tALERT_B\tINT_B\t  \tINIT_B\tDONE\t")
+        print("%s\t%s\t%d\t%d\t%d\t%d\t%d"%(\
+            "RTM" if self.get_rtm_mode() else "Desktop",
+            "Open" if self.get_handle() else "Closed",
+            self.get_pmbus_int(), self.get_clk_int(), self.get_pg(),
+            self.get_fpga_init(), self.get_fpga_done()))
+        print("")
+
+        print("---------FMC2----------\t---------FMC3----------\t")
+        print("PRSNT\tCLK_DIR\tPG\tPRSNT\tCLK_DIR\tPG")
+        print("%d\t%d\t%d\t%d\t%d\t%d"%(self.get_fmc2_prsnt(), self.get_fmc2_clk_dir(),self.get_fmc2_pg(),
+            self.get_fmc3_prsnt(), self.get_fmc3_clk_dir(), self.get_fmc3_pg()))

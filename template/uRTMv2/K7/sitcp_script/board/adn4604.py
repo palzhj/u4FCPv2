@@ -188,7 +188,27 @@ class adn4604(object):
             else:
                 self.tx_control(i, TX_DISABLED)
 
-    def get_output_status(self):
+    def tx_status(self, ch):
+        tx_control_addr = (ch + ADN_TX_CON_OUT0) & 0xFF # TX Basic Control Register offset ix 0x20
+        return 1 if TX_ENABLED & self.i2c.read8(1, tx_control_addr) else 0
+
+    def print_ch_sel(self, input):
+        return "I"+'{:02d}'.format(input)
+
+    def get_tx_status(self):
         temp = self.i2c.readBytes(8, 1, ADN_XPT_STATUS_REG)
-        for i in temp:
-            print("0x%x"%i)
+        print("CLK   \tO00 O01 O02 O03 O04 O05 O06 O07 O08 O09 O10 O11 O12 O13 O14 O15")
+        print("Switch\t%s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s"%(\
+            self.print_ch_sel(temp[0]&0xF), self.print_ch_sel((temp[0]>>4)&0xF),
+            self.print_ch_sel(temp[1]&0xF), self.print_ch_sel((temp[1]>>4)&0xF),
+            self.print_ch_sel(temp[2]&0xF), self.print_ch_sel((temp[2]>>4)&0xF),
+            self.print_ch_sel(temp[3]&0xF), self.print_ch_sel((temp[3]>>4)&0xF),
+            self.print_ch_sel(temp[4]&0xF), self.print_ch_sel((temp[4]>>4)&0xF),
+            self.print_ch_sel(temp[5]&0xF), self.print_ch_sel((temp[5]>>4)&0xF),
+            self.print_ch_sel(temp[6]&0xF), self.print_ch_sel((temp[6]>>4)&0xF),
+            self.print_ch_sel(temp[7]&0xF), self.print_ch_sel((temp[7]>>4)&0xF)))
+        print("OEN  \t%d   %d   %d   %d   %d   %d   %d   %d   %d   %d   %d   %d   %d   %d   %d   %d"%(\
+            self.tx_status(0), self.tx_status(1), self.tx_status(2), self.tx_status(3),
+            self.tx_status(4), self.tx_status(5), self.tx_status(6), self.tx_status(7),
+            self.tx_status(8), self.tx_status(9), self.tx_status(10), self.tx_status(11),
+            self.tx_status(12), self.tx_status(13), self.tx_status(14), self.tx_status(15)))
