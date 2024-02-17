@@ -58,7 +58,7 @@ set VERILOG_FILES "\
 set VHDL_FILES ""
 
 set NGC_FILES "\
-  SiTCP/SiTCP_XC7K_32K_BBT_V110.ngc"
+  SiTCP/SiTCP_XC7K_32K_BBT_V110.edf"
 
 set SIM_FILES ""
 
@@ -68,7 +68,8 @@ set XCI_FILES "\
   ip/clk_wiz.xci \
   ip/ila64.xci \
   ip/sitcp_fifo.xci \
-  ip/xadc_wiz.xci"
+  ip/xadc_wiz.xci\
+  "
 
 set XDC_FILES "uRTMv2_top.xdc"
 
