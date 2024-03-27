@@ -68,11 +68,12 @@ if INIT_CLK:
 
     si5345 = si5345.si5345()
     si5345.load_config()
+    print("PLL initialized")
 
     adn4604 = adn4604.adn4604()
     adn4604.config()
-    # adn4604.get_output_status()
-    print("PLL and Clk switch initialized")
+    adn4604.get_tx_status()
+    print("Clk switch initialized")
     print("")
 
 #################################################################

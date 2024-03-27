@@ -4,6 +4,7 @@
 # 2024-02-01 created
 import lib
 from lib import i2c
+from time import sleep
 
 # User configuration defines for ADN4604 Clock switch output config
 
@@ -123,6 +124,8 @@ RXE_TERM = 0x2    # Input[15:8]  (East)  termination control
 TXS_TERM = 0x4    # Output[7:0]  (South) termination control
 TXN_TERM = 0x8    # Output[15:8] (North) termination control
 
+I2C_DELAY = 0.0
+
 class adn4604(object):
     """Class for communicating with ADN4604 using i2c bus."""
     def __init__(self, i2c_addr = 0b1001_0010, base_address = 0x00020000, clk_freq = 125, i2c_freq = 100):
@@ -131,12 +134,15 @@ class adn4604(object):
 
     def reset(self): # Software Reset
         self.i2c.write8(0x01, 1, ADN_RESET_REG)
+        sleep(I2C_DELAY)
 
     def update(self): # Activates the current stored configuration
         self.i2c.write8(0x1, 1, ADN_XPT_UPDATE_REG)
+        sleep(I2C_DELAY)
 
     def active_map(self, i = ADN_XPT_MAP0):
         self.i2c.write8(i, 1, ADN_XPT_MAP_TABLE_SEL_REG)
+        sleep(I2C_DELAY)
 
     def xpt_config(self): # Configures the cross-connection map
         map0 = bytes()
@@ -149,15 +155,19 @@ class adn4604(object):
         map0 += bytes([(ADN4604_CFG_OUT_13<<4 | ADN4604_CFG_OUT_12) & 0xFF])
         map0 += bytes([(ADN4604_CFG_OUT_15<<4 | ADN4604_CFG_OUT_14) & 0xFF])
         self.i2c.writeBytes(map0, 1, ADN_XPT_MAP0_CON_REG)
+        sleep(I2C_DELAY)
+
         self.active_map(ADN_XPT_MAP0)
         self.update()
 
     def termination_ctl(self, term_cfg):
         self.i2c.write8(term_cfg, 1, ADN_TERMINATION_CTL_REG)
+        sleep(I2C_DELAY)
 
     def tx_control(self, ch, tx_mode): # Sets the output status
         tx_control_addr = (ch + ADN_TX_CON_OUT0) & 0xFF # TX Basic Control Register offset ix 0x20
         self.i2c.write8(tx_mode, 1, tx_control_addr)
+        sleep(I2C_DELAY)
 
     def config(self):
         self.termination_ctl(0)

@@ -27,7 +27,7 @@ import ucd90124
 TEST_REG    = 1
 TEST_SYSMON = 0
 TEST_I2C    = 0
-TEST_CLK    = 0
+TEST_CLK    = 1
 TEST_EEPROM = 0
 TEST_VIO    = 0
 TEST_GPIO   = 0
@@ -97,14 +97,17 @@ if TEST_I2C:
 if TEST_CLK:
     i2c_switch = i2c_switch.i2c_switch()
     i2c_switch.enable_clk()
-    # i2c_switch.get_status()
+    i2c_switch.get_status()
 
     si5345 = si5345.si5345()
     si5345.load_config()
+    print("PLL initialized")
 
     adn4604 = adn4604.adn4604()
     adn4604.config()
-    # adn4604.get_output_status()
+    print("Clk switch initialized")
+    adn4604.get_tx_status()
+    print("")
 
 #################################################################
 # i2c eeprom test
