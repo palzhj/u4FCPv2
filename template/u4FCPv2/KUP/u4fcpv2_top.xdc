@@ -6,18 +6,21 @@ set_property  BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]
 
 ##############################################################################
 # CLK
-set_property PACKAGE_PIN AU32 [get_ports "CLK_IN_P"]
-set_property PACKAGE_PIN AU33 [get_ports "CLK_IN_N"]
-set_property IOSTANDARD LVDS [get_ports "CLK_IN_P"]
-set_property IOSTANDARD LVDS [get_ports "CLK_IN_N"]
-create_clock -period 10.000 -name "CLK_IN" [get_ports "CLK_IN_P"]
-set_property CLOCK_DEDICATED_ROUTE BACKBONE [get_nets clk100]
 
-set_property PACKAGE_PIN AU34 [get_ports "REFCLK_P"]
-set_property PACKAGE_PIN AU35 [get_ports "REFCLK_N"]
-set_property IOSTANDARD LVDS [get_ports "REFCLK_P"]
-set_property IOSTANDARD LVDS [get_ports "REFCLK_N"]
-create_clock -period 5.000 -name "REFCLK" [get_ports "REFCLK_P"]
+# Local clk 200 MHz, has 100 Ohm external termination resistor
+set_property PACKAGE_PIN F13 [get_ports "CLK200_P"]
+set_property PACKAGE_PIN F12 [get_ports "CLK200_N"]
+set_property IOSTANDARD LVDS_25 [get_ports "CLK200_P"]
+set_property IOSTANDARD LVDS_25 [get_ports "CLK200_N"]
+create_clock -period 5.000 -name "CLK200" [get_ports "CLK200_P"]
+
+# clk from out1 of pll1, , has 100 Ohm external termination resistor
+# share io bank with FMC0
+set_property PACKAGE_PIN AU32 [get_ports "CLK_IN_PL_P"]
+set_property PACKAGE_PIN AU33 [get_ports "CLK_IN_PL_N"]
+set_property IOSTANDARD LVDS [get_ports "CLK_IN_PL_P"]
+set_property IOSTANDARD LVDS [get_ports "CLK_IN_PL_N"]
+create_clock -period 8.000 -name "CLK_IN_PL" [get_ports "CLK_IN_PL_P"]
 
 set_property PACKAGE_PIN AK32 [get_ports "CLK_INOUT_P"]
 set_property PACKAGE_PIN AL32 [get_ports "CLK_INOUT_N"]
