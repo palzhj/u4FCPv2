@@ -269,7 +269,7 @@ generate
   for (i = 0; i < SPI_NUM; i = i+1) begin: spi_gen
     simple_spi_top spi(
       .clk_i  (CLK),
-      .rst_i  (RST),
+      .rst_i  (~RST),
       .cyc_i  (wb_cyc),
       .stb_i  (wb_stb & spi_cs & (sub_arb_addr==i)),
       .adr_i  (wb_adr[1:0]),
