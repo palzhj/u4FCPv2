@@ -54,7 +54,7 @@ A block diagram of the u4FCP and uRTM is shown below. The red lines are high-spe
 
 ### FMC connection
 
-Although the FMC standard defines LA, HA, HB and DP differential ports, only parts of them are connected to FPGA duo to limited IO resources.
+Although the FMC standard defines LA, HA, HB and DP differential ports, only parts of them are connected to FPGA due to limited IO resources.
 The table below summarizes the connections of FMC
 
 <table cellspacing="0" border="0">
