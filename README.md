@@ -42,7 +42,7 @@ The I/O capability of u4FCP & uRTM can be further enhanced with four [VITA-57.1 
 * +12 VDC
 
 <figure>
-    <img src="/readme/photo.png"
+    <img src="/readme/photo.jpg"
     	width="800"
         alt="Board Pictures">
     <figcaption><em>Photo of u4FCP v2 & uRTM v2.2</em></figcaption>
