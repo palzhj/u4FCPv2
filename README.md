@@ -2,13 +2,13 @@
 
 ## Introduction
 
-MicroTCA.4 Fast Control and Process board (u4FCP) is an FPGA-based [MicroTCA.4](https://www.picmg.org/product/microtca-enhancements-rear-io-precision-timing-specification/) compatible Advanced Mezzanine Card (AMC) targeting generic clock, control and data acquisition in High-Energy Physics(HEP) experiments. 
+MicroTCA.4 Fast Control and Process board (u4FCP) is an FPGA-based [MicroTCA.4](https://www.picmg.org/product/microtca-enhancements-rear-io-precision-timing-specification/) compatible Advanced Mezzanine Card (AMC) targeting generic clock, control and data acquisition in High-Energy Physics(HEP) experiments.
 
 MicroTCA.4 Rear Transition Module (uRTM) is a rear transition module in the rear of the crate to increase the I/O capability of the u4FCP. The u4FCP and uRTM are connected through fabric connectors in the upper area above the standard µTCA backplane area, defined as Zone 3. The pin assignment is compatible with the [Zone 3 recommendation](https://techlab.desy.de/resources/zone_3_recommendation/index_eng.html) D1.4 for digital applications.
 
 u4FCP & uRTM are conceived to serve a mid-sized system residing either inside a MicroTCA crate or stand-alone on desktop with high-speed optical links or Ethernet to PC.
 
-The I/O capability of u4FCP & uRTM can be further enhanced with four [VITA-57.1 FPGA Mezzanine Cards (FMC)](https://ohwr.org/projects/fmc-projects/wiki/fmc-standard) through the high-pin-count sockets. 
+The I/O capability of u4FCP & uRTM can be further enhanced with four [VITA-57.1 FPGA Mezzanine Cards (FMC)](https://ohwr.org/projects/fmc-projects/wiki/fmc-standard) through the high-pin-count sockets.
 
 :memo: **Note:** Either of these two boards can be used independently bench-top prototyping.
 
@@ -20,17 +20,17 @@ The I/O capability of u4FCP & uRTM can be further enhanced with four [VITA-57.1 
 
 #### u4FCP
 
-* Height: 180.6 mm 
+* Height: 180.6 mm
 * Length: 148.5 mm
 
 #### uRTM
 
-* Height: 182.5 mm 
+* Height: 182.5 mm
 * Length: 148.5 mm
 
 ### Environmental Temperature
 
-* Operating: 0°C to +45°C 
+* Operating: 0°C to +45°C
 * Storage: -25°C to +60°C
 
 ### Humidity
@@ -41,9 +41,16 @@ The I/O capability of u4FCP & uRTM can be further enhanced with four [VITA-57.1 
 
 * +12 VDC
 
+<figure>
+    <img src="/readme/photo.png"
+    	width="800"
+        alt="Board Pictures">
+    <figcaption><em>Photo of u4FCP v2 & uRTM v2.2</em></figcaption>
+</figure>
+
 ## System Architecture
 
-A block diagram of the u4FCP and uRTM is shown below. The red lines are high-speed serial links connected to the [gigabyte transceivers (GTY/GTH/GTX)](https://docs.xilinx.com/r/en-US/ug440-xilinx-power-estimator/Using-the-Transceiver-Sheets-GTP-GTX-GTH-GTY-GTZ) of the FPGA. The blue lines are the general input/outputs connected to the High Performance (HP), High Range (HR) or High Density (HD) banks of the FPGA. 
+A block diagram of the u4FCP and uRTM is shown below. The red lines are high-speed serial links connected to the [gigabyte transceivers (GTY/GTH/GTX)](https://docs.xilinx.com/r/en-US/ug440-xilinx-power-estimator/Using-the-Transceiver-Sheets-GTP-GTX-GTH-GTY-GTZ) of the FPGA. The blue lines are the general input/outputs connected to the High Performance (HP), High Range (HR) or High Density (HD) banks of the FPGA.
 
 <figure>
     <img src="/readme/block_diagram.png"
@@ -151,7 +158,7 @@ Whether you are using an internal or external clock, the signal must be cleaned 
 
 #### JTAG
 
-Users can access to the FPGA through the MicroTCA crate or JTAG header. A configurable logic circuit acts as a bridge selecting the JTAG master source between the JTAG header and AMC/RTM JTAG lines. When an FMC card is attached to u4FCP & uRTM, the circuit automatically adds the attached device to the JTAG chain as determined by its FMC_PRSNT_M2C_B signal. 
+Users can access to the FPGA through the MicroTCA crate or JTAG header. A configurable logic circuit acts as a bridge selecting the JTAG master source between the JTAG header and AMC/RTM JTAG lines. When an FMC card is attached to u4FCP & uRTM, the circuit automatically adds the attached device to the JTAG chain as determined by its FMC_PRSNT_M2C_B signal.
 
 :memo: **Note:** It's recommended to implement a TDI to TDO connection via a device or bypass jumper for the JTAG chain to be completed on the attached FMC card. If not, the circuit can be configured by software to bypass the JTAG chain of FMC.
 
@@ -164,7 +171,7 @@ Users can access to the FPGA through the MicroTCA crate or JTAG header. A config
 
 #### I2C Bus
 
-I2C bus is used to configure the board and provide environmental monitoring of the physical health. Although each device on board has a unique address, we add a multiplexer to prevent address collisions from attached FMCs, DDR modules or optical transceivers. 
+I2C bus is used to configure the board and provide environmental monitoring of the physical health. Although each device on board has a unique address, we add a multiplexer to prevent address collisions from attached FMCs, DDR modules or optical transceivers.
 
 <figure>
     <img src="/readme/i2c.png"
@@ -174,7 +181,7 @@ I2C bus is used to configure the board and provide environmental monitoring of t
 
 ## u4FCP
 
-Built around the Xilinx Kintex UltraScale+ FPGA, u4FCP provides users with a platform with synchronous clock, trigger/control, high volume data memory and high bandwidth data throughput that are required in general experiment. 
+Built around the Xilinx Kintex UltraScale+ FPGA, u4FCP provides users with a platform with synchronous clock, trigger/control, high volume data memory and high bandwidth data throughput that are required in general experiment.
 
 <figure>
     <img src="/readme/block_diagram_u4fcp.png"
@@ -199,7 +206,7 @@ Moreover, u4FCP connects 16 GTHs and 4 GTYs to RTM to further improve scalabilit
 
 The u4FCP connects each FMC-HPC connector with 8 GTYs. Limited by the number of available IO pins of the FPGA, only LA[16:0] are connected, which can provide up to 34 single-ended or 17 differential user defined signals, the Vadj can be programmed to support 1.0V\~1.8V. In addition, HB[7:0] are connected to the ADC (10-bit 0.2 MSPS) channels of FPGA.
 
-Finally, u4FCP hosts a [FireFly transceiver](https://www.samtec.com/optics/optical-cable/mid-board/firefly) with 4 fiber channels. 
+Finally, u4FCP hosts a [FireFly transceiver](https://www.samtec.com/optics/optical-cable/mid-board/firefly) with 4 fiber channels.
 
 The following figure shows the gigabyte transceiver connection on u4FCP.
 
@@ -249,11 +256,11 @@ The same as u4FCP, uRTM have two FMC sockets, but there are the differences:
 
 :memo: **Note:** The RTM[15:0] are connected to DP[7:0] of two FMCs directly.
 
-Benefit from the large number of available IO pins on FPGA, both FMCs have LA[33:0] and HB[5:0], the FMC3 has additional HA[23:0], which is far more than the connections on u4FCP. 
+Benefit from the large number of available IO pins on FPGA, both FMCs have LA[33:0] and HB[5:0], the FMC3 has additional HA[23:0], which is far more than the connections on u4FCP.
 HB[5:0] are connected to the ADC (Dual 12-bit 1 MSPS) channels of FPGA.
 Vadj can be programmed to support 1.2V~3.3V.
 
-uRTM hosts a Gigabit Ethernet through RGMII interface, which may help for rapid prototyping in single-board mode. 
+uRTM hosts a Gigabit Ethernet through RGMII interface, which may help for rapid prototyping in single-board mode.
 
 On-board memories are summarized below:
 
