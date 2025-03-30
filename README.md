@@ -1,32 +1,34 @@
 # u4FCP & uRTM v2
 
-## Introduction
+## Overview
+The **MicroTCA.4 Fast Control and Process board (u4FCP)** is an FPGA-based [MicroTCA.4](https://www.picmg.org/product/microtca-enhancements-rear-io-precision-timing-specification/) compliant Advanced Mezzanine Card (AMC) designed for clock distribution, control, and data acquisition in High-Energy Physics (HEP) experiments.
 
-MicroTCA.4 Fast Control and Process board (u4FCP) is an FPGA-based [MicroTCA.4](https://www.picmg.org/product/microtca-enhancements-rear-io-precision-timing-specification/) compatible Advanced Mezzanine Card (AMC) targeting generic clock, control and data acquisition in High-Energy Physics(HEP) experiments.
+### Key Features
 
-MicroTCA.4 Rear Transition Module (uRTM) is a rear transition module in the rear of the crate to increase the I/O capability of the u4FCP. The u4FCP and uRTM are connected through fabric connectors in the upper area above the standard µTCA backplane area, defined as Zone 3. The pin assignment is compatible with the [Zone 3 recommendation](https://techlab.desy.de/resources/zone_3_recommendation/index_eng.html) D1.4 for digital applications.
+* **Modular Architecture**: Paired with the **MicroTCA.4 Rear Transition Module (uRTM)** to expand I/O capabilities
+* **High-Speed Connectivity**:
+  - Four VITA-57.1 FMC (high-pin-count) sockets for I/O expansion
+  - Zone 3 fabric connectors (compatible with [DESY Zone 3 recommendation D1.4](https://techlab.desy.de/resources/zone_3_recommendation/index_eng.html))
+* **Flexible Deployment**:
+  - Can operate within a MicroTCA crate
+  - Supports stand-alone desktop operation via optical links or Ethernet
 
-u4FCP & uRTM are conceived to serve a mid-sized system residing either inside a MicroTCA crate or stand-alone on desktop with high-speed optical links or Ethernet to PC.
+### Important Notes
 
-The I/O capability of u4FCP & uRTM can be further enhanced with four [VITA-57.1 FPGA Mezzanine Cards (FMC)](https://ohwr.org/projects/fmc-projects/wiki/fmc-standard) through the high-pin-count sockets.
+:memo: **Note:** Both boards can be used independently for bench-top prototyping.
 
-:memo: **Note:** Either of these two boards can be used independently bench-top prototyping.
-
-:warning: **Warning:** The u4FCP and uRTM board can be damaged by electrostatic discharge (ESD). Follow standard ESD prevention measures when handling the board.
+:warning: **Warning:** These boards are sensitive to electrostatic discharge (ESD). Always follow proper ESD precautions when handling.
 
 ## Board Specifications
 
 ### Dimensions
 
-#### u4FCP
+3D models of the boards are available in the [u4FCPv2 repository](https://github.com/palzhj/u4FCPv2/tree/main/outline).
 
-* Height: 180.6 mm
-* Length: 148.5 mm
-
-#### uRTM
-
-* Height: 182.5 mm
-* Length: 148.5 mm
+| Board | Length | Height |
+| ----- | ------ | ------ |
+| u4FCP | 180.6 mm | 148.5 mm |
+| uRTM  | 182.5 mm | 148.5 mm |
 
 ### Environmental Temperature
 
@@ -41,6 +43,8 @@ The I/O capability of u4FCP & uRTM can be further enhanced with four [VITA-57.1 
 
 * +12 VDC
 
+## System Architecture
+
 <figure>
     <img src="/readme/photo.jpg"
     	width="800"
@@ -48,16 +52,16 @@ The I/O capability of u4FCP & uRTM can be further enhanced with four [VITA-57.1 
     <figcaption><em>Photo of u4FCP v2 & uRTM v2.2</em></figcaption>
 </figure>
 
-## System Architecture
-
-A block diagram of the u4FCP and uRTM is shown below. The red lines are high-speed serial links connected to the [gigabyte transceivers (GTY/GTH/GTX)](https://docs.xilinx.com/r/en-US/ug440-xilinx-power-estimator/Using-the-Transceiver-Sheets-GTP-GTX-GTH-GTY-GTZ) of the FPGA. The blue lines are the general input/outputs connected to the High Performance (HP), High Range (HR) or High Density (HD) banks of the FPGA.
-
 <figure>
     <img src="/readme/block_diagram.png"
     	width="800"
         alt="Block Giagram">
     <figcaption><em>Block diagram of u4FCP & uRTM</em></figcaption>
 </figure>
+
+The block diagram below illustrates the u4FCP and uRTM architecture. Key connections are color-coded:
+- **Red lines**: High-speed serial links using [FPGA gigabit transceivers (GTY/GTH/GTX)](https://docs.xilinx.com/r/en-US/ug440-xilinx-power-estimator/Using-the-Transceiver-Sheets-GTP-GTX-GTH-GTY-GTZ)
+- **Blue lines**: General I/O connections to FPGA banks (HP/HR/HD)
 
 ### FMC connection
 
@@ -143,7 +147,12 @@ The table below summarizes the connections of FMC
 
 ### Clock Features
 
-Based on cross-point switches and programmable clock multipliers, the clock distribution for u4FCP & uRTM offer a large selection of input clock sources (e.g. the LEMO connectors in the front/rear panel, the AMC clocks, the FMC clocks, or onboard oscillators). The clean clock is used as a reference clock for the gigabyte transceivers. This makes the u4FCP & uRTM give users the possibility of implementing various high speed serial data protocols for custom applications.
+The clock system provides flexible input options including:
+- Front/rear panel LEMO connectors
+- AMC/FMC clocks
+- Onboard oscillators
+
+Using cross-point switches and programmable clock multipliers, the cleaned reference clock (via [Si5345 jitter attenuator](https://www.skyworksinc.com/en/Products/Timing/High-Performance-Jitter-Attenuators/Si5345B)) ensures stable operation of gigabit transceivers. This enables support for multiple high-speed serial protocols in custom applications.
 
 <figure>
     <img src="/readme/clock.png"
@@ -152,13 +161,11 @@ Based on cross-point switches and programmable clock multipliers, the clock dist
     <figcaption><em>Clock generation and distribution</em></figcaption>
 </figure>
 
-Whether you are using an internal or external clock, the signal must be cleaned to minimize jitter and ensure stable performance. u4FCP & uRTM use dedicated chip ([Si5345](https://www.skyworksinc.com/en/Products/Timing/High-Performance-Jitter-Attenuators/Si5345B)) for jitter cleaning.
-
 ### Configuration
 
 #### JTAG
 
-Users can access to the FPGA through the MicroTCA crate or JTAG header. A configurable logic circuit acts as a bridge selecting the JTAG master source between the JTAG header and AMC/RTM JTAG lines. When an FMC card is attached to u4FCP & uRTM, the circuit automatically adds the attached device to the JTAG chain as determined by its FMC_PRSNT_M2C_B signal.
+The FPGA can be accessed either through the MicroTCA crate or JTAG header. A configurable bridge circuit selects between these JTAG sources. When an FMC card is detected (via FMC_PRSNT_M2C_B signal), it's automatically incorporated into the JTAG chain.
 
 :memo: **Note:** It's recommended to implement a TDI to TDO connection via a device or bypass jumper for the JTAG chain to be completed on the attached FMC card. If not, the circuit can be configured by software to bypass the JTAG chain of FMC.
 
@@ -190,7 +197,19 @@ Built around the Xilinx Kintex UltraScale+ FPGA, u4FCP provides users with a pla
     <figcaption><em>FPGA Block diagram of u4FCP</em></figcaption>
 </figure>
 
-An on-board microcontroller, which the host can communicate with either via IPMB Bus of the chassis backplane or through the USB/UART port on the front panel, is responsible for power-on initialization, parameter monitoring, e.g. voltages/currents or temperature, and also hot-plug capability, activation state display, payload power management and communication with the [MicroTCA Carrier Hub (MCH)](https://www.picmg.org/spec-product-category/microtca_mch), etc. The firmware of the microcontroller is developed based on real-time operating system, [FreeRTOS](https://freertos.org), and migrated from [CERN-MMC](https://espace.cern.ch/ph-dep-ESE-BE-uTCAEvaluationProject/MMC_project/default.aspx) to support ARM Cortex-M3. More information can be found [here](https://iopscience.iop.org/article/10.1088/1748-0221/16/03/T03005).
+An on-board microcontroller handles system management functions including:
+- Power-on initialization
+- Environmental monitoring (voltages, currents, temperature)
+- Hot-plug capability
+- Status indication
+- Power management
+- MCH communication (via [IPMB](https://www.picmg.org/spec-product-category/microtca_mch))
+
+The microcontroller supports dual communication interfaces:
+1. Chassis IPMB bus
+2. Front panel USB/UART
+
+Running [FreeRTOS](https://freertos.org) on an ARM Cortex-M3, the firmware is derived from [OpenMMC](https://github.com/lnls-dig/openMMC). See the [project repository](https://github.com/palzhj/openMMC_u4FCP) for implementation details.
 
 <figure>
     <img src="/readme/backplane.png"
@@ -218,7 +237,7 @@ The following figure shows the gigabyte transceiver connection on u4FCP.
 
 1. FMC HPC connector (8 GTY) x2
 2. AMC ports (16 GTH)
-3. RTM ports (4 GTY and 16 GTH )
+3. RTM ports (4 GTY to K7 and 16 GTH to FMC HPC)
 4. FireFly (4 GTY)
 </em></figcaption>
 </figure>
@@ -227,10 +246,9 @@ The following figure shows the gigabyte transceiver connection on u4FCP.
 
 On-board memories are summarized below:
 
-1. Two up to 16G-Byte DDR4 SODIMM with 72-bit data bus
-2. 2K-bit I2C Serial EEPROM with EUI-48™ Identity, providing a unique node Ethernet MAC address for mass-production process
-3. 512K-bit I2C Serial EEPROM for MMC
-4. 512M-bit Quad SPI Flash for storing the FPGA firmware
+1. Two up to 16G-Byte DDR4 SODIMM with 72-bit data bus, supports ECC
+2. 512K-bit I2C Serial EEPROM for MMC
+3. 1G-bit Quad SPI Flash (MT25QU01GBBB8E12-0AAT) for storing the FPGA firmware
 
 ## uRTM
 
@@ -266,5 +284,4 @@ On-board memories are summarized below:
 
 1. Two up to 8G-Byte DDR3L SODIMM with 64-bit data bus
 2. 512K-bit I2C Serial EEPROM for MMC
-3. 256M-bit Quad SPI Flash for storing the FPGA firmware
-
+3. 256M-bit Quad SPI Flash (S25FL256SAGBHIA10) for storing the FPGA firmware
