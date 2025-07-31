@@ -53,12 +53,32 @@ set VERILOG_FILES "\
   wishbone/wb_uart/uart_rfifo.v \
   wishbone/wb_uart/uart_tfifo.v \
   wishbone/wb_uart/raminfr.v \
+  DDR3L/example_top.v \
+  DDR3L/mig_7series_v4_2_traffic_gen_top.v \
+  DDR3L/mig_7series_v4_2_chk_win.v \
+  DDR3L/mig_7series_v4_2_memc_traffic_gen.v \
+  DDR3L/mig_7series_v4_2_init_mem_pattern_ctr.v \
+  DDR3L/mig_7series_v4_2_cmd_gen.v \
+  DDR3L/mig_7series_v4_2_memc_flow_vcontrol.v \
+  DDR3L/mig_7series_v4_2_tg_status.v \
+  DDR3L/mig_7series_v4_2_read_data_path.v \
+  DDR3L/mig_7series_v4_2_write_data_path.v \
+  DDR3L/mig_7series_v4_2_afifo.v \
+  DDR3L/mig_7series_v4_2_cmd_prbs_gen.v \
+  DDR3L/mig_7series_v4_2_rd_data_gen.v \
+  DDR3L/mig_7series_v4_2_read_posted_fifo.v \
+  DDR3L/mig_7series_v4_2_wr_data_gen.v \
+  DDR3L/mig_7series_v4_2_s7ven_data_gen.v \
+  DDR3L/mig_7series_v4_2_vio_init_pattern_bram.v \
+  DDR3L/mig_7series_v4_2_data_prbs_gen.v \
+  DDR3L/mig_7series_v4_2_tg_prbs_gen.v \
   "
 
 set VHDL_FILES ""
 
 set NGC_FILES "\
-  SiTCP/SiTCP_XC7K_32K_BBT_V110.edf"
+  SiTCP/SiTCP_XC7K_32K_BBT_V110.edf \
+  "
 
 set SIM_FILES ""
 
@@ -69,6 +89,8 @@ set XCI_FILES "\
   ip/ila64.xci \
   ip/sitcp_fifo.xci \
   ip/xadc_wiz.xci\
+  ip/ila_ddr3_native.xci \
+  ip/vio_twm_ddrx.xci \
   "
 
 set XDC_FILES "uRTMv2_top.xdc"
@@ -158,3 +180,6 @@ foreach ip [get_ips -exclude_bd_ips] {
 #wait for the last run.
 wait_on_run $run
 export_simulation -of_objects [get_ips -exclude_bd_ips] -force -quiet
+
+add_files -norecurse ${firmware_dir}/sources/ip/ddr3/mig_7series_0.xci
+add_files -norecurse ${firmware_dir}/sources/ip/ddr3/mig_b.prj

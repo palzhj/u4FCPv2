@@ -295,8 +295,8 @@ module top #(
   input             FMC3_HB_N5,
 
 // DDR3L
-  // output [1 : 0]   DDR3_CK_P,
-  // output [1 : 0]   DDR3_CK_N,
+  output [1 : 0]    DDR3_CK_P,
+  output [1 : 0]    DDR3_CK_N,
   output [1 : 0]    DDR3_CKE,
   output [1 : 0]    DDR3_CS_N,
   output [1 : 0]    DDR3_ODT,
@@ -310,6 +310,7 @@ module top #(
   inout  [63: 0]    DDR3_DQ,
   inout  [7 : 0]    DDR3_DQS_P,
   inout  [7 : 0]    DDR3_DQS_N,
+  output [7 : 0]    DDR3_DM,
 
 // FireFly
   // output [3 : 0]   TX117_P,
@@ -592,6 +593,34 @@ assign FPGA_SCL = scl_oen[0] ? 1'bz: scl_o[0];
 
 assign sda_i[0] = FPGA_SDA;
 assign FPGA_SDA = sda_oen[0] ? 1'bz: sda_o[0];
+
+///////////////////////////////////////////////////////////////////////////////
+// DDR3L test
+wire tg_compare_error, init_calib_complete;
+
+example_top example_top(
+  .ddr3_dq      (DDR3_DQ),
+  .ddr3_dqs_n   (DDR3_DQS_N),
+  .ddr3_dqs_p   (DDR3_DQS_P),
+  .ddr3_addr    (DDR3_ADDR),
+  .ddr3_ba      (DDR3_BA),
+  .ddr3_ras_n   (DDR3_RAS_N),
+  .ddr3_cas_n   (DDR3_CAS_N),
+  .ddr3_we_n    (DDR3_WE_N),
+  .ddr3_reset_n (DDR3_RESET_N),
+  .ddr3_ck_p    (DDR3_CK_P),
+  .ddr3_ck_n    (DDR3_CK_N),
+  .ddr3_cke     (DDR3_CKE),
+  .ddr3_cs_n    (DDR3_CS_N),
+  .ddr3_dm      (DDR3_DM),
+  .ddr3_odt     (DDR3_ODT),
+
+  .sys_clk_i    (clk125_int),
+  .clk_ref_i    (clk200_int),
+  .sys_rst      (rst),
+  .tg_compare_error   (tg_compare_error),
+  .init_calib_complete(init_calib_complete)
+);
 
 ///////////////////////////////////////////////////////////////////////////////
 // FMC test
@@ -948,6 +977,9 @@ assign probe2[31] = FMC3_HA_N21;
 assign probe2[32] = FMC3_HA_N22;
 assign probe2[33] = FMC3_HA_N23;
 
-assign probe2[63:34] = 0;
+assign probe2[34] = init_calib_complete;
+assign probe2[35] = tg_compare_error;
+
+assign probe2[63:36] = 0;
 
 endmodule
