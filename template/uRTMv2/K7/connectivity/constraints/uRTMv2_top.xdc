@@ -70,6 +70,11 @@ set_property  IOSTANDARD  LVCMOS33      [get_ports "TESTPIN[2]"]
 set_property  PACKAGE_PIN R28           [get_ports "TESTPIN[3]"]
 set_property  IOSTANDARD  LVCMOS33      [get_ports "TESTPIN[3]"]
 
+set_property  PACKAGE_PIN U22           [get_ports "MMCX_TEST_P"]
+set_property  IOSTANDARD  LVCMOS33      [get_ports "MMCX_TEST_P"]
+set_property  PACKAGE_PIN U23           [get_ports "MMCX_TEST_N"]
+set_property  IOSTANDARD  LVCMOS33      [get_ports "MMCX_TEST_N"]
+
 # RED
 set_property  PACKAGE_PIN V29           [get_ports "RLED_B"]
 set_property  IOSTANDARD  LVCMOS33      [get_ports "RLED_B"]

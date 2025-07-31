@@ -22,21 +22,43 @@ set SIM_TOPLEVEL top
 set VERILOG_FILES "\
   top.v \
   RESET.v \
-  RBCP2WB.v \
   RBCP_REG.v \
   SiTCP/SITCP.v \
   SiTCP/MDIO_INIT.v \
   SiTCP/SiTCP_XC7K_32K_BBT_V110.V \
   SiTCP/TIMER.v \
   SiTCP/tri_mode_eth_mac_v5_5_rgmii_v2_0_if.v \
-  wb_i2c/i2c_master_top.v \
-  wb_i2c/i2c_master_bit_ctrl.v \
-  wb_i2c/i2c_master_byte_ctrl.v"
+  wishbone/RBCP2WB.v \
+  wishbone/wb_reg/reg_table.v \
+  wishbone/wb_reg/rggen-verilog-rtl/rggen_rtl_macros.vh \
+  wishbone/wb_reg/rggen-verilog-rtl/rggen_bit_field.v \
+  wishbone/wb_reg/rggen-verilog-rtl/rggen_default_register.v \
+  wishbone/wb_reg/rggen-verilog-rtl/rggen_register_common.v \
+  wishbone/wb_reg/rggen-verilog-rtl/rggen_address_decoder.v \
+  wishbone/wb_reg/rggen-verilog-rtl/rggen_wishbone_adapter.v \
+  wishbone/wb_reg/rggen-verilog-rtl/rggen_adapter_common.v \
+  wishbone/wb_reg/rggen-verilog-rtl/rggen_mux.v \
+  wishbone/wb_reg/rggen-verilog-rtl/rggen_or_reducer.v \
+  wishbone/wb_i2c/i2c_master_top.v \
+  wishbone/wb_i2c/i2c_master_bit_ctrl.v \
+  wishbone/wb_i2c/i2c_master_byte_ctrl.v \
+  wishbone/wb_spi/simple_spi_top.v \
+  wishbone/wb_spi/fifo4.v \
+  wishbone/wb_uart/uart_top.v \
+  wishbone/wb_uart/uart_wb.v \
+  wishbone/wb_uart/uart_regs.v \
+  wishbone/wb_uart/uart_transmitter.v \
+  wishbone/wb_uart/uart_sync_flops.v \
+  wishbone/wb_uart/uart_receiver.v \
+  wishbone/wb_uart/uart_rfifo.v \
+  wishbone/wb_uart/uart_tfifo.v \
+  wishbone/wb_uart/raminfr.v \
+  "
 
 set VHDL_FILES ""
 
 set NGC_FILES "\
-  SiTCP/SiTCP_XC7K_32K_BBT_V110.ngc"
+  SiTCP/SiTCP_XC7K_32K_BBT_V110.edf"
 
 set SIM_FILES ""
 
@@ -46,7 +68,8 @@ set XCI_FILES "\
   ip/clk_wiz.xci \
   ip/ila64.xci \
   ip/sitcp_fifo.xci \
-  ip/xadc_wiz.xci"
+  ip/xadc_wiz.xci\
+  "
 
 set XDC_FILES "uRTMv2_top.xdc"
 

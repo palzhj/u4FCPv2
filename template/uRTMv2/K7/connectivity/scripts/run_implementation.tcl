@@ -15,10 +15,14 @@
 #   limitations under the License.
 
 reset_runs [get_runs]
+
+# auto add synthesis date
 set now [clock format [clock seconds] -format %Y%m%d%H]
 set_property generic [format "SYN_DATE=32'h%s" $now] [current_fileset]
+
 launch_runs impl_1 -to_step write_bitstream -jobs 8
 wait_on_runs [get_runs impl_1]
+
 file copy -force ../Projects/top/top.runs/impl_1/top.bit ../output/top.bit
 file copy -force ../Projects/top/top.runs/impl_1/top.ltx ../output/top.ltx
 write_cfgmem -format mcs -size 32 -interface SPIx4 -loadbit {up 0x00000000 "../output/top.bit"} -force -file "../output/top.mcs"
@@ -30,11 +34,3 @@ write_cfgmem -format mcs -size 32 -interface SPIx4 -loadbit {up 0x00000000 "../o
 # file copy -force ../Projects/altiroc_emu_top/altiroc_emu_top.runs/impl_1/altiroc_emulator.bit ../output/altiroc_emulator_640Mb_16byte.bit
 # file copy -force ../Projects/altiroc_emu_top/altiroc_emu_top.runs/impl_1/altiroc_emulator.ltx ../output/altiroc_emulator_640Mb_16byte.ltx
 # write_cfgmem  -format mcs -size 1 -interface SPIx4 -loadbit {up 0x00000000 "../output/altiroc_emulator_640Mb_16byte.bit"} -force -file "../output/altiroc_emulator_640Mb_16byte.mcs"
-
-# reset_runs [get_runs]
-# set_property generic "DATARATE=1280 packetlength=16" [current_fileset]
-# launch_runs impl_1 -to_step write_bitstream -jobs 8
-# wait_on_runs [get_runs impl_1]
-# file copy -force ../Projects/altiroc_emu_top/altiroc_emu_top.runs/impl_1/altiroc_emulator.bit ../output/altiroc_emulator_1280Mb_16byte.bit
-# file copy -force ../Projects/altiroc_emu_top/altiroc_emu_top.runs/impl_1/altiroc_emulator.ltx ../output/altiroc_emulator_1280Mb_16byte.ltx
-# write_cfgmem  -format mcs -size 1 -interface SPIx4 -loadbit {up 0x00000000 "../output/altiroc_emulator_1280Mb_16byte.bit"} -force -file "../output/altiroc_emulator_1280Mb_16byte.mcs"
