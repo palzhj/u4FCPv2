@@ -321,10 +321,10 @@ module top #(
   // input            MGTCLK117_N0,
   // input            MGTCLK117_P1,
   // input            MGTCLK117_N1,
-  output            MODPRSL117,
-  output            MODSEL117,
+  input             MODPRSL117,
+  input             MODSEL117,
   input             INTL117,
-  output            RESETL117,
+  input             RESETL117,
 
   // output [3 : 0]   TX118_P,
   // output [3 : 0]   TX118_N,
@@ -334,10 +334,10 @@ module top #(
   // input            MGTCLK118_N0,
   // input            MGTCLK118_P1,
   // input            MGTCLK118_N1,
-  output            MODPRSL118,
-  output            MODSEL118,
+  input             MODPRSL118,
+  input             MODSEL118,
   input             INTL118,
-  output            RESETL118,
+  input             RESETL118,
 
 // MMCX
   // output [3 : 0]   TX116_P,
@@ -359,13 +359,13 @@ module top #(
   // input            MGTCLK115_P1,
   // input            MGTCLK115_N1,
 
-  inout             RTM_IO0,
-  inout             RTM_IO1,
-  inout             RTM_IO2,
+  output            RTM_IO0,
+  input             RTM_IO1,
+  output            RTM_IO2,
   inout             RTM_IO3,
 
   input             RTM_MODE,
-  output            RTM_INTL
+  input             RTM_INTL
 );
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -792,6 +792,11 @@ OBUFDS OBUFDS_fmc3_clk_c2m (
 );
 
 //////////////////////////////////////////////////////////////////////////////
+// RTM
+assign RTM_IO0 = temp;
+assign RTM_IO2 = temp;
+
+//////////////////////////////////////////////////////////////////////////////
 // Test
 IBUFDS #(
   .DIFF_TERM("FALSE")
@@ -980,6 +985,24 @@ assign probe2[33] = FMC3_HA_N23;
 assign probe2[34] = init_calib_complete;
 assign probe2[35] = tg_compare_error;
 
-assign probe2[63:36] = 0;
+assign probe2[36] = FANFAIL_B;
+assign probe2[37] = OT_B;
+
+assign probe2[38] = MODPRSL117;
+assign probe2[39] = MODSEL117;
+assign probe2[40] = INTL117;
+assign probe2[41] = RESETL117;
+
+assign probe2[42] = MODPRSL118;
+assign probe2[43] = MODSEL118;
+assign probe2[44] = INTL118;
+assign probe2[45] = RESETL118;
+
+assign probe2[46] = RTM_IO1;
+assign probe2[47] = RTM_IO3;
+assign probe2[48] = RTM_MODE;
+assign probe2[49] = RTM_INTL;
+
+assign probe2[63:50] = 0;
 
 endmodule

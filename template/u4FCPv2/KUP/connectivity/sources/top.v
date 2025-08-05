@@ -280,10 +280,10 @@ module top #(
   // input             MGTCLK129_N1,
 
 // Firefly
-  output            FIREFLY_MODSEL,   // pulled low when I2C are used
+  input             FIREFLY_MODSEL,   // pulled low when I2C are used
   input             FIREFLY_MODPRSL,  // low to indicate present
   input             FIREFLY_INTL,     // low to indicate a fault condition
-  output            FIREFLY_RESETL,   // pulled low for more than 200 us when reset
+  input             FIREFLY_RESETL,   // pulled low for more than 200 us when reset
 
   // input             FIREFLY_M2C_P0,
   // input             FIREFLY_M2C_N0,
@@ -384,29 +384,29 @@ module top #(
   // input             MGTCLK230_P0,
   // input             MGTCLK230_N0,
 
-  // output            AMC_TX17,
-  // output            AMC_TX18,
-  // output            AMC_TX19,
-  // output            AMC_TX20,
+  output            AMC_TX17,
+  output            AMC_TX18,
+  output            AMC_TX19,
+  output            AMC_TX20,
   output            AMC_TX_DE17,
   output            AMC_TX_DE18,
   output            AMC_TX_DE19,
   output            AMC_TX_DE20,
-  // input             AMC_RX17,
-  // input             AMC_RX18,
-  // input             AMC_RX19,
-  // input             AMC_RX20,
+  input             AMC_RX17,
+  input             AMC_RX18,
+  input             AMC_RX19,
+  input             AMC_RX20,
   output            AMC_RX_DE17,
   output            AMC_RX_DE18,
   output            AMC_RX_DE19,
   output            AMC_RX_DE20,
 
 // RTM
-  // input             RTM_PS_B,
-  // input             RTM_IO0,
-  // input             RTM_IO1,
-  // input             RTM_IO2,
-  // input             RTM_IO3,
+  input             RTM_PS_B,
+  output            RTM_IO0,
+  input             RTM_IO1,
+  output            RTM_IO2,
+  input             RTM_IO3,
 
   // output            AMC2RTM_P0,
   // output            AMC2RTM_N0,
@@ -852,14 +852,24 @@ OBUFDS OBUFDS_fmc1_clk_c2m (
 
 ///////////////////////////////////////////////////////////////////////////////
 // AMC test
-assign AMC_TX_DE17 = 1'b0;
+assign AMC_TX_DE17 = 1'b1;
 assign AMC_RX_DE17 = 1'b0;
-assign AMC_TX_DE18 = 1'b0;
+assign AMC_TX_DE18 = 1'b1;
 assign AMC_RX_DE18 = 1'b0;
-assign AMC_TX_DE19 = 1'b0;
+assign AMC_TX_DE19 = 1'b1;
 assign AMC_RX_DE19 = 1'b0;
-assign AMC_TX_DE20 = 1'b0;
+assign AMC_TX_DE20 = 1'b1;
 assign AMC_RX_DE20 = 1'b0;
+
+assign AMC_TX17 = temp;
+assign AMC_TX18 = temp;
+assign AMC_TX19 = temp;
+assign AMC_TX20 = temp;
+
+//////////////////////////////////////////////////////////////////////////////
+// RTM test
+assign RTM_IO0 = temp;
+assign RTM_IO2 = temp;
 
 //////////////////////////////////////////////////////////////////////////////
 // Test
@@ -986,5 +996,19 @@ ila64 ila64_1 (
 assign probe1[7:0] = DIPSW[7:0];
 assign probe1[8] = RST_B;
 assign probe1[9] = lemo_in;
+assign probe1[10] = FIREFLY_MODSEL;   // pulled low when I2C are used
+assign probe1[11] = FIREFLY_MODPRSL;  // low to indicate present
+assign probe1[12] = FIREFLY_INTL;     // low to indicate a fault condition
+assign probe1[13] = FIREFLY_RESETL;   // pulled low for more than 200 us when reset
+assign probe1[14] = AMC_MODE;
+assign probe1[15] = AMC_RX17;
+assign probe1[16] = AMC_RX18;
+assign probe1[17] = AMC_RX19;
+assign probe1[18] = AMC_RX20;
+assign probe1[19] = RTM_PS_B;
+assign probe1[20] = RTM_IO1;
+assign probe1[21] = RTM_IO3;
+
+assign probe1[63:22] = 0;
 
 endmodule
