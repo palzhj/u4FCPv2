@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MultiProjectsData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Version>1</Version>
-  <Timestamp>2025-08-08T13:16:40.6204524+08:00</Timestamp>
+  <Timestamp>2025-08-11T19:45:47.3979365+08:00</Timestamp>
   <Creator>Texas Instruments Fusion Digital Power Designer v7.10.1.0 [2023-10-27]</Creator>
   <Project_Info_List>
     <ProjectInfo>
       <ProjectFile />
       <ProjectData>
         <Version>1</Version>
-        <Timestamp>2025-08-08T13:16:42.1658762+08:00</Timestamp>
+        <Timestamp>2025-08-11T19:45:50.1098202+08:00</Timestamp>
         <Creator>Texas Instruments Fusion Digital Power Designer v7.10.1.0 [2023-10-27]</Creator>
         <Devices>
           <Device>
@@ -1267,8 +1267,8 @@
                 <ID>GPIO_CONFIG_0</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_0 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: True</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x08" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1279,8 +1279,8 @@
                 <ID>GPIO_CONFIG_1</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_1 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: True</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x08" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1291,8 +1291,8 @@
                 <ID>GPIO_CONFIG_2</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_2 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: True</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x08" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1315,8 +1315,8 @@
                 <ID>GPIO_CONFIG_4</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_4 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: True</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x08" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1327,8 +1327,8 @@
                 <ID>GPIO_CONFIG_5</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_5 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: True</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x08" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1339,8 +1339,8 @@
                 <ID>GPIO_CONFIG_6</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_6 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: True</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x08" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1375,8 +1375,8 @@
                 <ID>GPIO_CONFIG_9</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_9 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: True</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x08" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1471,8 +1471,8 @@
                 <ID>GPIO_CONFIG_17</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_17 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: True</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x08" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1483,8 +1483,8 @@
                 <ID>GPIO_CONFIG_18</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_18 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: True</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x08" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1495,8 +1495,8 @@
                 <ID>GPIO_CONFIG_19</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_19 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: True</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x08" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1519,8 +1519,8 @@
                 <ID>GPIO_CONFIG_21</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_21 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: True</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x08" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1543,8 +1543,8 @@
                 <ID>GPIO_CONFIG_23</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_23 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: True</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x08" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1555,8 +1555,8 @@
                 <ID>GPIO_CONFIG_24</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_24 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: True]</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x0F" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1567,8 +1567,8 @@
                 <ID>GPIO_CONFIG_25</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_25 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: True]</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x0F" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1579,8 +1579,8 @@
                 <ID>GPIO_CONFIG_26</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_26 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: True]</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x0F" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1783,8 +1783,8 @@
                 <ID>GPIO_CONFIG_43</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_43 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: True]</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x0F" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1795,8 +1795,8 @@
                 <ID>GPIO_CONFIG_44</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_44 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: True]</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x0F" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1819,8 +1819,8 @@
                 <ID>GPIO_CONFIG_46</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_46 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: True]</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x0F" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1831,8 +1831,8 @@
                 <ID>GPIO_CONFIG_47</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_47 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: True]</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x0F" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1843,8 +1843,8 @@
                 <ID>GPIO_CONFIG_48</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_48 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: True]</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x0F" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1855,8 +1855,8 @@
                 <ID>GPIO_CONFIG_49</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_49 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: True]</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x0F" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1867,8 +1867,8 @@
                 <ID>GPIO_CONFIG_50</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_50 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: True]</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x0F" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1951,8 +1951,8 @@
                 <ID>GPIO_CONFIG_57</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_57 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: True]</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x0F" />
+                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: False]</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x07" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1963,8 +1963,8 @@
                 <ID>GPIO_CONFIG_58</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_58 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: True</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x08" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1975,8 +1975,8 @@
                 <ID>GPIO_CONFIG_59</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_59 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: True</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x08" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -2011,8 +2011,8 @@
                 <ID>GPIO_CONFIG_62</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_62 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: True]</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x0F" />
+                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: False]</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x07" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -2035,8 +2035,8 @@
                 <ID>GPIO_CONFIG_64</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_64 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: True]</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x0F" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -2083,8 +2083,8 @@
                 <ID>GPIO_CONFIG_68</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_68 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: True]</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x0F" />
+                <ValueText>Enable: False; Out_Enable: False; Out_Value: False; Status: False</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -2095,8 +2095,8 @@
                 <ID>GPIO_CONFIG_69</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_69 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: True]</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x0F" />
+                <ValueText>Static GPO [0] [Enable: True; Out_Enable: True; Out_Value: False; Status: False]</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x03" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -2275,8 +2275,8 @@
                 <ID>UCD90240_BLACK_BOX_FAULT_INFO</ID>
                 <Code>181</Code>
                 <IDAndCode>BLACK_BOX_FAULT_INFO [0xB5]</IDAndCode>
-                <ValueText>Fault ID: IOUT UC Fault; Rail #: 21; Fault Value: 0.000 A; GPO statuses:0000000000001100b; GPI statuses:00000000000000010000000000000000b; Time Stamp: 2000年1月13日 20:15:27</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x130C0067C8582400800000010C0000000100" />
+                <ValueText>Fault ID: VOUT UV Fault; Rail #: 01; Fault Value: 8.911 V; Not valid; Time Stamp: 2000年1月1日 0:00:05</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x03000051170008A523000000CF01FF7F0F00" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -2359,8 +2359,8 @@
                 <ID>GPO_CONFIG_1</ID>
                 <Code>248</Code>
                 <IDAndCode>GPO_CONFIG_1 [MFR 40,0xF8]</IDAndCode>
-                <ValueText>Pin A9 LGPO03(GPIO) ActiveHigh ActivelyDrivenOutput; GPI2; Invert OR Gate; Delay Time: 0 ms; Assert Delay disabled; Assert Delay disabled</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x3A0620000900000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Pin A9 LGPO03(GPIO) ActiveHigh ActivelyDrivenOutput; (GPI2') + (GPO5'); Delay Time: 0 ms; Assert Delay disabled; Assert Delay disabled</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x3A0600000900000000000000000002000000020000000000000000000000000000000000000000000000000000001000000010000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>255</Page>
@@ -2371,8 +2371,8 @@
                 <ID>GPO_CONFIG_2</ID>
                 <Code>248</Code>
                 <IDAndCode>GPO_CONFIG_2 [MFR 40,0xF8]</IDAndCode>
-                <ValueText>Pin C8 LGPO04(GPIO) ActiveHigh ActivelyDrivenOutput; GPI9; Invert OR Gate; Delay Time: 0 ms; Assert Delay disabled; Assert Delay disabled</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x3B0620000900000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Pin C8 LGPO04(GPIO) ActiveHigh ActivelyDrivenOutput; (GPI9') + (GPO6'); Delay Time: 0 ms; Assert Delay disabled; Assert Delay disabled</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x3B0600000900000000000000000000010000000100000000000000000000000000000000000000000000000000002000000020000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>255</Page>
@@ -2383,8 +2383,8 @@
                 <ID>GPO_CONFIG_3</ID>
                 <Code>248</Code>
                 <IDAndCode>GPO_CONFIG_3 [MFR 40,0xF8]</IDAndCode>
-                <ValueText>Pin M1 LGPO10(GPIO) ActiveHigh ActivelyDrivenOutput; RAIL4' [IOUT_OC_WARN]; Delay Time: 0 ms; Assert Delay disabled; Assert Delay disabled</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x410600000A17080000000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Pin M1 LGPO10(GPIO) ActiveHigh ActivelyDrivenOutput; NOT (RAIL4' [IOUT_OC_FAULT_LATCH]) + NOT (RAIL4' [VOUT_UV_FAULT_LATCH]); Invert OR Gate; Delay Time: 0 ms; Assert Delay disabled; Assert Delay disabled</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x410620009794080000000800000000000000000000000000000000000000080000000800000000000000000000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>255</Page>
@@ -2395,8 +2395,8 @@
                 <ID>GPO_CONFIG_4</ID>
                 <Code>248</Code>
                 <IDAndCode>GPO_CONFIG_4 [MFR 40,0xF8]</IDAndCode>
-                <ValueText>Pin M2 LGPO11(GPIO) ActiveHigh ActivelyDrivenOutput; RAIL7' [IOUT_OC_WARN]; Delay Time: 0 ms; Assert Delay disabled; Assert Delay disabled</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x420600000A17400000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Pin M2 LGPO11(GPIO) ActiveHigh ActivelyDrivenOutput; NOT (RAIL7' [IOUT_OC_FAULT_LATCH]) + NOT (RAIL7' [VOUT_UV_FAULT_LATCH]); Invert OR Gate; Delay Time: 0 ms; Assert Delay disabled; Assert Delay disabled</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x420620009794400000004000000000000000000000000000000000000000400000004000000000000000000000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>255</Page>
@@ -2407,8 +2407,8 @@
                 <ID>GPO_CONFIG_5</ID>
                 <Code>248</Code>
                 <IDAndCode>GPO_CONFIG_5 [MFR 40,0xF8]</IDAndCode>
-                <ValueText>Unassigned; No Mask; Delay Time: 0 ms; Assert Delay disabled; Assert Delay disabled</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Pin L3 LGPO09(GPIO) ActiveHigh ActivelyDrivenOutput; NOT (RAIL3' • RAIL4' • RAIL5' [IOUT_OC_FAULT_LATCH]) + NOT (RAIL1 • RAIL4 • RAIL15 [POWER_GOOD]); Invert OR Gate; Delay Time: 0 ms; Assert Delay disabled; Assert Delay disabled</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x4006200097801C0000001C00000000000000000000000000000000000000094000000000000000000000000000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>255</Page>
@@ -2419,8 +2419,8 @@
                 <ID>GPO_CONFIG_6</ID>
                 <Code>248</Code>
                 <IDAndCode>GPO_CONFIG_6 [MFR 40,0xF8]</IDAndCode>
-                <ValueText>Unassigned; No Mask; Delay Time: 0 ms; Assert Delay disabled; Assert Delay disabled</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Pin L4 LGPO13(GPIO) ActiveHigh ActivelyDrivenOutput; NOT (RAIL6' • RAIL7' • RAIL8' [IOUT_OC_FAULT_LATCH]) + NOT (RAIL1 • RAIL7 • RAIL15 [POWER_GOOD]); Invert OR Gate; Delay Time: 0 ms; Assert Delay disabled; Assert Delay disabled</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x440620009780E0000000E000000000000000000000000000000000000000414000000000000000000000000000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>255</Page>
@@ -2575,8 +2575,8 @@
                 <ID>LOGGED_COMMON_PEAKS</ID>
                 <Code>238</Code>
                 <IDAndCode>LOGGED_COMMON_PEAKS [MFR 30,0xEE]</IDAndCode>
-                <ValueText>Temp: 31 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x1F" />
+                <ValueText>Temp: 23 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x17" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -2599,8 +2599,8 @@
                 <ID>LOGGED_FAULTS2</ID>
                 <Code>234</Code>
                 <IDAndCode>LOGGED_FAULTS [MFR 26,0xEA]</IDAndCode>
-                <ValueText>Common: LOG_NOT_EMPTY; GPI: &lt;empty&gt;; Rail #1: &lt;EMPTY&gt;; Rail #2: &lt;EMPTY&gt;; Rail #3: IOUT_UC; Rail #4: &lt;EMPTY&gt;; Rail #5: IOUT_UC; Rail #6: &lt;EMPTY&gt;; Rail #7: &lt;EMPTY&gt;; Rail #8: &lt;EMPTY&gt;; Rail #9: IOUT_UC; Rail #10: &lt;EMPTY&gt;; Rail #11: IOUT_UC; Rail #12: IOUT_UC; Rail #13: IOUT_UC; Rail #14: &lt;EMPTY&gt;; Rail #15: &lt;EMPTY&gt;; Rail #16: &lt;EMPTY&gt;; Rail #17: &lt;EMPTY&gt;; Rail #18: &lt;EMPTY&gt;; Rail #19: &lt;EMPTY&gt;; Rail #20: &lt;EMPTY&gt;; Rail #21: &lt;EMPTY&gt;; Rail #22: &lt;EMPTY&gt;; Rail #23: &lt;EMPTY&gt;; Rail #24: &lt;EMPTY&gt;; Rail #25: &lt;EMPTY&gt;; Rail #26: &lt;EMPTY&gt;; Rail #27: &lt;EMPTY&gt;; Rail #28: &lt;EMPTY&gt;; Rail #29: &lt;EMPTY&gt;; Rail #30: &lt;EMPTY&gt;; Rail #31: &lt;EMPTY&gt;; Rail #32: &lt;EMPTY&gt;</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x01000000000000100010000000100010101000000000000000000000000000000000000000" />
+                <ValueText>Common: &lt;EMPTY&gt;; GPI: &lt;empty&gt;; Rail #1: &lt;EMPTY&gt;; Rail #2: &lt;EMPTY&gt;; Rail #3: &lt;EMPTY&gt;; Rail #4: &lt;EMPTY&gt;; Rail #5: &lt;EMPTY&gt;; Rail #6: &lt;EMPTY&gt;; Rail #7: &lt;EMPTY&gt;; Rail #8: &lt;EMPTY&gt;; Rail #9: &lt;EMPTY&gt;; Rail #10: &lt;EMPTY&gt;; Rail #11: &lt;EMPTY&gt;; Rail #12: &lt;EMPTY&gt;; Rail #13: &lt;EMPTY&gt;; Rail #14: &lt;EMPTY&gt;; Rail #15: &lt;EMPTY&gt;; Rail #16: &lt;EMPTY&gt;; Rail #17: &lt;EMPTY&gt;; Rail #18: &lt;EMPTY&gt;; Rail #19: &lt;EMPTY&gt;; Rail #20: &lt;EMPTY&gt;; Rail #21: &lt;EMPTY&gt;; Rail #22: &lt;EMPTY&gt;; Rail #23: &lt;EMPTY&gt;; Rail #24: &lt;EMPTY&gt;; Rail #25: &lt;EMPTY&gt;; Rail #26: &lt;EMPTY&gt;; Rail #27: &lt;EMPTY&gt;; Rail #28: &lt;EMPTY&gt;; Rail #29: &lt;EMPTY&gt;; Rail #30: &lt;EMPTY&gt;; Rail #31: &lt;EMPTY&gt;; Rail #32: &lt;EMPTY&gt;</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00000000000000000000000000000000000000000000000000000000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -2743,9 +2743,9 @@
                 <ID>READ_TEMPERATURE_1</ID>
                 <Code>141</Code>
                 <IDAndCode>READ_TEMPERATURE_1 [0x8D]</IDAndCode>
-                <ValueText>29 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xDB97" />
-                <ValueNumeric>28.71875</ValueNumeric>
+                <ValueText>24 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xDAF6" />
+                <ValueNumeric>23.6875</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -2769,8 +2769,8 @@
                 <ID>REAL_TIME_CLOCK</ID>
                 <Code>215</Code>
                 <IDAndCode>RUN_TIME_CLOCK [MFR 07,0xD7]</IDAndCode>
-                <ValueText>12 Days, 20:22:24.479</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x045F25DF0000000C" />
+                <ValueText>0 Days, 00:01:39.296</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000183E000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>255</Page>
@@ -2794,8 +2794,8 @@
                 <ID>STATUS_BYTE</ID>
                 <Code>120</Code>
                 <IDAndCode>STATUS_BYTE [0x78]</IDAndCode>
-                <ValueText>NONE_OF_ABOVE</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x01" />
+                <ValueText>NONE_OF_ABOVE,OFF</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x41" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -2818,8 +2818,8 @@
                 <ID>STATUS_WORD</ID>
                 <Code>121</Code>
                 <IDAndCode>STATUS_WORD [0x79]</IDAndCode>
-                <ValueText>NONE_OF_ABOVE,POWER_GOOD,IOUT_POUT,VOUT</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xC801" />
+                <ValueText>NONE_OF_ABOVE,OFF,POWER_GOOD,MFR</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x1841" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -2866,8 +2866,8 @@
                 <ID>UCD90240_BLACK_BOX_RAIL_VALUES</ID>
                 <Code>183</Code>
                 <IDAndCode>BLACK_BOX_RAIL_VALUES [0xB7,Rail #1]</IDAndCode>
-                <ValueText>Rail 1: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=11.8398 V; Current=0.0000 A; Temperature=0.0000 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x005C2F00000000" />
+                <ValueText>Rail 1: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=8.9111 V; Current=0.0000 A; Temperature=0.0000 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00A52300000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>0</Page>
@@ -2967,8 +2967,8 @@
                 <ID>LOGGED_PAGE_PEAKS</ID>
                 <Code>237</Code>
                 <IDAndCode>LOGGED_PAGE_PEAKS [MFR 29,0xED,Rail #1]</IDAndCode>
-                <ValueText>Voltage: 11.864 V, Current: 0.00 A, Temp: 0 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00752F0080" />
+                <ValueText>Voltage: 12.043 V, Current: 0.00 A, Temp: 0 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x002C300080" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>0</Page>
@@ -2991,8 +2991,8 @@
                 <ID>MFR_STATUS</ID>
                 <Code>243</Code>
                 <IDAndCode>MFR_STATUS [MFR 35,0xF3,Rail #1]</IDAndCode>
-                <ValueText>&lt;EMPTY&gt;</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000" />
+                <ValueText>STORE_DEFAULT_ALL_DONE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000200" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>0</Page>
@@ -3003,8 +3003,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #1]</IDAndCode>
-                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Use TOFF_DELAY/TOFF_FALL</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x16" />
+                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Turn off Immediately</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x17" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>0</Page>
@@ -3182,8 +3182,8 @@
                 <ID>READ_RAIL_STATE</ID>
                 <Code>185</Code>
                 <IDAndCode>READ_RAIL_STATE [0xB9,Rail #1]</IDAndCode>
-                <ValueText>REGULATION</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x05" />
+                <ValueText>IDLE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x01" />
                 <ParameterType>String</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>0</Page>
@@ -3194,9 +3194,9 @@
                 <ID>READ_TEMPERATURE_2</ID>
                 <Code>142</Code>
                 <IDAndCode>READ_TEMPERATURE_2 [0x8E,Rail #1]</IDAndCode>
-                <ValueText>29 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xDB9A" />
-                <ValueNumeric>28.8125</ValueNumeric>
+                <ValueText>24 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xDAF6" />
+                <ValueNumeric>23.6875</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>0</Page>
@@ -3207,9 +3207,9 @@
                 <ID>READ_VOUT</ID>
                 <Code>139</Code>
                 <IDAndCode>READ_VOUT [0x8B,Rail #1]</IDAndCode>
-                <ValueText>11.745 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x2EFB" />
-                <ValueNumeric>11.745</ValueNumeric>
+                <ValueText>12.037 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x3026" />
+                <ValueNumeric>12.037</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>0</Page>
@@ -3855,8 +3855,8 @@
                 <ID>UCD90240_BLACK_BOX_RAIL_VALUES</ID>
                 <Code>183</Code>
                 <IDAndCode>BLACK_BOX_RAIL_VALUES [0xB7,Rail #2]</IDAndCode>
-                <ValueText>Rail 2: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=0.0000 V; Current=0.1719 A; Temperature=0.0000 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000C0A20000" />
+                <ValueText>Rail 2: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=0.0000 V; Current=-0.0156 A; Temperature=0.0000 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000008E0000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>1</Page>
@@ -3867,8 +3867,8 @@
                 <ID>FAULT_RESPONSES</ID>
                 <Code>233</Code>
                 <IDAndCode>FAULT_RESPONSES [MFR 25,0xE9,Rail #2]</IDAndCode>
-                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000000000" />
+                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Shutdown immediately; Restart: Do not restart| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000080000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>1</Page>
@@ -3944,7 +3944,7 @@
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #2]</IDAndCode>
                 <ValueText>-1.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xB400" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xBE00" />
                 <ValueNumeric>-1</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -3956,8 +3956,8 @@
                 <ID>LOGGED_PAGE_PEAKS</ID>
                 <Code>237</Code>
                 <IDAndCode>LOGGED_PAGE_PEAKS [MFR 29,0xED,Rail #2]</IDAndCode>
-                <ValueText>Voltage: 0.000 V, Current: 0.56 A, Temp: 0 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00000040B2" />
+                <ValueText>Voltage: 0.000 V, Current: 0.00 A, Temp: 0 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0000000080" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>1</Page>
@@ -3980,8 +3980,8 @@
                 <ID>MFR_STATUS</ID>
                 <Code>243</Code>
                 <IDAndCode>MFR_STATUS [MFR 35,0xF3,Rail #2]</IDAndCode>
-                <ValueText>&lt;EMPTY&gt;</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000" />
+                <ValueText>STORE_DEFAULT_ALL_DONE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000200" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>1</Page>
@@ -3992,8 +3992,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #2]</IDAndCode>
-                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Use TOFF_DELAY/TOFF_FALL</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x16" />
+                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Turn off Immediately</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x17" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>1</Page>
@@ -4158,9 +4158,9 @@
                 <ID>READ_IOUT</ID>
                 <Code>140</Code>
                 <IDAndCode>READ_IOUT [0x8C,Rail #2]</IDAndCode>
-                <ValueText>0.56 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xB240" />
-                <ValueNumeric>0.5625</ValueNumeric>
+                <ValueText>-0.23 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xA440" />
+                <ValueNumeric>-0.234375</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>1</Page>
@@ -4171,8 +4171,8 @@
                 <ID>READ_RAIL_STATE</ID>
                 <Code>185</Code>
                 <IDAndCode>READ_RAIL_STATE [0xB9,Rail #2]</IDAndCode>
-                <ValueText>REGULATION</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x05" />
+                <ValueText>IDLE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x01" />
                 <ParameterType>String</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>1</Page>
@@ -4183,9 +4183,9 @@
                 <ID>READ_TEMPERATURE_2</ID>
                 <Code>142</Code>
                 <IDAndCode>READ_TEMPERATURE_2 [0x8E,Rail #2]</IDAndCode>
-                <ValueText>29 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xDB98" />
-                <ValueNumeric>28.75</ValueNumeric>
+                <ValueText>24 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xDAF6" />
+                <ValueNumeric>23.6875</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>1</Page>
@@ -4209,8 +4209,8 @@
                 <ID>SEQ_CONFIG</ID>
                 <Code>246</Code>
                 <IDAndCode>SEQ_CONFIG [MFR 38,0xF6,Rail #2]</IDAndCode>
-                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Unassigned; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0004000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: 1,16 | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin L10 EN03(GPIO) ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x1A06018000000000000000000000000000000000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>1</Page>
@@ -4416,9 +4416,9 @@
                 <ID>TON_DELAY</ID>
                 <Code>96</Code>
                 <IDAndCode>TON_DELAY [0x60,Rail #2]</IDAndCode>
-                <ValueText>0.0 ms</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
-                <ValueNumeric>0</ValueNumeric>
+                <ValueText>3,000.0 ms</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x12EE" />
+                <ValueNumeric>3000</ValueNumeric>
                 <ParameterType>TimeOneDigitMilliseconds</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>1</Page>
@@ -4844,8 +4844,8 @@
                 <ID>UCD90240_BLACK_BOX_RAIL_VALUES</ID>
                 <Code>183</Code>
                 <IDAndCode>BLACK_BOX_RAIL_VALUES [0xB7,Rail #3]</IDAndCode>
-                <ValueText>Rail 3: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=0.0000 V; Current=0.0000 A; Temperature=0.0000 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00000000800000" />
+                <ValueText>Rail 3: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=0.0000 V; Current=-0.5000 A; Temperature=0.0000 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000FFFF0000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>2</Page>
@@ -4856,8 +4856,8 @@
                 <ID>FAULT_RESPONSES</ID>
                 <Code>233</Code>
                 <IDAndCode>FAULT_RESPONSES [MFR 25,0xE9,Rail #3]</IDAndCode>
-                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000000000" />
+                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Shutdown immediately; Restart: Do not restart| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000080000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>2</Page>
@@ -4933,7 +4933,7 @@
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #3]</IDAndCode>
                 <ValueText>-1.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xB400" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xBE00" />
                 <ValueNumeric>-1</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -4945,8 +4945,8 @@
                 <ID>LOGGED_PAGE_PEAKS</ID>
                 <Code>237</Code>
                 <IDAndCode>LOGGED_PAGE_PEAKS [MFR 29,0xED,Rail #3]</IDAndCode>
-                <ValueText>Voltage: 0.000 V, Current: 0.08 A, Temp: 0 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000809A" />
+                <ValueText>Voltage: 0.000 V, Current: 0.06 A, Temp: 0 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000009A" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>2</Page>
@@ -4969,8 +4969,8 @@
                 <ID>MFR_STATUS</ID>
                 <Code>243</Code>
                 <IDAndCode>MFR_STATUS [MFR 35,0xF3,Rail #3]</IDAndCode>
-                <ValueText>&lt;EMPTY&gt;</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000" />
+                <ValueText>STORE_DEFAULT_ALL_DONE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000200" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>2</Page>
@@ -4981,8 +4981,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #3]</IDAndCode>
-                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Use TOFF_DELAY/TOFF_FALL</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x16" />
+                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Turn off Immediately</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x17" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>2</Page>
@@ -5147,9 +5147,9 @@
                 <ID>READ_IOUT</ID>
                 <Code>140</Code>
                 <IDAndCode>READ_IOUT [0x8C,Rail #3]</IDAndCode>
-                <ValueText>0.08 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x9A80" />
-                <ValueNumeric>0.078125</ValueNumeric>
+                <ValueText>0.06 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x9A00" />
+                <ValueNumeric>0.0625</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>2</Page>
@@ -5160,8 +5160,8 @@
                 <ID>READ_RAIL_STATE</ID>
                 <Code>185</Code>
                 <IDAndCode>READ_RAIL_STATE [0xB9,Rail #3]</IDAndCode>
-                <ValueText>REGULATION</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x05" />
+                <ValueText>IDLE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x01" />
                 <ParameterType>String</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>2</Page>
@@ -5172,9 +5172,9 @@
                 <ID>READ_TEMPERATURE_2</ID>
                 <Code>142</Code>
                 <IDAndCode>READ_TEMPERATURE_2 [0x8E,Rail #3]</IDAndCode>
-                <ValueText>29 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xDB98" />
-                <ValueNumeric>28.75</ValueNumeric>
+                <ValueText>24 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xDAF6" />
+                <ValueNumeric>23.6875</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>2</Page>
@@ -5198,8 +5198,8 @@
                 <ID>SEQ_CONFIG</ID>
                 <Code>246</Code>
                 <IDAndCode>SEQ_CONFIG [MFR 38,0xF6,Rail #3]</IDAndCode>
-                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Unassigned; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0004000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: Rail #4 | Enable: Unassigned; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0004000000000000000000000000000000000000000800000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>2</Page>
@@ -5318,8 +5318,8 @@
                 <ID>STATUS_IOUT</ID>
                 <Code>123</Code>
                 <IDAndCode>STATUS_IOUT [0x7B,Rail #3]</IDAndCode>
-                <ValueText>IOUT_UC_FAULT</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x10" />
+                <ValueText>&lt;EMPTY&gt;</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>2</Page>
@@ -5833,8 +5833,8 @@
                 <ID>UCD90240_BLACK_BOX_RAIL_VALUES</ID>
                 <Code>183</Code>
                 <IDAndCode>BLACK_BOX_RAIL_VALUES [0xB7,Rail #4]</IDAndCode>
-                <ValueText>Rail 4: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=1.0440 V; Current=0.6719 A; Temperature=0.0000 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00B410B0B20000" />
+                <ValueText>Rail 4: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=0.0000 V; Current=0.0313 A; Temperature=0.0000 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00000000920000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>3</Page>
@@ -5845,8 +5845,8 @@
                 <ID>FAULT_RESPONSES</ID>
                 <Code>233</Code>
                 <IDAndCode>FAULT_RESPONSES [MFR 25,0xE9,Rail #4]</IDAndCode>
-                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000000000" />
+                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Shutdown immediately; Restart: Do not restart| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000080000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>3</Page>
@@ -5922,7 +5922,7 @@
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #4]</IDAndCode>
                 <ValueText>-1.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xB400" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xBE00" />
                 <ValueNumeric>-1</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -5934,8 +5934,8 @@
                 <ID>LOGGED_PAGE_PEAKS</ID>
                 <Code>237</Code>
                 <IDAndCode>LOGGED_PAGE_PEAKS [MFR 29,0xED,Rail #4]</IDAndCode>
-                <ValueText>Voltage: 0.000 V, Current: 0.00 A, Temp: 0 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0000000000" />
+                <ValueText>Voltage: 0.013 V, Current: 0.41 A, Temp: 0 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00680040AB" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>3</Page>
@@ -5958,8 +5958,8 @@
                 <ID>MFR_STATUS</ID>
                 <Code>243</Code>
                 <IDAndCode>MFR_STATUS [MFR 35,0xF3,Rail #4]</IDAndCode>
-                <ValueText>&lt;EMPTY&gt;</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000" />
+                <ValueText>STORE_DEFAULT_ALL_DONE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000200" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>3</Page>
@@ -5970,8 +5970,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #4]</IDAndCode>
-                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Use TOFF_DELAY/TOFF_FALL</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x16" />
+                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Turn off Immediately</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x17" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>3</Page>
@@ -6020,9 +6020,9 @@
                 <ID>POWER_GOOD_OFF</ID>
                 <Code>95</Code>
                 <IDAndCode>POWER_GOOD_OFF [0x5F,Rail #4, CustomIndex #0]</IDAndCode>
-                <ValueText>1.148 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x24BC" />
-                <ValueNumeric>1.148</ValueNumeric>
+                <ValueText>0.810 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x19EC" />
+                <ValueNumeric>0.81</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>3</Page>
@@ -6072,9 +6072,9 @@
                 <ID>POWER_GOOD_ON</ID>
                 <Code>94</Code>
                 <IDAndCode>POWER_GOOD_ON [0x5E,Rail #4, CustomIndex #0]</IDAndCode>
-                <ValueText>1.215 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x26E1" />
-                <ValueNumeric>1.215</ValueNumeric>
+                <ValueText>0.878 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x1C19" />
+                <ValueNumeric>0.878</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>3</Page>
@@ -6136,9 +6136,9 @@
                 <ID>READ_IOUT</ID>
                 <Code>140</Code>
                 <IDAndCode>READ_IOUT [0x8C,Rail #4]</IDAndCode>
-                <ValueText>0.03 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x9200" />
-                <ValueNumeric>0.03125</ValueNumeric>
+                <ValueText>0.41 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xAB40" />
+                <ValueNumeric>0.40625</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>3</Page>
@@ -6149,8 +6149,8 @@
                 <ID>READ_RAIL_STATE</ID>
                 <Code>185</Code>
                 <IDAndCode>READ_RAIL_STATE [0xB9,Rail #4]</IDAndCode>
-                <ValueText>RAMP_UP</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x04" />
+                <ValueText>IDLE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x01" />
                 <ParameterType>String</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>3</Page>
@@ -6161,9 +6161,9 @@
                 <ID>READ_TEMPERATURE_2</ID>
                 <Code>142</Code>
                 <IDAndCode>READ_TEMPERATURE_2 [0x8E,Rail #4]</IDAndCode>
-                <ValueText>29 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xDB98" />
-                <ValueNumeric>28.75</ValueNumeric>
+                <ValueText>24 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xDAF6" />
+                <ValueNumeric>23.6875</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>3</Page>
@@ -6174,9 +6174,9 @@
                 <ID>READ_VOUT</ID>
                 <Code>139</Code>
                 <IDAndCode>READ_VOUT [0x8B,Rail #4]</IDAndCode>
-                <ValueText>1.054 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x10DC" />
-                <ValueNumeric>1.054</ValueNumeric>
+                <ValueText>0.013 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0068" />
+                <ValueNumeric>0.013</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>3</Page>
@@ -6187,8 +6187,8 @@
                 <ID>SEQ_CONFIG</ID>
                 <Code>246</Code>
                 <IDAndCode>SEQ_CONFIG [MFR 38,0xF6,Rail #4]</IDAndCode>
-                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Unassigned; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0004000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: 1 | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin N9 EN02(GPIO) ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x1906010000000000000000000000000000000000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>3</Page>
@@ -6394,9 +6394,9 @@
                 <ID>TON_DELAY</ID>
                 <Code>96</Code>
                 <IDAndCode>TON_DELAY [0x60,Rail #4]</IDAndCode>
-                <ValueText>0.0 ms</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
-                <ValueNumeric>0</ValueNumeric>
+                <ValueText>1,000.0 ms</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x03E8" />
+                <ValueNumeric>1000</ValueNumeric>
                 <ParameterType>TimeOneDigitMilliseconds</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>3</Page>
@@ -6834,8 +6834,8 @@
                 <ID>FAULT_RESPONSES</ID>
                 <Code>233</Code>
                 <IDAndCode>FAULT_RESPONSES [MFR 25,0xE9,Rail #5]</IDAndCode>
-                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000000000" />
+                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Shutdown immediately; Restart: Do not restart| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000080000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>4</Page>
@@ -6911,7 +6911,7 @@
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #5]</IDAndCode>
                 <ValueText>-1.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xB400" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xBE00" />
                 <ValueNumeric>-1</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -6923,8 +6923,8 @@
                 <ID>LOGGED_PAGE_PEAKS</ID>
                 <Code>237</Code>
                 <IDAndCode>LOGGED_PAGE_PEAKS [MFR 29,0xED,Rail #5]</IDAndCode>
-                <ValueText>Voltage: 0.000 V, Current: 1.03 A, Temp: 0 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00000010BA" />
+                <ValueText>Voltage: 0.000 V, Current: 0.00 A, Temp: 0 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0000000080" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>4</Page>
@@ -6947,8 +6947,8 @@
                 <ID>MFR_STATUS</ID>
                 <Code>243</Code>
                 <IDAndCode>MFR_STATUS [MFR 35,0xF3,Rail #5]</IDAndCode>
-                <ValueText>&lt;EMPTY&gt;</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000" />
+                <ValueText>STORE_DEFAULT_ALL_DONE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000200" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>4</Page>
@@ -6959,8 +6959,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #5]</IDAndCode>
-                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Use TOFF_DELAY/TOFF_FALL</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x16" />
+                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Turn off Immediately</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x17" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>4</Page>
@@ -7125,9 +7125,9 @@
                 <ID>READ_IOUT</ID>
                 <Code>140</Code>
                 <IDAndCode>READ_IOUT [0x8C,Rail #5]</IDAndCode>
-                <ValueText>0.13 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xA200" />
-                <ValueNumeric>0.125</ValueNumeric>
+                <ValueText>0.00 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>4</Page>
@@ -7138,8 +7138,8 @@
                 <ID>READ_RAIL_STATE</ID>
                 <Code>185</Code>
                 <IDAndCode>READ_RAIL_STATE [0xB9,Rail #5]</IDAndCode>
-                <ValueText>REGULATION</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x05" />
+                <ValueText>IDLE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x01" />
                 <ParameterType>String</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>4</Page>
@@ -7150,9 +7150,9 @@
                 <ID>READ_TEMPERATURE_2</ID>
                 <Code>142</Code>
                 <IDAndCode>READ_TEMPERATURE_2 [0x8E,Rail #5]</IDAndCode>
-                <ValueText>29 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xDB9C" />
-                <ValueNumeric>28.875</ValueNumeric>
+                <ValueText>24 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xDAF8" />
+                <ValueNumeric>23.75</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>4</Page>
@@ -7176,8 +7176,8 @@
                 <ID>SEQ_CONFIG</ID>
                 <Code>246</Code>
                 <IDAndCode>SEQ_CONFIG [MFR 38,0xF6,Rail #5]</IDAndCode>
-                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Unassigned; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0004000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: Rail #4 | Enable: Unassigned; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0004000000000000000000000000000000000000000800000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>4</Page>
@@ -7296,8 +7296,8 @@
                 <ID>STATUS_IOUT</ID>
                 <Code>123</Code>
                 <IDAndCode>STATUS_IOUT [0x7B,Rail #5]</IDAndCode>
-                <ValueText>IOUT_UC_FAULT</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x10" />
+                <ValueText>&lt;EMPTY&gt;</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>4</Page>
@@ -7811,8 +7811,8 @@
                 <ID>UCD90240_BLACK_BOX_RAIL_VALUES</ID>
                 <Code>183</Code>
                 <IDAndCode>BLACK_BOX_RAIL_VALUES [0xB7,Rail #6]</IDAndCode>
-                <ValueText>Rail 6: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=0.0000 V; Current=0.0000 A; Temperature=0.0000 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00000000800000" />
+                <ValueText>Rail 6: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=0.0000 V; Current=0.0313 A; Temperature=0.0000 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00000000920000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>5</Page>
@@ -7823,8 +7823,8 @@
                 <ID>FAULT_RESPONSES</ID>
                 <Code>233</Code>
                 <IDAndCode>FAULT_RESPONSES [MFR 25,0xE9,Rail #6]</IDAndCode>
-                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000000000" />
+                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Shutdown immediately; Restart: Do not restart| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000080000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>5</Page>
@@ -7900,7 +7900,7 @@
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #6]</IDAndCode>
                 <ValueText>-1.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xB400" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xBE00" />
                 <ValueNumeric>-1</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -7912,8 +7912,8 @@
                 <ID>LOGGED_PAGE_PEAKS</ID>
                 <Code>237</Code>
                 <IDAndCode>LOGGED_PAGE_PEAKS [MFR 29,0xED,Rail #6]</IDAndCode>
-                <ValueText>Voltage: 0.000 V, Current: 0.09 A, Temp: 0 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000009B" />
+                <ValueText>Voltage: 0.000 V, Current: 0.00 A, Temp: 0 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0000000080" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>5</Page>
@@ -7936,8 +7936,8 @@
                 <ID>MFR_STATUS</ID>
                 <Code>243</Code>
                 <IDAndCode>MFR_STATUS [MFR 35,0xF3,Rail #6]</IDAndCode>
-                <ValueText>&lt;EMPTY&gt;</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000" />
+                <ValueText>STORE_DEFAULT_ALL_DONE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000200" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>5</Page>
@@ -7948,8 +7948,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #6]</IDAndCode>
-                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Use TOFF_DELAY/TOFF_FALL</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x16" />
+                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Turn off Immediately</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x17" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>5</Page>
@@ -8114,9 +8114,9 @@
                 <ID>READ_IOUT</ID>
                 <Code>140</Code>
                 <IDAndCode>READ_IOUT [0x8C,Rail #6]</IDAndCode>
-                <ValueText>0.09 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x9B00" />
-                <ValueNumeric>0.09375</ValueNumeric>
+                <ValueText>0.00 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>5</Page>
@@ -8127,8 +8127,8 @@
                 <ID>READ_RAIL_STATE</ID>
                 <Code>185</Code>
                 <IDAndCode>READ_RAIL_STATE [0xB9,Rail #6]</IDAndCode>
-                <ValueText>REGULATION</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x05" />
+                <ValueText>IDLE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x01" />
                 <ParameterType>String</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>5</Page>
@@ -8139,9 +8139,9 @@
                 <ID>READ_TEMPERATURE_2</ID>
                 <Code>142</Code>
                 <IDAndCode>READ_TEMPERATURE_2 [0x8E,Rail #6]</IDAndCode>
-                <ValueText>29 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xDB9A" />
-                <ValueNumeric>28.8125</ValueNumeric>
+                <ValueText>24 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xDAF8" />
+                <ValueNumeric>23.75</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>5</Page>
@@ -8165,8 +8165,8 @@
                 <ID>SEQ_CONFIG</ID>
                 <Code>246</Code>
                 <IDAndCode>SEQ_CONFIG [MFR 38,0xF6,Rail #6]</IDAndCode>
-                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Unassigned; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0004000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: Rail #7 | Enable: Unassigned; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0004000000000000000000000000000000000000004000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>5</Page>
@@ -8800,8 +8800,8 @@
                 <ID>UCD90240_BLACK_BOX_RAIL_VALUES</ID>
                 <Code>183</Code>
                 <IDAndCode>BLACK_BOX_RAIL_VALUES [0xB7,Rail #7]</IDAndCode>
-                <ValueText>Rail 7: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=1.0503 V; Current=0.0000 A; Temperature=0.0000 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00CE1000800000" />
+                <ValueText>Rail 7: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=0.0000 V; Current=0.0000 A; Temperature=0.0000 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>6</Page>
@@ -8812,8 +8812,8 @@
                 <ID>FAULT_RESPONSES</ID>
                 <Code>233</Code>
                 <IDAndCode>FAULT_RESPONSES [MFR 25,0xE9,Rail #7]</IDAndCode>
-                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000000000" />
+                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Shutdown immediately; Restart: Do not restart| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000080000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>6</Page>
@@ -8889,7 +8889,7 @@
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #7]</IDAndCode>
                 <ValueText>-1.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xB400" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xBE00" />
                 <ValueNumeric>-1</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -8901,8 +8901,8 @@
                 <ID>LOGGED_PAGE_PEAKS</ID>
                 <Code>237</Code>
                 <IDAndCode>LOGGED_PAGE_PEAKS [MFR 29,0xED,Rail #7]</IDAndCode>
-                <ValueText>Voltage: 0.000 V, Current: 0.00 A, Temp: 0 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0000000000" />
+                <ValueText>Voltage: 0.008 V, Current: 0.00 A, Temp: 0 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0040000080" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>6</Page>
@@ -8925,8 +8925,8 @@
                 <ID>MFR_STATUS</ID>
                 <Code>243</Code>
                 <IDAndCode>MFR_STATUS [MFR 35,0xF3,Rail #7]</IDAndCode>
-                <ValueText>&lt;EMPTY&gt;</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000" />
+                <ValueText>STORE_DEFAULT_ALL_DONE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000200" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>6</Page>
@@ -8937,8 +8937,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #7]</IDAndCode>
-                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Use TOFF_DELAY/TOFF_FALL</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x16" />
+                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Turn off Immediately</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x17" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>6</Page>
@@ -8987,9 +8987,9 @@
                 <ID>POWER_GOOD_OFF</ID>
                 <Code>95</Code>
                 <IDAndCode>POWER_GOOD_OFF [0x5F,Rail #7, CustomIndex #0]</IDAndCode>
-                <ValueText>1.148 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x24BC" />
-                <ValueNumeric>1.148</ValueNumeric>
+                <ValueText>0.810 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x19EC" />
+                <ValueNumeric>0.81</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>6</Page>
@@ -9039,9 +9039,9 @@
                 <ID>POWER_GOOD_ON</ID>
                 <Code>94</Code>
                 <IDAndCode>POWER_GOOD_ON [0x5E,Rail #7, CustomIndex #0]</IDAndCode>
-                <ValueText>1.215 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x26E1" />
-                <ValueNumeric>1.215</ValueNumeric>
+                <ValueText>0.878 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x1C19" />
+                <ValueNumeric>0.878</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>6</Page>
@@ -9103,9 +9103,9 @@
                 <ID>READ_IOUT</ID>
                 <Code>140</Code>
                 <IDAndCode>READ_IOUT [0x8C,Rail #7]</IDAndCode>
-                <ValueText>0.03 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x9200" />
-                <ValueNumeric>0.03125</ValueNumeric>
+                <ValueText>0.00 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>6</Page>
@@ -9116,8 +9116,8 @@
                 <ID>READ_RAIL_STATE</ID>
                 <Code>185</Code>
                 <IDAndCode>READ_RAIL_STATE [0xB9,Rail #7]</IDAndCode>
-                <ValueText>RAMP_UP</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x04" />
+                <ValueText>IDLE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x01" />
                 <ParameterType>String</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>6</Page>
@@ -9128,9 +9128,9 @@
                 <ID>READ_TEMPERATURE_2</ID>
                 <Code>142</Code>
                 <IDAndCode>READ_TEMPERATURE_2 [0x8E,Rail #7]</IDAndCode>
-                <ValueText>29 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xDB98" />
-                <ValueNumeric>28.75</ValueNumeric>
+                <ValueText>24 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xDAF8" />
+                <ValueNumeric>23.75</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>6</Page>
@@ -9141,9 +9141,9 @@
                 <ID>READ_VOUT</ID>
                 <Code>139</Code>
                 <IDAndCode>READ_VOUT [0x8B,Rail #7]</IDAndCode>
-                <ValueText>1.060 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x10F6" />
-                <ValueNumeric>1.06</ValueNumeric>
+                <ValueText>0.008 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0040" />
+                <ValueNumeric>0.008</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>6</Page>
@@ -9154,8 +9154,8 @@
                 <ID>SEQ_CONFIG</ID>
                 <Code>246</Code>
                 <IDAndCode>SEQ_CONFIG [MFR 38,0xF6,Rail #7]</IDAndCode>
-                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Unassigned; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0004000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: 1 | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin M9 EN01(GPIO) ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x1806010000000000000000000000000000000000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>6</Page>
@@ -9361,9 +9361,9 @@
                 <ID>TON_DELAY</ID>
                 <Code>96</Code>
                 <IDAndCode>TON_DELAY [0x60,Rail #7]</IDAndCode>
-                <ValueText>0.0 ms</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
-                <ValueNumeric>0</ValueNumeric>
+                <ValueText>2,000.0 ms</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0BE8" />
+                <ValueNumeric>2000</ValueNumeric>
                 <ParameterType>TimeOneDigitMilliseconds</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>6</Page>
@@ -9789,8 +9789,8 @@
                 <ID>UCD90240_BLACK_BOX_RAIL_VALUES</ID>
                 <Code>183</Code>
                 <IDAndCode>BLACK_BOX_RAIL_VALUES [0xB7,Rail #8]</IDAndCode>
-                <ValueText>Rail 8: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=0.0000 V; Current=0.0313 A; Temperature=0.0000 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00000000920000" />
+                <ValueText>Rail 8: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=0.0000 V; Current=0.0000 A; Temperature=0.0000 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>7</Page>
@@ -9801,8 +9801,8 @@
                 <ID>FAULT_RESPONSES</ID>
                 <Code>233</Code>
                 <IDAndCode>FAULT_RESPONSES [MFR 25,0xE9,Rail #8]</IDAndCode>
-                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000000000" />
+                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Shutdown immediately; Restart: Do not restart| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000080000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>7</Page>
@@ -9878,7 +9878,7 @@
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #8]</IDAndCode>
                 <ValueText>-1.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xB400" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xBE00" />
                 <ValueNumeric>-1</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -9890,8 +9890,8 @@
                 <ID>LOGGED_PAGE_PEAKS</ID>
                 <Code>237</Code>
                 <IDAndCode>LOGGED_PAGE_PEAKS [MFR 29,0xED,Rail #8]</IDAndCode>
-                <ValueText>Voltage: 0.000 V, Current: 1.16 A, Temp: 0 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00000050BA" />
+                <ValueText>Voltage: 0.000 V, Current: 0.00 A, Temp: 0 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0000000080" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>7</Page>
@@ -9914,8 +9914,8 @@
                 <ID>MFR_STATUS</ID>
                 <Code>243</Code>
                 <IDAndCode>MFR_STATUS [MFR 35,0xF3,Rail #8]</IDAndCode>
-                <ValueText>&lt;EMPTY&gt;</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000" />
+                <ValueText>STORE_DEFAULT_ALL_DONE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000200" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>7</Page>
@@ -9926,8 +9926,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #8]</IDAndCode>
-                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Use TOFF_DELAY/TOFF_FALL</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x16" />
+                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Turn off Immediately</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x17" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>7</Page>
@@ -10092,9 +10092,9 @@
                 <ID>READ_IOUT</ID>
                 <Code>140</Code>
                 <IDAndCode>READ_IOUT [0x8C,Rail #8]</IDAndCode>
-                <ValueText>0.17 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xA2C0" />
-                <ValueNumeric>0.171875</ValueNumeric>
+                <ValueText>0.00 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>7</Page>
@@ -10105,8 +10105,8 @@
                 <ID>READ_RAIL_STATE</ID>
                 <Code>185</Code>
                 <IDAndCode>READ_RAIL_STATE [0xB9,Rail #8]</IDAndCode>
-                <ValueText>REGULATION</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x05" />
+                <ValueText>IDLE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x01" />
                 <ParameterType>String</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>7</Page>
@@ -10117,9 +10117,9 @@
                 <ID>READ_TEMPERATURE_2</ID>
                 <Code>142</Code>
                 <IDAndCode>READ_TEMPERATURE_2 [0x8E,Rail #8]</IDAndCode>
-                <ValueText>29 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xDB98" />
-                <ValueNumeric>28.75</ValueNumeric>
+                <ValueText>24 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xDAF8" />
+                <ValueNumeric>23.75</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>7</Page>
@@ -10143,8 +10143,8 @@
                 <ID>SEQ_CONFIG</ID>
                 <Code>246</Code>
                 <IDAndCode>SEQ_CONFIG [MFR 38,0xF6,Rail #8]</IDAndCode>
-                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Unassigned; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0004000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: Rail #7 | Enable: Unassigned; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0004000000000000000000000000000000000000004000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>7</Page>
@@ -10778,8 +10778,8 @@
                 <ID>UCD90240_BLACK_BOX_RAIL_VALUES</ID>
                 <Code>183</Code>
                 <IDAndCode>BLACK_BOX_RAIL_VALUES [0xB7,Rail #9]</IDAndCode>
-                <ValueText>Rail 9: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=0.8491 V; Current=0.0000 A; Temperature=0.0000 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00960D00800000" />
+                <ValueText>Rail 9: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=0.8569 V; Current=0.1094 A; Temperature=0.0000 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00D836809B0000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>8</Page>
@@ -10790,8 +10790,8 @@
                 <ID>FAULT_RESPONSES</ID>
                 <Code>233</Code>
                 <IDAndCode>FAULT_RESPONSES [MFR 25,0xE9,Rail #9]</IDAndCode>
-                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000000000" />
+                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Shutdown immediately; Restart: Do not restart| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000080000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>8</Page>
@@ -10867,7 +10867,7 @@
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #9]</IDAndCode>
                 <ValueText>-1.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xB400" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xBE00" />
                 <ValueNumeric>-1</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -10879,8 +10879,8 @@
                 <ID>LOGGED_PAGE_PEAKS</ID>
                 <Code>237</Code>
                 <IDAndCode>LOGGED_PAGE_PEAKS [MFR 29,0xED,Rail #9]</IDAndCode>
-                <ValueText>Voltage: 0.000 V, Current: 0.00 A, Temp: 0 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0000000000" />
+                <ValueText>Voltage: 0.181 V, Current: 0.42 A, Temp: 0 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00900B60AB" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>8</Page>
@@ -10903,8 +10903,8 @@
                 <ID>MFR_STATUS</ID>
                 <Code>243</Code>
                 <IDAndCode>MFR_STATUS [MFR 35,0xF3,Rail #9]</IDAndCode>
-                <ValueText>&lt;EMPTY&gt;</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000" />
+                <ValueText>STORE_DEFAULT_ALL_DONE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000200" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>8</Page>
@@ -10915,8 +10915,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #9]</IDAndCode>
-                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Use TOFF_DELAY/TOFF_FALL</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x16" />
+                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Turn off Immediately</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x17" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>8</Page>
@@ -11081,9 +11081,9 @@
                 <ID>READ_IOUT</ID>
                 <Code>140</Code>
                 <IDAndCode>READ_IOUT [0x8C,Rail #9]</IDAndCode>
-                <ValueText>2.39 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xC264" />
-                <ValueNumeric>2.390625</ValueNumeric>
+                <ValueText>0.03 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x9200" />
+                <ValueNumeric>0.03125</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>8</Page>
@@ -11094,8 +11094,8 @@
                 <ID>READ_RAIL_STATE</ID>
                 <Code>185</Code>
                 <IDAndCode>READ_RAIL_STATE [0xB9,Rail #9]</IDAndCode>
-                <ValueText>REGULATION</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x05" />
+                <ValueText>IDLE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x01" />
                 <ParameterType>String</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>8</Page>
@@ -11106,9 +11106,9 @@
                 <ID>READ_TEMPERATURE_2</ID>
                 <Code>142</Code>
                 <IDAndCode>READ_TEMPERATURE_2 [0x8E,Rail #9]</IDAndCode>
-                <ValueText>29 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xDB9A" />
-                <ValueNumeric>28.8125</ValueNumeric>
+                <ValueText>24 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xDAF8" />
+                <ValueNumeric>23.75</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>8</Page>
@@ -11119,9 +11119,9 @@
                 <ID>READ_VOUT</ID>
                 <Code>139</Code>
                 <IDAndCode>READ_VOUT [0x8B,Rail #9]</IDAndCode>
-                <ValueText>0.848 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x0D90" />
-                <ValueNumeric>0.848</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>8</Page>
@@ -11132,8 +11132,8 @@
                 <ID>SEQ_CONFIG</ID>
                 <Code>246</Code>
                 <IDAndCode>SEQ_CONFIG [MFR 38,0xF6,Rail #9]</IDAndCode>
-                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Unassigned; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0004000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin F13 EN25(GPIO) ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x3006000000000000000000000000000000000000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>8</Page>
@@ -11252,8 +11252,8 @@
                 <ID>STATUS_IOUT</ID>
                 <Code>123</Code>
                 <IDAndCode>STATUS_IOUT [0x7B,Rail #9]</IDAndCode>
-                <ValueText>IOUT_UC_FAULT</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x10" />
+                <ValueText>&lt;EMPTY&gt;</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>8</Page>
@@ -11767,8 +11767,8 @@
                 <ID>UCD90240_BLACK_BOX_RAIL_VALUES</ID>
                 <Code>183</Code>
                 <IDAndCode>BLACK_BOX_RAIL_VALUES [0xB7,Rail #10]</IDAndCode>
-                <ValueText>Rail 10: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=1.1455 V; Current=0.0000 A; Temperature=0.0000 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00541200800000" />
+                <ValueText>Rail 10: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=1.8174 V; Current=0.2813 A; Temperature=0.0000 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00283A40AA0000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>9</Page>
@@ -11779,8 +11779,8 @@
                 <ID>FAULT_RESPONSES</ID>
                 <Code>233</Code>
                 <IDAndCode>FAULT_RESPONSES [MFR 25,0xE9,Rail #10]</IDAndCode>
-                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000000000" />
+                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Shutdown immediately; Restart: Do not restart| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000080000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>9</Page>
@@ -11856,7 +11856,7 @@
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #10]</IDAndCode>
                 <ValueText>-1.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xB400" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xBE00" />
                 <ValueNumeric>-1</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -11868,8 +11868,8 @@
                 <ID>LOGGED_PAGE_PEAKS</ID>
                 <Code>237</Code>
                 <IDAndCode>LOGGED_PAGE_PEAKS [MFR 29,0xED,Rail #10]</IDAndCode>
-                <ValueText>Voltage: 0.000 V, Current: 0.00 A, Temp: 0 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0000000000" />
+                <ValueText>Voltage: 0.011 V, Current: 0.22 A, Temp: 0 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x005C0080A3" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>9</Page>
@@ -11892,8 +11892,8 @@
                 <ID>MFR_STATUS</ID>
                 <Code>243</Code>
                 <IDAndCode>MFR_STATUS [MFR 35,0xF3,Rail #10]</IDAndCode>
-                <ValueText>&lt;EMPTY&gt;</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000" />
+                <ValueText>STORE_DEFAULT_ALL_DONE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000200" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>9</Page>
@@ -11904,8 +11904,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #10]</IDAndCode>
-                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Use TOFF_DELAY/TOFF_FALL</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x16" />
+                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Turn off Immediately</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x17" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>9</Page>
@@ -12070,9 +12070,9 @@
                 <ID>READ_IOUT</ID>
                 <Code>140</Code>
                 <IDAndCode>READ_IOUT [0x8C,Rail #10]</IDAndCode>
-                <ValueText>0.41 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xAB40" />
-                <ValueNumeric>0.40625</ValueNumeric>
+                <ValueText>0.22 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xA380" />
+                <ValueNumeric>0.21875</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>9</Page>
@@ -12083,8 +12083,8 @@
                 <ID>READ_RAIL_STATE</ID>
                 <Code>185</Code>
                 <IDAndCode>READ_RAIL_STATE [0xB9,Rail #10]</IDAndCode>
-                <ValueText>REGULATION</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x05" />
+                <ValueText>IDLE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x01" />
                 <ParameterType>String</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>9</Page>
@@ -12095,9 +12095,9 @@
                 <ID>READ_TEMPERATURE_2</ID>
                 <Code>142</Code>
                 <IDAndCode>READ_TEMPERATURE_2 [0x8E,Rail #10]</IDAndCode>
-                <ValueText>29 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xDB9C" />
-                <ValueNumeric>28.875</ValueNumeric>
+                <ValueText>24 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xDAF8" />
+                <ValueNumeric>23.75</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>9</Page>
@@ -12108,9 +12108,9 @@
                 <ID>READ_VOUT</ID>
                 <Code>139</Code>
                 <IDAndCode>READ_VOUT [0x8B,Rail #10]</IDAndCode>
-                <ValueText>1.787 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x1C96" />
-                <ValueNumeric>1.787</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>9</Page>
@@ -12121,8 +12121,8 @@
                 <ID>SEQ_CONFIG</ID>
                 <Code>246</Code>
                 <IDAndCode>SEQ_CONFIG [MFR 38,0xF6,Rail #10]</IDAndCode>
-                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Unassigned; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0004000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin F12 EN26(GPIO) ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x3106000000000000000000000000000000000000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>9</Page>
@@ -12756,8 +12756,8 @@
                 <ID>UCD90240_BLACK_BOX_RAIL_VALUES</ID>
                 <Code>183</Code>
                 <IDAndCode>BLACK_BOX_RAIL_VALUES [0xB7,Rail #11]</IDAndCode>
-                <ValueText>Rail 11: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=0.8926 V; Current=0.0156 A; Temperature=0.0000 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00480E008A0000" />
+                <ValueText>Rail 11: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=0.0000 V; Current=0.0000 A; Temperature=0.0000 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>10</Page>
@@ -12768,8 +12768,8 @@
                 <ID>FAULT_RESPONSES</ID>
                 <Code>233</Code>
                 <IDAndCode>FAULT_RESPONSES [MFR 25,0xE9,Rail #11]</IDAndCode>
-                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000000000" />
+                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Shutdown immediately; Restart: Do not restart| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000080000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>10</Page>
@@ -12845,7 +12845,7 @@
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #11]</IDAndCode>
                 <ValueText>-1.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xB400" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xBE00" />
                 <ValueNumeric>-1</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -12857,8 +12857,8 @@
                 <ID>LOGGED_PAGE_PEAKS</ID>
                 <Code>237</Code>
                 <IDAndCode>LOGGED_PAGE_PEAKS [MFR 29,0xED,Rail #11]</IDAndCode>
-                <ValueText>Voltage: 0.000 V, Current: 0.00 A, Temp: 0 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0000000000" />
+                <ValueText>Voltage: 0.003 V, Current: 0.00 A, Temp: 0 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0038000080" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>10</Page>
@@ -12881,8 +12881,8 @@
                 <ID>MFR_STATUS</ID>
                 <Code>243</Code>
                 <IDAndCode>MFR_STATUS [MFR 35,0xF3,Rail #11]</IDAndCode>
-                <ValueText>&lt;EMPTY&gt;</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000" />
+                <ValueText>STORE_DEFAULT_ALL_DONE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000200" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>10</Page>
@@ -12893,8 +12893,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #11]</IDAndCode>
-                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Use TOFF_DELAY/TOFF_FALL</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x16" />
+                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Turn off Immediately</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x17" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>10</Page>
@@ -13059,9 +13059,9 @@
                 <ID>READ_IOUT</ID>
                 <Code>140</Code>
                 <IDAndCode>READ_IOUT [0x8C,Rail #11]</IDAndCode>
-                <ValueText>0.08 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x9A80" />
-                <ValueNumeric>0.078125</ValueNumeric>
+                <ValueText>0.00 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>10</Page>
@@ -13072,8 +13072,8 @@
                 <ID>READ_RAIL_STATE</ID>
                 <Code>185</Code>
                 <IDAndCode>READ_RAIL_STATE [0xB9,Rail #11]</IDAndCode>
-                <ValueText>REGULATION</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x05" />
+                <ValueText>IDLE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x01" />
                 <ParameterType>String</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>10</Page>
@@ -13084,9 +13084,9 @@
                 <ID>READ_TEMPERATURE_2</ID>
                 <Code>142</Code>
                 <IDAndCode>READ_TEMPERATURE_2 [0x8E,Rail #11]</IDAndCode>
-                <ValueText>29 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xDB9C" />
-                <ValueNumeric>28.875</ValueNumeric>
+                <ValueText>24 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xDAF8" />
+                <ValueNumeric>23.75</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>10</Page>
@@ -13097,9 +13097,9 @@
                 <ID>READ_VOUT</ID>
                 <Code>139</Code>
                 <IDAndCode>READ_VOUT [0x8B,Rail #11]</IDAndCode>
-                <ValueText>0.893 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x0E48" />
-                <ValueNumeric>0.893</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>10</Page>
@@ -13110,8 +13110,8 @@
                 <ID>SEQ_CONFIG</ID>
                 <Code>246</Code>
                 <IDAndCode>SEQ_CONFIG [MFR 38,0xF6,Rail #11]</IDAndCode>
-                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Unassigned; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0004000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin H3 EN23(GPIO) ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x2E06000000000000000000000000000000000000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>10</Page>
@@ -13230,8 +13230,8 @@
                 <ID>STATUS_IOUT</ID>
                 <Code>123</Code>
                 <IDAndCode>STATUS_IOUT [0x7B,Rail #11]</IDAndCode>
-                <ValueText>IOUT_UC_FAULT</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x10" />
+                <ValueText>&lt;EMPTY&gt;</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>10</Page>
@@ -13745,8 +13745,8 @@
                 <ID>UCD90240_BLACK_BOX_RAIL_VALUES</ID>
                 <Code>183</Code>
                 <IDAndCode>BLACK_BOX_RAIL_VALUES [0xB7,Rail #12]</IDAndCode>
-                <ValueText>Rail 12: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=1.1826 V; Current=0.0000 A; Temperature=0.0000 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00EC1200800000" />
+                <ValueText>Rail 12: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=1.2051 V; Current=-0.5000 A; Temperature=0.0000 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00204DFFFF0000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>11</Page>
@@ -13757,8 +13757,8 @@
                 <ID>FAULT_RESPONSES</ID>
                 <Code>233</Code>
                 <IDAndCode>FAULT_RESPONSES [MFR 25,0xE9,Rail #12]</IDAndCode>
-                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000000000" />
+                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Shutdown immediately; Restart: Do not restart| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000080000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>11</Page>
@@ -13834,7 +13834,7 @@
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #12]</IDAndCode>
                 <ValueText>-1.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xB400" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xBE00" />
                 <ValueNumeric>-1</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -13846,8 +13846,8 @@
                 <ID>LOGGED_PAGE_PEAKS</ID>
                 <Code>237</Code>
                 <IDAndCode>LOGGED_PAGE_PEAKS [MFR 29,0xED,Rail #12]</IDAndCode>
-                <ValueText>Voltage: 0.000 V, Current: 0.00 A, Temp: 0 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0000000000" />
+                <ValueText>Voltage: 0.005 V, Current: 0.02 A, Temp: 0 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x005000008A" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>11</Page>
@@ -13870,8 +13870,8 @@
                 <ID>MFR_STATUS</ID>
                 <Code>243</Code>
                 <IDAndCode>MFR_STATUS [MFR 35,0xF3,Rail #12]</IDAndCode>
-                <ValueText>&lt;EMPTY&gt;</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000" />
+                <ValueText>STORE_DEFAULT_ALL_DONE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000200" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>11</Page>
@@ -13882,8 +13882,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #12]</IDAndCode>
-                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Use TOFF_DELAY/TOFF_FALL</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x16" />
+                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Turn off Immediately</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x17" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>11</Page>
@@ -14048,9 +14048,9 @@
                 <ID>READ_IOUT</ID>
                 <Code>140</Code>
                 <IDAndCode>READ_IOUT [0x8C,Rail #12]</IDAndCode>
-                <ValueText>0.13 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xA200" />
-                <ValueNumeric>0.125</ValueNumeric>
+                <ValueText>0.02 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x8A00" />
+                <ValueNumeric>0.015625</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>11</Page>
@@ -14061,8 +14061,8 @@
                 <ID>READ_RAIL_STATE</ID>
                 <Code>185</Code>
                 <IDAndCode>READ_RAIL_STATE [0xB9,Rail #12]</IDAndCode>
-                <ValueText>REGULATION</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x05" />
+                <ValueText>IDLE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x01" />
                 <ParameterType>String</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>11</Page>
@@ -14073,9 +14073,9 @@
                 <ID>READ_TEMPERATURE_2</ID>
                 <Code>142</Code>
                 <IDAndCode>READ_TEMPERATURE_2 [0x8E,Rail #12]</IDAndCode>
-                <ValueText>29 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xDB9A" />
-                <ValueNumeric>28.8125</ValueNumeric>
+                <ValueText>24 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xDAF8" />
+                <ValueNumeric>23.75</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>11</Page>
@@ -14086,9 +14086,9 @@
                 <ID>READ_VOUT</ID>
                 <Code>139</Code>
                 <IDAndCode>READ_VOUT [0x8B,Rail #12]</IDAndCode>
-                <ValueText>1.197 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x1328" />
-                <ValueNumeric>1.197</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>11</Page>
@@ -14099,8 +14099,8 @@
                 <ID>SEQ_CONFIG</ID>
                 <Code>246</Code>
                 <IDAndCode>SEQ_CONFIG [MFR 38,0xF6,Rail #12]</IDAndCode>
-                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Unassigned; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0004000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin G4 EN24(GPIO) ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x2F06000000000000000000000000000000000000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>11</Page>
@@ -14219,8 +14219,8 @@
                 <ID>STATUS_IOUT</ID>
                 <Code>123</Code>
                 <IDAndCode>STATUS_IOUT [0x7B,Rail #12]</IDAndCode>
-                <ValueText>IOUT_UC_FAULT</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x10" />
+                <ValueText>&lt;EMPTY&gt;</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>11</Page>
@@ -14734,8 +14734,8 @@
                 <ID>UCD90240_BLACK_BOX_RAIL_VALUES</ID>
                 <Code>183</Code>
                 <IDAndCode>BLACK_BOX_RAIL_VALUES [0xB7,Rail #13]</IDAndCode>
-                <ValueText>Rail 13: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=1.1777 V; Current=0.0000 A; Temperature=0.0000 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00D81200800000" />
+                <ValueText>Rail 13: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=1.2051 V; Current=0.0469 A; Temperature=0.0000 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00204D00930000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>12</Page>
@@ -14746,8 +14746,8 @@
                 <ID>FAULT_RESPONSES</ID>
                 <Code>233</Code>
                 <IDAndCode>FAULT_RESPONSES [MFR 25,0xE9,Rail #13]</IDAndCode>
-                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000000000" />
+                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Shutdown immediately; Restart: Do not restart| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000080000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>12</Page>
@@ -14823,7 +14823,7 @@
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #13]</IDAndCode>
                 <ValueText>-1.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xB400" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xBE00" />
                 <ValueNumeric>-1</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -14836,7 +14836,7 @@
                 <Code>237</Code>
                 <IDAndCode>LOGGED_PAGE_PEAKS [MFR 29,0xED,Rail #13]</IDAndCode>
                 <ValueText>Voltage: 0.000 V, Current: 0.00 A, Temp: 0 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0000000000" />
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0000000080" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>12</Page>
@@ -14859,8 +14859,8 @@
                 <ID>MFR_STATUS</ID>
                 <Code>243</Code>
                 <IDAndCode>MFR_STATUS [MFR 35,0xF3,Rail #13]</IDAndCode>
-                <ValueText>&lt;EMPTY&gt;</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000" />
+                <ValueText>STORE_DEFAULT_ALL_DONE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000200" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>12</Page>
@@ -14871,8 +14871,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #13]</IDAndCode>
-                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Use TOFF_DELAY/TOFF_FALL</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x16" />
+                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Turn off Immediately</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x17" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>12</Page>
@@ -15037,9 +15037,9 @@
                 <ID>READ_IOUT</ID>
                 <Code>140</Code>
                 <IDAndCode>READ_IOUT [0x8C,Rail #13]</IDAndCode>
-                <ValueText>0.06 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x9A00" />
-                <ValueNumeric>0.0625</ValueNumeric>
+                <ValueText>0.00 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>12</Page>
@@ -15050,8 +15050,8 @@
                 <ID>READ_RAIL_STATE</ID>
                 <Code>185</Code>
                 <IDAndCode>READ_RAIL_STATE [0xB9,Rail #13]</IDAndCode>
-                <ValueText>REGULATION</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x05" />
+                <ValueText>IDLE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x01" />
                 <ParameterType>String</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>12</Page>
@@ -15062,9 +15062,9 @@
                 <ID>READ_TEMPERATURE_2</ID>
                 <Code>142</Code>
                 <IDAndCode>READ_TEMPERATURE_2 [0x8E,Rail #13]</IDAndCode>
-                <ValueText>29 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xDB9A" />
-                <ValueNumeric>28.8125</ValueNumeric>
+                <ValueText>24 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xDAF8" />
+                <ValueNumeric>23.75</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>12</Page>
@@ -15075,9 +15075,9 @@
                 <ID>READ_VOUT</ID>
                 <Code>139</Code>
                 <IDAndCode>READ_VOUT [0x8B,Rail #13]</IDAndCode>
-                <ValueText>1.191 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x130E" />
-                <ValueNumeric>1.191</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>12</Page>
@@ -15088,8 +15088,8 @@
                 <ID>SEQ_CONFIG</ID>
                 <Code>246</Code>
                 <IDAndCode>SEQ_CONFIG [MFR 38,0xF6,Rail #13]</IDAndCode>
-                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Unassigned; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0004000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin J3 EN21(GPIO) ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x2C06000000000000000000000000000000000000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>12</Page>
@@ -15208,8 +15208,8 @@
                 <ID>STATUS_IOUT</ID>
                 <Code>123</Code>
                 <IDAndCode>STATUS_IOUT [0x7B,Rail #13]</IDAndCode>
-                <ValueText>IOUT_UC_FAULT</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x10" />
+                <ValueText>&lt;EMPTY&gt;</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>12</Page>
@@ -15232,8 +15232,8 @@
                 <ID>STATUS_VOUT</ID>
                 <Code>122</Code>
                 <IDAndCode>STATUS_VOUT [0x7A,Rail #13]</IDAndCode>
-                <ValueText>VOUT_UV_WARN</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x20" />
+                <ValueText>&lt;EMPTY&gt;</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x00" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>12</Page>
@@ -15723,8 +15723,8 @@
                 <ID>UCD90240_BLACK_BOX_RAIL_VALUES</ID>
                 <Code>183</Code>
                 <IDAndCode>BLACK_BOX_RAIL_VALUES [0xB7,Rail #14]</IDAndCode>
-                <ValueText>Rail 14: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=1.1792 V; Current=0.0000 A; Temperature=0.0000 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00DE1200800000" />
+                <ValueText>Rail 14: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=1.2134 V; Current=0.0313 A; Temperature=0.0000 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00A84D00920000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>13</Page>
@@ -15735,8 +15735,8 @@
                 <ID>FAULT_RESPONSES</ID>
                 <Code>233</Code>
                 <IDAndCode>FAULT_RESPONSES [MFR 25,0xE9,Rail #14]</IDAndCode>
-                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000000000" />
+                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Shutdown immediately; Restart: Do not restart| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000080000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>13</Page>
@@ -15812,7 +15812,7 @@
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #14]</IDAndCode>
                 <ValueText>-1.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xB400" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xBE00" />
                 <ValueNumeric>-1</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -15824,8 +15824,8 @@
                 <ID>LOGGED_PAGE_PEAKS</ID>
                 <Code>237</Code>
                 <IDAndCode>LOGGED_PAGE_PEAKS [MFR 29,0xED,Rail #14]</IDAndCode>
-                <ValueText>Voltage: 0.000 V, Current: 0.00 A, Temp: 0 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0000000000" />
+                <ValueText>Voltage: 0.000 V, Current: 0.02 A, Temp: 0 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000008A" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>13</Page>
@@ -15848,8 +15848,8 @@
                 <ID>MFR_STATUS</ID>
                 <Code>243</Code>
                 <IDAndCode>MFR_STATUS [MFR 35,0xF3,Rail #14]</IDAndCode>
-                <ValueText>&lt;EMPTY&gt;</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000" />
+                <ValueText>STORE_DEFAULT_ALL_DONE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000200" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>13</Page>
@@ -15860,8 +15860,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #14]</IDAndCode>
-                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Use TOFF_DELAY/TOFF_FALL</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x16" />
+                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Turn off Immediately</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x17" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>13</Page>
@@ -16026,9 +16026,9 @@
                 <ID>READ_IOUT</ID>
                 <Code>140</Code>
                 <IDAndCode>READ_IOUT [0x8C,Rail #14]</IDAndCode>
-                <ValueText>0.06 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x9A00" />
-                <ValueNumeric>0.0625</ValueNumeric>
+                <ValueText>0.02 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x8A00" />
+                <ValueNumeric>0.015625</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>13</Page>
@@ -16039,8 +16039,8 @@
                 <ID>READ_RAIL_STATE</ID>
                 <Code>185</Code>
                 <IDAndCode>READ_RAIL_STATE [0xB9,Rail #14]</IDAndCode>
-                <ValueText>RAMP_UP</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x04" />
+                <ValueText>IDLE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x01" />
                 <ParameterType>String</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>13</Page>
@@ -16051,9 +16051,9 @@
                 <ID>READ_TEMPERATURE_2</ID>
                 <Code>142</Code>
                 <IDAndCode>READ_TEMPERATURE_2 [0x8E,Rail #14]</IDAndCode>
-                <ValueText>29 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xDB9C" />
-                <ValueNumeric>28.875</ValueNumeric>
+                <ValueText>24 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xDAF8" />
+                <ValueNumeric>23.75</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>13</Page>
@@ -16064,9 +16064,9 @@
                 <ID>READ_VOUT</ID>
                 <Code>139</Code>
                 <IDAndCode>READ_VOUT [0x8B,Rail #14]</IDAndCode>
-                <ValueText>1.192 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x1314" />
-                <ValueNumeric>1.192</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>13</Page>
@@ -16077,8 +16077,8 @@
                 <ID>SEQ_CONFIG</ID>
                 <Code>246</Code>
                 <IDAndCode>SEQ_CONFIG [MFR 38,0xF6,Rail #14]</IDAndCode>
-                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Unassigned; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0004000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin J2 EN20(GPIO) ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x2B06000000000000000000000000000000000000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>13</Page>
@@ -16712,8 +16712,8 @@
                 <ID>UCD90240_BLACK_BOX_RAIL_VALUES</ID>
                 <Code>183</Code>
                 <IDAndCode>BLACK_BOX_RAIL_VALUES [0xB7,Rail #15]</IDAndCode>
-                <ValueText>Rail 15: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=1.1196 V; Current=0.0000 A; Temperature=0.0000 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00EA1100800000" />
+                <ValueText>Rail 15: OV Warn=False; UV Warn=False; OC Warn=False; Toff Max Warn=False; OT Warn=False; Voltage=3.3467 V; Current=1.2500 A; Temperature=0.0000 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x008C3580BA0000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>14</Page>
@@ -16724,8 +16724,8 @@
                 <ID>FAULT_RESPONSES</ID>
                 <Code>233</Code>
                 <IDAndCode>FAULT_RESPONSES [MFR 25,0xE9,Rail #15]</IDAndCode>
-                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000000000" />
+                <ValueText>Retry Time: 0 msec| Max Volt Glitch Time: 0.0 msec| Max Other Glitch Time: 0 msec| VOUT_OV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| VOUT_UV: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| IOUT_OC: Resequence: Disabled; Glitch filter: Disabled; Response: Shutdown immediately; Restart: Do not restart| IOUT_UC: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| OT: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A| TON_MAX: Resequence: Disabled; Glitch filter: Disabled; Response: Ignore; Restart: N/A</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000080000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Calibration</ParameterCategory>
                 <Page>14</Page>
@@ -16801,7 +16801,7 @@
                 <Code>75</Code>
                 <IDAndCode>IOUT_UC_FAULT_LIMIT [0x4B,Rail #15]</IDAndCode>
                 <ValueText>-1.000 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xB400" />
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xBE00" />
                 <ValueNumeric>-1</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Limits</ParameterCategory>
@@ -16813,8 +16813,8 @@
                 <ID>LOGGED_PAGE_PEAKS</ID>
                 <Code>237</Code>
                 <IDAndCode>LOGGED_PAGE_PEAKS [MFR 29,0xED,Rail #15]</IDAndCode>
-                <ValueText>Voltage: 3.324 V, Current: 2.05 A, Temp: 0 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x002E350CC2" />
+                <ValueText>Voltage: 0.001 V, Current: 1.64 A, Temp: 0 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x00060048BB" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>14</Page>
@@ -16837,8 +16837,8 @@
                 <ID>MFR_STATUS</ID>
                 <Code>243</Code>
                 <IDAndCode>MFR_STATUS [MFR 35,0xF3,Rail #15]</IDAndCode>
-                <ValueText>&lt;EMPTY&gt;</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000000" />
+                <ValueText>STORE_DEFAULT_ALL_DONE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x000000000200" />
                 <ParameterType>Bitmask</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>14</Page>
@@ -16849,8 +16849,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #15]</IDAndCode>
-                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Use TOFF_DELAY/TOFF_FALL</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x16" />
+                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Turn off Immediately</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x17" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>14</Page>
@@ -17015,9 +17015,9 @@
                 <ID>READ_IOUT</ID>
                 <Code>140</Code>
                 <IDAndCode>READ_IOUT [0x8C,Rail #15]</IDAndCode>
-                <ValueText>2.02 A</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xC204" />
-                <ValueNumeric>2.015625</ValueNumeric>
+                <ValueText>1.64 A</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xBB48" />
+                <ValueNumeric>1.640625</ValueNumeric>
                 <ParameterType>Current</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>14</Page>
@@ -17028,8 +17028,8 @@
                 <ID>READ_RAIL_STATE</ID>
                 <Code>185</Code>
                 <IDAndCode>READ_RAIL_STATE [0xB9,Rail #15]</IDAndCode>
-                <ValueText>REGULATION</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x05" />
+                <ValueText>IDLE</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x01" />
                 <ParameterType>String</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>14</Page>
@@ -17040,9 +17040,9 @@
                 <ID>READ_TEMPERATURE_2</ID>
                 <Code>142</Code>
                 <IDAndCode>READ_TEMPERATURE_2 [0x8E,Rail #15]</IDAndCode>
-                <ValueText>29 °C</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0xDB9C" />
-                <ValueNumeric>28.875</ValueNumeric>
+                <ValueText>24 °C</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0xDAF8" />
+                <ValueNumeric>23.75</ValueNumeric>
                 <ParameterType>Temperature</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>14</Page>
@@ -17053,9 +17053,9 @@
                 <ID>READ_VOUT</ID>
                 <Code>139</Code>
                 <IDAndCode>READ_VOUT [0x8B,Rail #15]</IDAndCode>
-                <ValueText>3.316 V</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x350E" />
-                <ValueNumeric>3.316</ValueNumeric>
+                <ValueText>0.000 V</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x0000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>Voltage</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>14</Page>
@@ -17066,8 +17066,8 @@
                 <ID>SEQ_CONFIG</ID>
                 <Code>246</Code>
                 <IDAndCode>SEQ_CONFIG [MFR 38,0xF6,Rail #15]</IDAndCode>
-                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Unassigned; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0004000000000000000000000000000000000000000000000000000000" />
+                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin G11 EN27(GPIO) ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x3206000000000000000000000000000000000000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>14</Page>
@@ -18317,26 +18317,26 @@
                   <Index>0</Index>
                   <Blackbox_Fault_Info>
                     <GPI_Statuses>
-                      <boolean>false</boolean>
-                      <boolean>false</boolean>
-                      <boolean>false</boolean>
-                      <boolean>false</boolean>
-                      <boolean>false</boolean>
-                      <boolean>false</boolean>
-                      <boolean>false</boolean>
-                      <boolean>false</boolean>
-                      <boolean>false</boolean>
-                      <boolean>false</boolean>
-                      <boolean>false</boolean>
-                      <boolean>false</boolean>
-                      <boolean>false</boolean>
-                      <boolean>false</boolean>
-                      <boolean>false</boolean>
-                      <boolean>false</boolean>
+                      <boolean>true</boolean>
+                      <boolean>true</boolean>
+                      <boolean>true</boolean>
+                      <boolean>true</boolean>
+                      <boolean>true</boolean>
+                      <boolean>true</boolean>
+                      <boolean>true</boolean>
+                      <boolean>true</boolean>
+                      <boolean>true</boolean>
+                      <boolean>true</boolean>
+                      <boolean>true</boolean>
+                      <boolean>true</boolean>
+                      <boolean>true</boolean>
+                      <boolean>true</boolean>
                       <boolean>true</boolean>
                       <boolean>false</boolean>
-                      <boolean>false</boolean>
-                      <boolean>false</boolean>
+                      <boolean>true</boolean>
+                      <boolean>true</boolean>
+                      <boolean>true</boolean>
+                      <boolean>true</boolean>
                       <boolean>false</boolean>
                       <boolean>false</boolean>
                       <boolean>false</boolean>
@@ -18351,15 +18351,15 @@
                       <boolean>false</boolean>
                     </GPI_Statuses>
                     <GPO_Statuses>
-                      <boolean>false</boolean>
-                      <boolean>false</boolean>
+                      <boolean>true</boolean>
+                      <boolean>true</boolean>
                       <boolean>true</boolean>
                       <boolean>true</boolean>
                       <boolean>false</boolean>
                       <boolean>false</boolean>
-                      <boolean>false</boolean>
-                      <boolean>false</boolean>
-                      <boolean>false</boolean>
+                      <boolean>true</boolean>
+                      <boolean>true</boolean>
+                      <boolean>true</boolean>
                       <boolean>false</boolean>
                       <boolean>false</boolean>
                       <boolean>false</boolean>
@@ -18368,21 +18368,21 @@
                       <boolean>false</boolean>
                       <boolean>false</boolean>
                     </GPO_Statuses>
-                    <Fault_Page_Number_Or_GPI_Number>2</Fault_Page_Number_Or_GPI_Number>
+                    <Fault_Page_Number_Or_GPI_Number>0</Fault_Page_Number_Or_GPI_Number>
                     <Is_Paged_Fault>true</Is_Paged_Fault>
-                    <Fault_Type>4</Fault_Type>
-                    <Fault_ID>IOUT_UC_FAULT</Fault_ID>
-                    <Is_Log_Valid>true</Is_Log_Valid>
-                    <Fault_Value>8388608</Fault_Value>
-                    <Milliseconds>72927335</Milliseconds>
-                    <Days>12</Days>
+                    <Fault_Type>1</Fault_Type>
+                    <Fault_ID>VOUT_UV_FAULT</Fault_ID>
+                    <Is_Log_Valid>false</Is_Log_Valid>
+                    <Fault_Value>2770534400</Fault_Value>
+                    <Milliseconds>5969</Milliseconds>
+                    <Days>0</Days>
                     <Is_First_Log_Valid>true</Is_First_Log_Valid>
                     <Time_Stamp>
-                      <Milliseconds>72927335</Milliseconds>
-                      <Days>730131</Days>
+                      <Milliseconds>5969</Milliseconds>
+                      <Days>730119</Days>
                     </Time_Stamp>
-                    <Vout_Exponent>-12</Vout_Exponent>
-                    <Value_Encoded Hex="0x130C0067C8582400800000010C0000000100" />
+                    <Vout_Exponent>-10</Vout_Exponent>
+                    <Value_Encoded Hex="0x03000051170008A523000000CF01FF7F0F00" />
                   </Blackbox_Fault_Info>
                   <Blackbox_Rail_Warnings>
                     <Value_Encoded Hex="0x0000000000000000000000000000000000000000000000000000000000000000" />
@@ -18425,45 +18425,45 @@
                     <UCD90240BlackboxRailValues>
                       <Page_Index>0</Page_Index>
                       <Rail_Warning_Value>0</Rail_Warning_Value>
-                      <Value_Encoded Hex="0x005C2F00000000" />
-                      <Voltage_Encoded Hex="0x2F5C" />
+                      <Value_Encoded Hex="0x00A52300000000" />
+                      <Voltage_Encoded Hex="0x23A5" />
                       <Current_Encoded Hex="0x0000" />
                       <Temp_Encoded Hex="0x0000" />
-                      <Voltage_Value>11.83984</Voltage_Value>
+                      <Voltage_Value>8.91113</Voltage_Value>
                       <Current_Value>0</Current_Value>
                       <Temperature_Value>0</Temperature_Value>
                     </UCD90240BlackboxRailValues>
                     <UCD90240BlackboxRailValues>
                       <Page_Index>1</Page_Index>
                       <Rail_Warning_Value>0</Rail_Warning_Value>
-                      <Value_Encoded Hex="0x000000C0A20000" />
+                      <Value_Encoded Hex="0x000000008E0000" />
                       <Voltage_Encoded Hex="0x0000" />
-                      <Current_Encoded Hex="0xA2C0" />
+                      <Current_Encoded Hex="0x8E00" />
                       <Temp_Encoded Hex="0x0000" />
                       <Voltage_Value>0</Voltage_Value>
-                      <Current_Value>0.171875</Current_Value>
+                      <Current_Value>-0.015625</Current_Value>
                       <Temperature_Value>0</Temperature_Value>
                     </UCD90240BlackboxRailValues>
                     <UCD90240BlackboxRailValues>
                       <Page_Index>2</Page_Index>
                       <Rail_Warning_Value>0</Rail_Warning_Value>
-                      <Value_Encoded Hex="0x00000000800000" />
+                      <Value_Encoded Hex="0x000000FFFF0000" />
                       <Voltage_Encoded Hex="0x0000" />
-                      <Current_Encoded Hex="0x8000" />
+                      <Current_Encoded Hex="0xFFFF" />
                       <Temp_Encoded Hex="0x0000" />
                       <Voltage_Value>0</Voltage_Value>
-                      <Current_Value>0</Current_Value>
+                      <Current_Value>-0.5</Current_Value>
                       <Temperature_Value>0</Temperature_Value>
                     </UCD90240BlackboxRailValues>
                     <UCD90240BlackboxRailValues>
                       <Page_Index>3</Page_Index>
                       <Rail_Warning_Value>0</Rail_Warning_Value>
-                      <Value_Encoded Hex="0x00B410B0B20000" />
-                      <Voltage_Encoded Hex="0x10B4" />
-                      <Current_Encoded Hex="0xB2B0" />
+                      <Value_Encoded Hex="0x00000000920000" />
+                      <Voltage_Encoded Hex="0x0000" />
+                      <Current_Encoded Hex="0x9200" />
                       <Temp_Encoded Hex="0x0000" />
-                      <Voltage_Value>1.04395</Voltage_Value>
-                      <Current_Value>0.671875</Current_Value>
+                      <Voltage_Value>0</Voltage_Value>
+                      <Current_Value>0.03125</Current_Value>
                       <Temperature_Value>0</Temperature_Value>
                     </UCD90240BlackboxRailValues>
                     <UCD90240BlackboxRailValues>
@@ -18480,28 +18480,6 @@
                     <UCD90240BlackboxRailValues>
                       <Page_Index>5</Page_Index>
                       <Rail_Warning_Value>0</Rail_Warning_Value>
-                      <Value_Encoded Hex="0x00000000800000" />
-                      <Voltage_Encoded Hex="0x0000" />
-                      <Current_Encoded Hex="0x8000" />
-                      <Temp_Encoded Hex="0x0000" />
-                      <Voltage_Value>0</Voltage_Value>
-                      <Current_Value>0</Current_Value>
-                      <Temperature_Value>0</Temperature_Value>
-                    </UCD90240BlackboxRailValues>
-                    <UCD90240BlackboxRailValues>
-                      <Page_Index>6</Page_Index>
-                      <Rail_Warning_Value>0</Rail_Warning_Value>
-                      <Value_Encoded Hex="0x00CE1000800000" />
-                      <Voltage_Encoded Hex="0x10CE" />
-                      <Current_Encoded Hex="0x8000" />
-                      <Temp_Encoded Hex="0x0000" />
-                      <Voltage_Value>1.05029</Voltage_Value>
-                      <Current_Value>0</Current_Value>
-                      <Temperature_Value>0</Temperature_Value>
-                    </UCD90240BlackboxRailValues>
-                    <UCD90240BlackboxRailValues>
-                      <Page_Index>7</Page_Index>
-                      <Rail_Warning_Value>0</Rail_Warning_Value>
                       <Value_Encoded Hex="0x00000000920000" />
                       <Voltage_Encoded Hex="0x0000" />
                       <Current_Encoded Hex="0x9200" />
@@ -18511,80 +18489,102 @@
                       <Temperature_Value>0</Temperature_Value>
                     </UCD90240BlackboxRailValues>
                     <UCD90240BlackboxRailValues>
+                      <Page_Index>6</Page_Index>
+                      <Rail_Warning_Value>0</Rail_Warning_Value>
+                      <Value_Encoded Hex="0x00000000000000" />
+                      <Voltage_Encoded Hex="0x0000" />
+                      <Current_Encoded Hex="0x0000" />
+                      <Temp_Encoded Hex="0x0000" />
+                      <Voltage_Value>0</Voltage_Value>
+                      <Current_Value>0</Current_Value>
+                      <Temperature_Value>0</Temperature_Value>
+                    </UCD90240BlackboxRailValues>
+                    <UCD90240BlackboxRailValues>
+                      <Page_Index>7</Page_Index>
+                      <Rail_Warning_Value>0</Rail_Warning_Value>
+                      <Value_Encoded Hex="0x00000000000000" />
+                      <Voltage_Encoded Hex="0x0000" />
+                      <Current_Encoded Hex="0x0000" />
+                      <Temp_Encoded Hex="0x0000" />
+                      <Voltage_Value>0</Voltage_Value>
+                      <Current_Value>0</Current_Value>
+                      <Temperature_Value>0</Temperature_Value>
+                    </UCD90240BlackboxRailValues>
+                    <UCD90240BlackboxRailValues>
                       <Page_Index>8</Page_Index>
                       <Rail_Warning_Value>0</Rail_Warning_Value>
-                      <Value_Encoded Hex="0x00960D00800000" />
-                      <Voltage_Encoded Hex="0x0D96" />
-                      <Current_Encoded Hex="0x8000" />
+                      <Value_Encoded Hex="0x00D836809B0000" />
+                      <Voltage_Encoded Hex="0x36D8" />
+                      <Current_Encoded Hex="0x9B80" />
                       <Temp_Encoded Hex="0x0000" />
-                      <Voltage_Value>0.84912</Voltage_Value>
-                      <Current_Value>0</Current_Value>
+                      <Voltage_Value>0.85693</Voltage_Value>
+                      <Current_Value>0.109375</Current_Value>
                       <Temperature_Value>0</Temperature_Value>
                     </UCD90240BlackboxRailValues>
                     <UCD90240BlackboxRailValues>
                       <Page_Index>9</Page_Index>
                       <Rail_Warning_Value>0</Rail_Warning_Value>
-                      <Value_Encoded Hex="0x00541200800000" />
-                      <Voltage_Encoded Hex="0x1254" />
-                      <Current_Encoded Hex="0x8000" />
+                      <Value_Encoded Hex="0x00283A40AA0000" />
+                      <Voltage_Encoded Hex="0x3A28" />
+                      <Current_Encoded Hex="0xAA40" />
                       <Temp_Encoded Hex="0x0000" />
-                      <Voltage_Value>1.14551</Voltage_Value>
-                      <Current_Value>0</Current_Value>
+                      <Voltage_Value>1.81738</Voltage_Value>
+                      <Current_Value>0.28125</Current_Value>
                       <Temperature_Value>0</Temperature_Value>
                     </UCD90240BlackboxRailValues>
                     <UCD90240BlackboxRailValues>
                       <Page_Index>10</Page_Index>
                       <Rail_Warning_Value>0</Rail_Warning_Value>
-                      <Value_Encoded Hex="0x00480E008A0000" />
-                      <Voltage_Encoded Hex="0x0E48" />
-                      <Current_Encoded Hex="0x8A00" />
+                      <Value_Encoded Hex="0x00000000000000" />
+                      <Voltage_Encoded Hex="0x0000" />
+                      <Current_Encoded Hex="0x0000" />
                       <Temp_Encoded Hex="0x0000" />
-                      <Voltage_Value>0.89258</Voltage_Value>
-                      <Current_Value>0.015625</Current_Value>
+                      <Voltage_Value>0</Voltage_Value>
+                      <Current_Value>0</Current_Value>
                       <Temperature_Value>0</Temperature_Value>
                     </UCD90240BlackboxRailValues>
                     <UCD90240BlackboxRailValues>
                       <Page_Index>11</Page_Index>
                       <Rail_Warning_Value>0</Rail_Warning_Value>
-                      <Value_Encoded Hex="0x00EC1200800000" />
-                      <Voltage_Encoded Hex="0x12EC" />
-                      <Current_Encoded Hex="0x8000" />
+                      <Value_Encoded Hex="0x00204DFFFF0000" />
+                      <Voltage_Encoded Hex="0x4D20" />
+                      <Current_Encoded Hex="0xFFFF" />
                       <Temp_Encoded Hex="0x0000" />
-                      <Voltage_Value>1.18262</Voltage_Value>
-                      <Current_Value>0</Current_Value>
+                      <Voltage_Value>1.20508</Voltage_Value>
+                      <Current_Value>-0.5</Current_Value>
                       <Temperature_Value>0</Temperature_Value>
                     </UCD90240BlackboxRailValues>
                     <UCD90240BlackboxRailValues>
                       <Page_Index>12</Page_Index>
                       <Rail_Warning_Value>0</Rail_Warning_Value>
-                      <Value_Encoded Hex="0x00D81200800000" />
-                      <Voltage_Encoded Hex="0x12D8" />
-                      <Current_Encoded Hex="0x8000" />
+                      <Value_Encoded Hex="0x00204D00930000" />
+                      <Voltage_Encoded Hex="0x4D20" />
+                      <Current_Encoded Hex="0x9300" />
                       <Temp_Encoded Hex="0x0000" />
-                      <Voltage_Value>1.17773</Voltage_Value>
-                      <Current_Value>0</Current_Value>
+                      <Voltage_Value>1.20508</Voltage_Value>
+                      <Current_Value>0.046875</Current_Value>
                       <Temperature_Value>0</Temperature_Value>
                     </UCD90240BlackboxRailValues>
                     <UCD90240BlackboxRailValues>
                       <Page_Index>13</Page_Index>
                       <Rail_Warning_Value>0</Rail_Warning_Value>
-                      <Value_Encoded Hex="0x00DE1200800000" />
-                      <Voltage_Encoded Hex="0x12DE" />
-                      <Current_Encoded Hex="0x8000" />
+                      <Value_Encoded Hex="0x00A84D00920000" />
+                      <Voltage_Encoded Hex="0x4DA8" />
+                      <Current_Encoded Hex="0x9200" />
                       <Temp_Encoded Hex="0x0000" />
-                      <Voltage_Value>1.1792</Voltage_Value>
-                      <Current_Value>0</Current_Value>
+                      <Voltage_Value>1.21338</Voltage_Value>
+                      <Current_Value>0.03125</Current_Value>
                       <Temperature_Value>0</Temperature_Value>
                     </UCD90240BlackboxRailValues>
                     <UCD90240BlackboxRailValues>
                       <Page_Index>14</Page_Index>
                       <Rail_Warning_Value>0</Rail_Warning_Value>
-                      <Value_Encoded Hex="0x00EA1100800000" />
-                      <Voltage_Encoded Hex="0x11EA" />
-                      <Current_Encoded Hex="0x8000" />
+                      <Value_Encoded Hex="0x008C3580BA0000" />
+                      <Voltage_Encoded Hex="0x358C" />
+                      <Current_Encoded Hex="0xBA80" />
                       <Temp_Encoded Hex="0x0000" />
-                      <Voltage_Value>1.11963</Voltage_Value>
-                      <Current_Value>0</Current_Value>
+                      <Voltage_Value>3.34668</Voltage_Value>
+                      <Current_Value>1.25</Current_Value>
                       <Temperature_Value>0</Temperature_Value>
                     </UCD90240BlackboxRailValues>
                   </Blackbox_Rail_Value_List>
@@ -18619,54 +18619,6 @@
                 <Stop>0</Stop>
               </Event_Times>
               <Order_Index>1</Order_Index>
-            </TraceDefinition>
-            <TraceDefinition>
-              <Part_ID>UCD90320</Part_ID>
-              <Address>17</Address>
-              <Extra1>STATIC-GPO</Extra1>
-              <Name>FMC1_PEN</Name>
-              <Pin_ID>24</Pin_ID>
-              <Event_Times>
-                <Start>0</Start>
-                <Stop>0</Stop>
-              </Event_Times>
-              <Order_Index>11</Order_Index>
-            </TraceDefinition>
-            <TraceDefinition>
-              <Part_ID>UCD90320</Part_ID>
-              <Address>17</Address>
-              <Extra1>STATIC-GPO</Extra1>
-              <Name>FMC0_PEN</Name>
-              <Pin_ID>25</Pin_ID>
-              <Event_Times>
-                <Start>0</Start>
-                <Stop>0</Stop>
-              </Event_Times>
-              <Order_Index>9</Order_Index>
-            </TraceDefinition>
-            <TraceDefinition>
-              <Part_ID>UCD90320</Part_ID>
-              <Address>17</Address>
-              <Extra1>STATIC-GPO</Extra1>
-              <Name>FMC0_3V3AUX_EN</Name>
-              <Pin_ID>57</Pin_ID>
-              <Event_Times>
-                <Start>0</Start>
-                <Stop>0</Stop>
-              </Event_Times>
-              <Order_Index>10</Order_Index>
-            </TraceDefinition>
-            <TraceDefinition>
-              <Part_ID>UCD90320</Part_ID>
-              <Address>17</Address>
-              <Extra1>STATIC-GPO</Extra1>
-              <Name>FMC1_3V3AUX_EN</Name>
-              <Pin_ID>62</Pin_ID>
-              <Event_Times>
-                <Start>0</Start>
-                <Stop>0</Stop>
-              </Event_Times>
-              <Order_Index>7</Order_Index>
             </TraceDefinition>
             <TraceDefinition>
               <Part_ID>UCD90320</Part_ID>
@@ -18751,30 +18703,6 @@
                 <Stop>0</Stop>
               </Event_Times>
               <Order_Index>5</Order_Index>
-            </TraceDefinition>
-            <TraceDefinition>
-              <Part_ID>UCD90320</Part_ID>
-              <Address>17</Address>
-              <Extra1>STATIC-GPO</Extra1>
-              <Name>FMC0_PG_C2M</Name>
-              <Pin_ID>64</Pin_ID>
-              <Event_Times>
-                <Start>0</Start>
-                <Stop>0</Stop>
-              </Event_Times>
-              <Order_Index>13</Order_Index>
-            </TraceDefinition>
-            <TraceDefinition>
-              <Part_ID>UCD90320</Part_ID>
-              <Address>17</Address>
-              <Extra1>STATIC-GPO</Extra1>
-              <Name>FMC1_PG_C2M</Name>
-              <Pin_ID>68</Pin_ID>
-              <Event_Times>
-                <Start>0</Start>
-                <Stop>0</Stop>
-              </Event_Times>
-              <Order_Index>12</Order_Index>
             </TraceDefinition>
             <TraceDefinition>
               <Part_ID>UCD90320</Part_ID>
@@ -18947,30 +18875,6 @@
             <TraceDefinition>
               <Part_ID>UCD90320</Part_ID>
               <Address>17</Address>
-              <Extra1>STATIC-GPO</Extra1>
-              <Name>RTM_MP_EN</Name>
-              <Pin_ID>69</Pin_ID>
-              <Event_Times>
-                <Start>0</Start>
-                <Stop>0</Stop>
-              </Event_Times>
-              <Order_Index>14</Order_Index>
-            </TraceDefinition>
-            <TraceDefinition>
-              <Part_ID>UCD90320</Part_ID>
-              <Address>17</Address>
-              <Extra1>STATIC-GPO</Extra1>
-              <Name>RTM_12V0_EN</Name>
-              <Pin_ID>26</Pin_ID>
-              <Event_Times>
-                <Start>0</Start>
-                <Stop>0</Stop>
-              </Event_Times>
-              <Order_Index>8</Order_Index>
-            </TraceDefinition>
-            <TraceDefinition>
-              <Part_ID>UCD90320</Part_ID>
-              <Address>17</Address>
               <Extra1>GPI</Extra1>
               <Name>FANFAIL</Name>
               <Pin_ID>23</Pin_ID>
@@ -18983,21 +18887,129 @@
             <TraceDefinition>
               <Part_ID>UCD90320</Part_ID>
               <Address>17</Address>
-              <Extra1>STATIC-GPO</Extra1>
-              <Name>EN_3V3</Name>
+              <Extra1>EN</Extra1>
+              <Name />
+              <Pin_ID>25</Pin_ID>
+              <Event_Times>
+                <Start>0</Start>
+                <Stop>0</Stop>
+              </Event_Times>
+              <Order_Index xsi:nil="true" />
+            </TraceDefinition>
+            <TraceDefinition>
+              <Part_ID>UCD90320</Part_ID>
+              <Address>17</Address>
+              <Extra1>EN</Extra1>
+              <Name />
+              <Pin_ID>24</Pin_ID>
+              <Event_Times>
+                <Start>0</Start>
+                <Stop>0</Stop>
+              </Event_Times>
+              <Order_Index xsi:nil="true" />
+            </TraceDefinition>
+            <TraceDefinition>
+              <Part_ID>UCD90320</Part_ID>
+              <Address>17</Address>
+              <Extra1>EN</Extra1>
+              <Name />
+              <Pin_ID>48</Pin_ID>
+              <Event_Times>
+                <Start>0</Start>
+                <Stop>0</Stop>
+              </Event_Times>
+              <Order_Index xsi:nil="true" />
+            </TraceDefinition>
+            <TraceDefinition>
+              <Part_ID>UCD90320</Part_ID>
+              <Address>17</Address>
+              <Extra1>EN</Extra1>
+              <Name />
+              <Pin_ID>49</Pin_ID>
+              <Event_Times>
+                <Start>0</Start>
+                <Stop>0</Stop>
+              </Event_Times>
+              <Order_Index xsi:nil="true" />
+            </TraceDefinition>
+            <TraceDefinition>
+              <Part_ID>UCD90320</Part_ID>
+              <Address>17</Address>
+              <Extra1>EN</Extra1>
+              <Name />
+              <Pin_ID>46</Pin_ID>
+              <Event_Times>
+                <Start>0</Start>
+                <Stop>0</Stop>
+              </Event_Times>
+              <Order_Index xsi:nil="true" />
+            </TraceDefinition>
+            <TraceDefinition>
+              <Part_ID>UCD90320</Part_ID>
+              <Address>17</Address>
+              <Extra1>EN</Extra1>
+              <Name />
+              <Pin_ID>47</Pin_ID>
+              <Event_Times>
+                <Start>0</Start>
+                <Stop>0</Stop>
+              </Event_Times>
+              <Order_Index xsi:nil="true" />
+            </TraceDefinition>
+            <TraceDefinition>
+              <Part_ID>UCD90320</Part_ID>
+              <Address>17</Address>
+              <Extra1>EN</Extra1>
+              <Name />
+              <Pin_ID>44</Pin_ID>
+              <Event_Times>
+                <Start>0</Start>
+                <Stop>0</Stop>
+              </Event_Times>
+              <Order_Index xsi:nil="true" />
+            </TraceDefinition>
+            <TraceDefinition>
+              <Part_ID>UCD90320</Part_ID>
+              <Address>17</Address>
+              <Extra1>EN</Extra1>
+              <Name />
+              <Pin_ID>43</Pin_ID>
+              <Event_Times>
+                <Start>0</Start>
+                <Stop>0</Stop>
+              </Event_Times>
+              <Order_Index xsi:nil="true" />
+            </TraceDefinition>
+            <TraceDefinition>
+              <Part_ID>UCD90320</Part_ID>
+              <Address>17</Address>
+              <Extra1>EN</Extra1>
+              <Name />
               <Pin_ID>50</Pin_ID>
               <Event_Times>
                 <Start>0</Start>
                 <Stop>0</Stop>
               </Event_Times>
-              <Order_Index>6</Order_Index>
+              <Order_Index xsi:nil="true" />
             </TraceDefinition>
             <TraceDefinition>
               <Part_ID>UCD90320</Part_ID>
               <Address>17</Address>
-              <Extra1>STATIC-GPO</Extra1>
-              <Name>EN 0V85</Name>
-              <Pin_ID>48</Pin_ID>
+              <Extra1>EN</Extra1>
+              <Name />
+              <Pin_ID>26</Pin_ID>
+              <Event_Times>
+                <Start>0</Start>
+                <Stop>0</Stop>
+              </Event_Times>
+              <Order_Index xsi:nil="true" />
+            </TraceDefinition>
+            <TraceDefinition>
+              <Part_ID>UCD90320</Part_ID>
+              <Address>17</Address>
+              <Extra1>GPO</Extra1>
+              <Name>FMC0_PG_C2M</Name>
+              <Pin_ID>64</Pin_ID>
               <Event_Times>
                 <Start>0</Start>
                 <Stop>0</Stop>
@@ -19007,9 +19019,9 @@
             <TraceDefinition>
               <Part_ID>UCD90320</Part_ID>
               <Address>17</Address>
-              <Extra1>STATIC-GPO</Extra1>
-              <Name>EN 1V8</Name>
-              <Pin_ID>49</Pin_ID>
+              <Extra1>GPO</Extra1>
+              <Name>FMC1_PG_C2M</Name>
+              <Pin_ID>68</Pin_ID>
               <Event_Times>
                 <Start>0</Start>
                 <Stop>0</Stop>
@@ -19020,32 +19032,20 @@
               <Part_ID>UCD90320</Part_ID>
               <Address>17</Address>
               <Extra1>STATIC-GPO</Extra1>
-              <Name>EN 1V2A</Name>
-              <Pin_ID>47</Pin_ID>
+              <Name>FMC0_3V3AUX_EN</Name>
+              <Pin_ID>57</Pin_ID>
               <Event_Times>
                 <Start>0</Start>
                 <Stop>0</Stop>
               </Event_Times>
-              <Order_Index>3</Order_Index>
+              <Order_Index>0</Order_Index>
             </TraceDefinition>
             <TraceDefinition>
               <Part_ID>UCD90320</Part_ID>
               <Address>17</Address>
               <Extra1>STATIC-GPO</Extra1>
-              <Name>EN 0V9A</Name>
-              <Pin_ID>46</Pin_ID>
-              <Event_Times>
-                <Start>0</Start>
-                <Stop>0</Stop>
-              </Event_Times>
-              <Order_Index>2</Order_Index>
-            </TraceDefinition>
-            <TraceDefinition>
-              <Part_ID>UCD90320</Part_ID>
-              <Address>17</Address>
-              <Extra1>STATIC-GPO</Extra1>
-              <Name>EN 1V2T</Name>
-              <Pin_ID>44</Pin_ID>
+              <Name>FMC1_3V3AUX_EN</Name>
+              <Pin_ID>62</Pin_ID>
               <Event_Times>
                 <Start>0</Start>
                 <Stop>0</Stop>
@@ -19056,13 +19056,13 @@
               <Part_ID>UCD90320</Part_ID>
               <Address>17</Address>
               <Extra1>STATIC-GPO</Extra1>
-              <Name>EN 1V2B</Name>
-              <Pin_ID>43</Pin_ID>
+              <Name>RTM_MP_EN</Name>
+              <Pin_ID>69</Pin_ID>
               <Event_Times>
                 <Start>0</Start>
                 <Stop>0</Stop>
               </Event_Times>
-              <Order_Index>0</Order_Index>
+              <Order_Index>2</Order_Index>
             </TraceDefinition>
           </Traces>
           <Int_Rail_Defs>
