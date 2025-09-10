@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MultiProjectsData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Version>1</Version>
-  <Timestamp>2025-08-11T19:45:47.3979365+08:00</Timestamp>
+  <Timestamp>2025-09-05T18:30:44.3875978+08:00</Timestamp>
   <Creator>Texas Instruments Fusion Digital Power Designer v7.10.1.0 [2023-10-27]</Creator>
   <Project_Info_List>
     <ProjectInfo>
       <ProjectFile />
       <ProjectData>
         <Version>1</Version>
-        <Timestamp>2025-08-11T19:45:50.1098202+08:00</Timestamp>
+        <Timestamp>2025-09-05T18:30:46.5256438+08:00</Timestamp>
         <Creator>Texas Instruments Fusion Digital Power Designer v7.10.1.0 [2023-10-27]</Creator>
         <Devices>
           <Device>
@@ -1951,8 +1951,8 @@
                 <ID>GPIO_CONFIG_57</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_57 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: False]</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x07" />
+                <ValueText>Static GPO [0] [Enable: True; Out_Enable: True; Out_Value: False; Status: False]</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x03" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -2011,8 +2011,8 @@
                 <ID>GPIO_CONFIG_62</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_62 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: False]</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x07" />
+                <ValueText>Static GPO [0] [Enable: True; Out_Enable: True; Out_Value: False; Status: False]</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x03" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -3992,8 +3992,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #2]</IDAndCode>
-                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Turn off Immediately</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x17" />
+                <ValueText>Mode: CONTROL and OPERATION; Control: Active High, Turn off Immediately</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x1F" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>1</Page>
@@ -4209,8 +4209,8 @@
                 <ID>SEQ_CONFIG</ID>
                 <Code>246</Code>
                 <IDAndCode>SEQ_CONFIG [MFR 38,0xF6,Rail #2]</IDAndCode>
-                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: 1,16 | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin L10 EN03(GPIO) ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x1A06018000000000000000000000000000000000000000000000000000" />
+                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin L10 EN03(GPIO) ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x1A06000000000000000000000000000000000000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>1</Page>
@@ -4416,9 +4416,9 @@
                 <ID>TON_DELAY</ID>
                 <Code>96</Code>
                 <IDAndCode>TON_DELAY [0x60,Rail #2]</IDAndCode>
-                <ValueText>3,000.0 ms</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x12EE" />
-                <ValueNumeric>3000</ValueNumeric>
+                <ValueText>0.0 ms</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>TimeOneDigitMilliseconds</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>1</Page>
@@ -5970,8 +5970,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #4]</IDAndCode>
-                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Turn off Immediately</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x17" />
+                <ValueText>Mode: CONTROL and OPERATION; Control: Active High, Turn off Immediately</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x1F" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>3</Page>
@@ -6187,8 +6187,8 @@
                 <ID>SEQ_CONFIG</ID>
                 <Code>246</Code>
                 <IDAndCode>SEQ_CONFIG [MFR 38,0xF6,Rail #4]</IDAndCode>
-                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: 1 | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin N9 EN02(GPIO) ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x1906010000000000000000000000000000000000000000000000000000" />
+                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin N9 EN02(GPIO) ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x1906000000000000000000000000000000000000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>3</Page>
@@ -6394,9 +6394,9 @@
                 <ID>TON_DELAY</ID>
                 <Code>96</Code>
                 <IDAndCode>TON_DELAY [0x60,Rail #4]</IDAndCode>
-                <ValueText>1,000.0 ms</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x03E8" />
-                <ValueNumeric>1000</ValueNumeric>
+                <ValueText>0.0 ms</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>TimeOneDigitMilliseconds</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>3</Page>
@@ -8937,8 +8937,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #7]</IDAndCode>
-                <ValueText>Mode: CONTROL Pin Only; Control: Active High, Turn off Immediately</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x17" />
+                <ValueText>Mode: CONTROL and OPERATION; Control: Active High, Turn off Immediately</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x1F" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>6</Page>
@@ -9154,8 +9154,8 @@
                 <ID>SEQ_CONFIG</ID>
                 <Code>246</Code>
                 <IDAndCode>SEQ_CONFIG [MFR 38,0xF6,Rail #7]</IDAndCode>
-                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: 1 | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin M9 EN01(GPIO) ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x1806010000000000000000000000000000000000000000000000000000" />
+                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | GPO On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | GPO Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin M9 EN01(GPIO) ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x1806000000000000000000000000000000000000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>6</Page>
@@ -9361,9 +9361,9 @@
                 <ID>TON_DELAY</ID>
                 <Code>96</Code>
                 <IDAndCode>TON_DELAY [0x60,Rail #7]</IDAndCode>
-                <ValueText>2,000.0 ms</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x0BE8" />
-                <ValueNumeric>2000</ValueNumeric>
+                <ValueText>0.0 ms</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>TimeOneDigitMilliseconds</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>6</Page>

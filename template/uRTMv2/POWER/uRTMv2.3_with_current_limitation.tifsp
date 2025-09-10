@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <MultiProjectsData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Version>1</Version>
-  <Timestamp>2025-08-11T19:48:01.3849385+08:00</Timestamp>
+  <Timestamp>2025-09-05T15:06:46.0575251+08:00</Timestamp>
   <Creator>Texas Instruments Fusion Digital Power Designer v7.10.1.0 [2023-10-27]</Creator>
   <Project_Info_List>
     <ProjectInfo>
       <ProjectFile />
       <ProjectData>
         <Version>1</Version>
-        <Timestamp>2025-08-11T19:48:02.8661344+08:00</Timestamp>
+        <Timestamp>2025-09-05T15:06:47.7015207+08:00</Timestamp>
         <Creator>Texas Instruments Fusion Digital Power Designer v7.10.1.0 [2023-10-27]</Creator>
         <Devices>
           <Device>
@@ -1143,8 +1143,8 @@
                 <ID>GPIO_CONFIG_0</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_0 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: True]</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x0F" />
+                <ValueText>Static GPO [0] [Enable: True; Out_Enable: True; Out_Value: False; Status: False]</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x03" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -1167,8 +1167,8 @@
                 <ID>GPIO_CONFIG_2</ID>
                 <Code>251</Code>
                 <IDAndCode>GPIO_CONFIG_2 [MFR 43,0xFB]</IDAndCode>
-                <ValueText>Static GPO [1] [Enable: True; Out_Enable: True; Out_Value: True; Status: True]</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x0F" />
+                <ValueText>Static GPO [0] [Enable: True; Out_Enable: True; Out_Value: False; Status: False]</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x03" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Status</ParameterCategory>
                 <Page>255</Page>
@@ -3673,8 +3673,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #4]</IDAndCode>
-                <ValueText>Mode: Always Converting</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x03" />
+                <ValueText>Mode: OPERATION Only</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x1B" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>3</Page>
@@ -3788,8 +3788,8 @@
                 <ID>SEQ_CONFIG</ID>
                 <Code>246</Code>
                 <IDAndCode>SEQ_CONFIG [MFR 38,0xF6,Rail #4]</IDAndCode>
-                <ValueText>Rail On Dep: Rail #1 | GPI On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin 20 FPWM4_GPIO8 ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x1E0000000000000100000000" />
+                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin 20 FPWM4_GPIO8 ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x1E0000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>3</Page>
@@ -3887,9 +3887,9 @@
                 <ID>TON_DELAY</ID>
                 <Code>96</Code>
                 <IDAndCode>TON_DELAY [0x60,Rail #4]</IDAndCode>
-                <ValueText>1,000.0 ms</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x03E8" />
-                <ValueNumeric>1000</ValueNumeric>
+                <ValueText>0.0 ms</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>TimeOneDigitMilliseconds</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>3</Page>
@@ -5119,8 +5119,8 @@
                 <ID>ON_OFF_CONFIG</ID>
                 <Code>2</Code>
                 <IDAndCode>ON_OFF_CONFIG [0x02,Rail #7]</IDAndCode>
-                <ValueText>Mode: Always Converting</ValueText>
-                <ValueEncoded xsi:type="PMBusByte" Hex="0x03" />
+                <ValueText>Mode: OPERATION Only</ValueText>
+                <ValueEncoded xsi:type="PMBusByte" Hex="0x1B" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>6</Page>
@@ -5234,8 +5234,8 @@
                 <ID>SEQ_CONFIG</ID>
                 <Code>246</Code>
                 <IDAndCode>SEQ_CONFIG [MFR 38,0xF6,Rail #7]</IDAndCode>
-                <ValueText>Rail On Dep: Rail #1 | GPI On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin 18 FPWM2_GPIO6 ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
-                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0E0000000000000100000000" />
+                <ValueText>Rail On Dep: &lt;None&gt; | GPI On Dep: &lt;None&gt; | Rail Off Dep: &lt;None&gt; | GPI Off Dep: &lt;None&gt; | Fault Dep: &lt;None&gt; | Enable: Pin 18 FPWM2_GPIO6 ActiveHigh ActivelyDrivenOutput; Seq On Timeout: 0 / Wait Indefinitely; Seq Off Timeout: 0 / Wait Indefinitely</ValueText>
+                <ValueEncoded xsi:type="PMBusBlock" Hex="0x0E0000000000000000000000" />
                 <ParameterType>Custom</ParameterType>
                 <ParameterCategory>Configuration</ParameterCategory>
                 <Page>6</Page>
@@ -5333,9 +5333,9 @@
                 <ID>TON_DELAY</ID>
                 <Code>96</Code>
                 <IDAndCode>TON_DELAY [0x60,Rail #7]</IDAndCode>
-                <ValueText>2,000.0 ms</ValueText>
-                <ValueEncoded xsi:type="PMBusWord" Hex="0x0BE8" />
-                <ValueNumeric>2000</ValueNumeric>
+                <ValueText>0.0 ms</ValueText>
+                <ValueEncoded xsi:type="PMBusWord" Hex="0x8000" />
+                <ValueNumeric>0</ValueNumeric>
                 <ParameterType>TimeOneDigitMilliseconds</ParameterType>
                 <ParameterCategory>OnOff</ParameterCategory>
                 <Page>6</Page>
