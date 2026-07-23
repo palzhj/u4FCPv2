@@ -25,7 +25,7 @@ set_property PACKAGE_PIN AU33 [get_ports "CLK_IN_PL_N"]
 # 1.8V: LVDS
 set_property IOSTANDARD LVDS [get_ports "CLK_IN_PL_P"]
 set_property IOSTANDARD LVDS [get_ports "CLK_IN_PL_N"]
-create_clock -period 6.400 -name "CLK_IN_PL" [get_ports "CLK_IN_PL_P"]
+create_clock -period 8.000 -name "CLK_IN_PL" [get_ports "CLK_IN_PL_P"]
 
 # clk from out8 of clk mux, has 100 Ohm external termination resistor
 # share io bank with FMC1
@@ -954,7 +954,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports "AMC_TX_DE18"]
 set_property IOSTANDARD LVCMOS33 [get_ports "AMC_TX_DE19"]
 set_property IOSTANDARD LVCMOS33 [get_ports "AMC_TX_DE20"]
 
-set_property PACKAGE_PIN L14 [get_ports "AMC_RX17"] 
+set_property PACKAGE_PIN L14 [get_ports "AMC_RX17"]
 set_property PACKAGE_PIN M12 [get_ports "AMC_RX18"]
 set_property PACKAGE_PIN M14 [get_ports "AMC_RX19"]
 set_property PACKAGE_PIN N14 [get_ports "AMC_RX20"]
@@ -1041,7 +1041,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports "RTM_IO*"]
 # set_property PACKAGE_PIN AP5 [get_ports "AMC2RTM_N10"]
 # set_property PACKAGE_PIN AN8 [get_ports "AMC2RTM_P9"]
 # set_property PACKAGE_PIN AN7 [get_ports "AMC2RTM_N9"]
-# set_property PACKAGE_PIN AM6 [get_ports "AMC2RTM_P8"] 
+# set_property PACKAGE_PIN AM6 [get_ports "AMC2RTM_P8"]
 # set_property PACKAGE_PIN AM5 [get_ports "AMC2RTM_N8"]
 # set_property PACKAGE_PIN AJ12 [get_ports "MGTCLK225_P0"]
 # set_property PACKAGE_PIN AJ11 [get_ports "MGTCLK225_N0"]

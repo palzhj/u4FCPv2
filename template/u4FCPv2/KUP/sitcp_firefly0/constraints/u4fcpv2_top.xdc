@@ -25,7 +25,7 @@ set_property PACKAGE_PIN AU33 [get_ports "CLK_IN_PL_N"]
 # 1.8V: LVDS
 set_property IOSTANDARD LVDS [get_ports "CLK_IN_PL_P"]
 set_property IOSTANDARD LVDS [get_ports "CLK_IN_PL_N"]
-create_clock -period 6.400 -name "CLK_IN_PL" [get_ports "CLK_IN_PL_P"]
+create_clock -period 8.000 -name "CLK_IN_PL" [get_ports "CLK_IN_PL_P"]
 
 # clk from out8 of clk mux, has 100 Ohm external termination resistor
 # share io bank with FMC1
