@@ -717,6 +717,12 @@ set_property PACKAGE_PIN AN30 [get_ports "FMC1_LA_P16"]
 # 1.2V: LVCMOS12 and DIFF_HSUL_12
 # 1.5V: LVCMOS15 and DIFF_SSTL15
 # 1.8V: LVCMOS18 and LVDS
+set_property IOSTANDARD LVDS [get_ports "FMC1_CLK_M2C_N1"]
+set_property IOSTANDARD LVDS [get_ports "FMC1_CLK_M2C_P1"]
+set_property IOSTANDARD LVDS [get_ports "FMC1_CLK_M2C_N3"]
+set_property IOSTANDARD LVDS [get_ports "FMC1_CLK_M2C_P3"]
+set_property IOSTANDARD LVDS [get_ports "FMC1_CLK_C2M_N3"]
+set_property IOSTANDARD LVDS [get_ports "FMC1_CLK_C2M_P3"]
 set_property IOSTANDARD LVCMOS18  [get_ports "FMC1_LA_N0"]
 set_property IOSTANDARD LVCMOS18  [get_ports "FMC1_LA_P0"]
 set_property IOSTANDARD LVCMOS18  [get_ports "FMC1_LA_N1"]
@@ -780,20 +786,24 @@ set_property IOSTANDARD  LVCMOS33 [get_ports "FMC1_HB_N*"]
 # set_property PACKAGE_PIN R39 [get_ports "FMC1_DP_M2C_N2"]
 # set_property PACKAGE_PIN P36 [get_ports "FMC1_DP_M2C_P1"]
 # set_property PACKAGE_PIN P37 [get_ports "FMC1_DP_M2C_N1"]
-# set_property PACKAGE_PIN N38 [get_ports "FMC1_DP_M2C_P0"]
-# set_property PACKAGE_PIN N39 [get_ports "FMC1_DP_M2C_N0"]
+set_property PACKAGE_PIN N38 [get_ports "FMC1_DP_M2C_P0"]
+set_property PACKAGE_PIN N39 [get_ports "FMC1_DP_M2C_N0"]
 # set_property PACKAGE_PIN P31 [get_ports "FMC1_DP_C2M_P3"]
 # set_property PACKAGE_PIN P32 [get_ports "FMC1_DP_C2M_N3"]
 # set_property PACKAGE_PIN N33 [get_ports "FMC1_DP_C2M_P2"]
 # set_property PACKAGE_PIN N34 [get_ports "FMC1_DP_C2M_N2"]
 # set_property PACKAGE_PIN M31 [get_ports "FMC1_DP_C2M_P1"]
 # set_property PACKAGE_PIN M32 [get_ports "FMC1_DP_C2M_N1"]
-# set_property PACKAGE_PIN L33 [get_ports "FMC1_DP_C2M_P0"]
-# set_property PACKAGE_PIN L34 [get_ports "FMC1_DP_C2M_N0"]
-# set_property PACKAGE_PIN V27 [get_ports "MGTCLK130_P0"]
-# set_property PACKAGE_PIN V28 [get_ports "MGTCLK130_N0"]
+set_property PACKAGE_PIN L33 [get_ports "FMC1_DP_C2M_P0"]
+set_property PACKAGE_PIN L34 [get_ports "FMC1_DP_C2M_N0"]
+set_property PACKAGE_PIN V27 [get_ports "MGTCLK130_P0"]
+set_property PACKAGE_PIN V28 [get_ports "MGTCLK130_N0"]
 # set_property PACKAGE_PIN U29 [get_ports "MGTCLK130_P1"]
 # set_property PACKAGE_PIN U30 [get_ports "MGTCLK130_N1"]
+
+set_clock_groups -asynchronous \
+  -group [get_clocks -include_generated_clocks [list CLK200 CLK_IN_PL CLK_IN_SW]] \
+  -group [get_clocks -include_generated_clocks [list MGTCLK130_P0]]
 
 # BANK_129
 # set_property PACKAGE_PIN Y36 [get_ports "FMC1_DP_M2C_P7"]
