@@ -1,10 +1,11 @@
 module rggen_address_decoder #(
-  parameter READABLE      = 1'b1,
-  parameter WRITABLE      = 1'b1,
-  parameter WIDTH         = 8,
-  parameter BUS_WIDTH     = 32,
-  parameter START_ADDRESS = {WIDTH{1'b0}},
-  parameter BYTE_SIZE     = 0
+  parameter READABLE              = 1'b1,
+  parameter WRITABLE              = 1'b1,
+  parameter WIDTH                 = 8,
+  parameter BUS_WIDTH             = 32,
+  parameter START_ADDRESS         = {WIDTH{1'b0}},
+  parameter BYTE_SIZE             = 0,
+  parameter USE_ADDITIONAL_MATCH  = 1'b0
 )(
   input   [WIDTH-1:0] i_address,
   input   [1:0]       i_access,
@@ -18,21 +19,7 @@ module rggen_address_decoder #(
   localparam                  BEGIN_ADDRESS_ALL_0 = BEGIN_ADDRESS == {(WIDTH-LSB){1'b0}};
   localparam                  END_ADDRESS_ALL_1   = END_ADDRESS   == {(WIDTH-LSB){1'b1}};
 
-  function automatic integer clog2;
-    input integer n;
-
-    integer result;
-    integer value;
-  begin
-    value   = n - 1;
-    result  = 0;
-    while (value > 0) begin
-      result  = result + 1;
-      value   = value >> 1;
-    end
-    clog2 = result;
-  end
-  endfunction
+  `include  "rggen_clog2.vh"
 
   function automatic [WIDTH-LSB-1:0] calc_end_address;
     input [WIDTH-1:0] start_address;
@@ -49,8 +36,9 @@ module rggen_address_decoder #(
 
   wire  w_address_match;
   wire  w_access_match;
+  wire  w_additional_match;
 
-  assign  o_match = w_address_match && w_access_match && i_additional_match;
+  assign  o_match = w_address_match && w_access_match && w_additional_match;
 
   generate
     if (BEGIN_ADDRESS == END_ADDRESS) begin : g_address_match
@@ -79,6 +67,13 @@ module rggen_address_decoder #(
     end
     else begin : g_access_match
       assign  w_access_match  = i_access[ACCESS_BIT] == 1'b1;
+    end
+
+    if (USE_ADDITIONAL_MATCH) begin : g_additional_match
+      assign  w_additional_match  = i_additional_match;
+    end
+    else begin : g_additional_match
+      assign  w_additional_match  = 1'b1;
     end
   endgenerate
 endmodule

@@ -1,5 +1,5 @@
 ##############################################################################
-# uFCP4 XCKU15P-2FFVE1517E Rev1.0 XDC 08/08/2020
+# uFCP4 XCKU15P-2FFVE1517E Rev2.0 XDC 08/08/2026
 set_property  SEVERITY {Warning} [get_drc_checks UCIO-1]
 set_property  SEVERITY {Warning} [get_drc_checks NSTD-1]
 set_property  BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]
@@ -113,8 +113,6 @@ set_property PACKAGE_PIN D5 [get_ports "FPGA_SCL"]
 set_property PACKAGE_PIN D6 [get_ports "FPGA_SDA"]
 set_property IOSTANDARD LVCMOS33 [get_ports "FPGA_SCL"]
 set_property IOSTANDARD LVCMOS33 [get_ports "FPGA_SDA"]
-set_property PULLUP     true     [get_ports "FPGA_SCL"]
-set_property PULLUP     true     [get_ports "FPGA_SDA"]
 
 ##############################################################################
 # UART
@@ -717,6 +715,12 @@ set_property PACKAGE_PIN AN30 [get_ports "FMC1_LA_P16"]
 # 1.2V: LVCMOS12 and DIFF_HSUL_12
 # 1.5V: LVCMOS15 and DIFF_SSTL15
 # 1.8V: LVCMOS18 and LVDS
+set_property IOSTANDARD LVDS [get_ports "FMC1_CLK_M2C_N1"]
+set_property IOSTANDARD LVDS [get_ports "FMC1_CLK_M2C_P1"]
+set_property IOSTANDARD LVDS [get_ports "FMC1_CLK_M2C_N3"]
+set_property IOSTANDARD LVDS [get_ports "FMC1_CLK_M2C_P3"]
+set_property IOSTANDARD LVDS [get_ports "FMC1_CLK_C2M_N3"]
+set_property IOSTANDARD LVDS [get_ports "FMC1_CLK_C2M_P3"]
 set_property IOSTANDARD LVCMOS18  [get_ports "FMC1_LA_N0"]
 set_property IOSTANDARD LVCMOS18  [get_ports "FMC1_LA_P0"]
 set_property IOSTANDARD LVCMOS18  [get_ports "FMC1_LA_N1"]
@@ -860,16 +864,16 @@ set_property IOSTANDARD LVCMOS25  [get_ports "AMC_MODE"]
 # set_property PACKAGE_PIN K1 [get_ports "AMC_RX_N2"]
 # set_property PACKAGE_PIN J4 [get_ports "AMC_RX_P1"]
 # set_property PACKAGE_PIN J3 [get_ports "AMC_RX_N1"]
-# set_property PACKAGE_PIN H2 [get_ports "AMC_RX_P0"]
-# set_property PACKAGE_PIN H1 [get_ports "AMC_RX_N0"]
+set_property PACKAGE_PIN H2 [get_ports "AMC_RX_P0"]
+set_property PACKAGE_PIN H1 [get_ports "AMC_RX_N0"]
 # set_property PACKAGE_PIN L8 [get_ports "AMC_TX_P3"]
 # set_property PACKAGE_PIN L7 [get_ports "AMC_TX_N3"]
 # set_property PACKAGE_PIN K6 [get_ports "AMC_TX_P2"]
 # set_property PACKAGE_PIN K5 [get_ports "AMC_TX_N2"]
 # set_property PACKAGE_PIN J8 [get_ports "AMC_TX_P1"]
 # set_property PACKAGE_PIN J7 [get_ports "AMC_TX_N1"]
-# set_property PACKAGE_PIN H6 [get_ports "AMC_TX_P0"]
-# set_property PACKAGE_PIN H5 [get_ports "AMC_TX_N0"]
+set_property PACKAGE_PIN H6 [get_ports "AMC_TX_P0"]
+set_property PACKAGE_PIN H5 [get_ports "AMC_TX_N0"]
 # set_property PACKAGE_PIN U12 [get_ports "MGTCLK231_P0"]
 # set_property PACKAGE_PIN U11 [get_ports "MGTCLK231_N0"]
 # set_property PACKAGE_PIN T10 [get_ports "MGTCLK231_P1"]
@@ -940,6 +944,8 @@ set_property PACKAGE_PIN N12 [get_ports "AMC_TX17"]
 set_property PACKAGE_PIN M11 [get_ports "AMC_TX18"]
 set_property PACKAGE_PIN N13 [get_ports "AMC_TX19"]
 set_property PACKAGE_PIN N15 [get_ports "AMC_TX20"]
+#
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets AMC_RX18]
 # Drive high to output, low to input
 set_property PACKAGE_PIN K13 [get_ports "AMC_TX_DE17"]
 set_property PACKAGE_PIN N10 [get_ports "AMC_TX_DE18"]
@@ -1089,3 +1095,32 @@ set_property IOSTANDARD LVCMOS33 [get_ports "RTM_IO*"]
 # set_property PACKAGE_PIN E34 [get_ports "AMC2RTM_N19"]
 # set_property PACKAGE_PIN T27 [get_ports "MGTCLK131_P0"]
 # set_property PACKAGE_PIN T28 [get_ports "MGTCLK131_N0"]
+
+##############################################################################
+# Timing: async-reset release (recovery/removal) crossing clk_out3_clk_wiz
+# (125 MHz) -> clk_out1_clk_wiz (40 MHz) on the PCS/PMA core reset bridge.
+#
+# gig_ethernet_pcs_pma_i/core_resets_i is an async2sync_reset (RESET.v):
+# its FDPE async-preset pins (PRE) are driven by the system reset released
+# synchronously in the 125 MHz domain (reset_usrclk). The 4-stage ASYNC_REG
+# pipe filters the release, so the ~1 ns recovery requirement imposed by the
+# MMCM output phase relationship is not real: worst case the reset deasserts
+# one clock later. False-path the async PRE checks of that reset pipe only
+# (no data-path checks are affected).
+set_false_path -to [get_pins -hier -filter {NAME =~ *core_resets_i/reset_pipe_reg[*]/PRE}]
+
+##############################################################################
+# Timing: software-controlled glitchless clock-mux select
+# clk_external_enable (RBCP register g_clk.g_ext_en, clk_out3_clk_wiz 125 MHz)
+#   -> BUFGMUX_CTRL_inst/S0  (internal clk64_int / external AMC_RX18 clk64 mux)
+#
+# The mux select is a quasi-static configuration bit, not a data path. The two
+# mux inputs are unrelated to the 125 MHz register clock, so whenever their
+# clock edges nearly coincide the S0 setup requirement collapses to ~0 ns
+# (observed: requirement 0.019 ns, slack -1.097 ns in the 22:55 build).
+# False-path the BUFGMUX_CTRL select pin checks only; data paths stay timed.
+#
+# NOTE: as with any BUFGMUX, the select must be changed while both clock inputs
+# are low (or with the consumer held in reset), otherwise the muxed clock may
+# glitch; this design relies on the MMCM-lock reset chain to recover.
+set_false_path -to [get_pins -hier -filter {NAME =~ *BUFGMUX_CTRL_inst/S*}]

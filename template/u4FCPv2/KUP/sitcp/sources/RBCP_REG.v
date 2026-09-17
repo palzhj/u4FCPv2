@@ -16,33 +16,58 @@ module RBCP_REG #(
   parameter [3 :0]  UART_NUM      = 1
 )(
   // System
-  input             CLK,        // in : System clock
-  input             RST,        // in : System reset
+  input             CLK,            // in : System clock
+  input             RST,            // in : System reset
   // RBCP I/F
-  input             RBCP_ACT,   // in : Active
-  input   [31:0]    RBCP_ADDR,  // in : Address[31:0]
-  input             RBCP_WE,    // in : Write enable
-  input   [7 :0]    RBCP_WD,    // in : Write data[7:0]
-  input             RBCP_RE,    // in : Read enable
-  output  [7 :0]    RBCP_RD,    // out: Read data[7:0]
-  output            RBCP_ACK,   // out: Acknowledge
+  input             RBCP_ACT,       // in : Active
+  input   [31:0]    RBCP_ADDR,      // in : Address[31:0]
+  input             RBCP_WE,        // in : Write enable
+  input   [7 :0]    RBCP_WD,        // in : Write data[7:0]
+  input             RBCP_RE,        // in : Read enable
+  output  [7 :0]    RBCP_RD,        // out: Read data[7:0]
+  output            RBCP_ACK,       // out: Acknowledge
   // User IO
   input             VP_IN,
   input             VN_IN,
   // I2C
-  input   [I2C_NUM-1:0]   SCL,
-  output  [I2C_NUM-1:0]   SCL_OEN,
-  output  [I2C_NUM-1:0]   SCL_O,
-  input   [I2C_NUM-1:0]   SDA,
-  output  [I2C_NUM-1:0]   SDA_OEN,
-  output  [I2C_NUM-1:0]   SDA_O,
+  input   [I2C_NUM-1:0] SCL,
+  output  [I2C_NUM-1:0] SCL_OEN,
+  output  [I2C_NUM-1:0] SCL_O,
+  input   [I2C_NUM-1:0] SDA,
+  output  [I2C_NUM-1:0] SDA_OEN,
+  output  [I2C_NUM-1:0] SDA_O,
   // SPI
-  output  [SPI_NUM-1:0]   SCK,
-  output  [SPI_NUM-1:0]   MOSI_O,
-  input   [SPI_NUM-1:0]   MISO_I,
+  output  [SPI_NUM-1:0] SCK,
+  output  [SPI_NUM-1:0] MOSI_O,
+  input   [SPI_NUM-1:0] MISO_I,
   // UART
-  input   [UART_NUM-1:0]  UART_RX,
-  output  [UART_NUM-1:0]  UART_TX
+  input   [UART_NUM-1:0] UART_RX,
+  output  [UART_NUM-1:0] UART_TX,
+  // Reset
+  output            USER_RST,       // out: User reset pulse (1 ms)
+  output            DDR_RST,        // out: DDR reset pulse (1 ms)
+  output            MODULE_RST,     // out: Module reset pulse (10 ms)
+  output            QSFP_RST,       // out: QSFP reset pulse (10 us)
+  // Status
+  input             CLK_LOCKED,     // in : MMCM locked
+  input             T_ALM,          // in : Temperature alarm
+  input             LV_ALM,         // in : Low-voltage alarm
+  input             HV_ALM,         // in : High-voltage alarm
+  input             QSFP_ALM,       // in : QSFP alarm
+  input             QSFP_PRS,       // in : QSFP module present
+  output            CLK_LOCKED_LCH, // out: Latched CLK_LOCKED
+  output            T_ALM_LCH,      // out: Latched T_ALM
+  output            LV_ALM_LCH,     // out: Latched LV_ALM
+  output            HV_ALM_LCH,     // out: Latched HV_ALM
+  output            QSFP_ALM_LCH,   // out: Latched QSFP_ALM
+  output            QSFP_PRS_LCH,   // out: Latched QSFP_PRS
+  // Control
+  output            CLK_EXT_EN,     // out: Clock source select (0: internal, 1: external)
+  output            LV_EN,          // out: Low-voltage enable
+  output            LV_OT_AUTO_OFF, // out: LV auto-off enable
+  output            HV_STOP,        // out: High-voltage stop
+  output            HV_OC_AUTO_OFF, // out: HV auto-off enable
+  output            QSFP_LPMODE     // out: QSFP low-power mode
 );
 ////////////////////////////////////////////////////////////////////////////////
 // WishBone bus arbitrator
@@ -208,6 +233,78 @@ wire [7 : 0]  sub_arb_addr = RBCP_ADDR[15:8];
 wire [7 : 0]  wb_reg_dat;
 wire          wb_reg_ack;
 
+// Reset pulse spreading: 1-cycle register trigger -> fixed-width reset pulse
+wire user_reset, ddr_reset, mod_reset, qsfp_reset;
+reset_pulse_extender reset_pulse_extender_usr(
+  .clk     (CLK),
+  .rst_in  (user_reset),
+  .rst_out (USER_RST)
+);
+
+reset_pulse_extender reset_pulse_extender_ddr(
+  .clk     (CLK),
+  .rst_in  (ddr_reset),
+  .rst_out (DDR_RST)
+);
+
+reset_pulse_extender #(
+  .PULSE_WIDTH_NS (10_000_000)   // 10 ms
+) reset_pulse_extender_mod (
+  .clk     (CLK),
+  .rst_in  (mod_reset),
+  .rst_out (MODULE_RST)
+);
+
+reset_pulse_extender #(
+  .PULSE_WIDTH_NS (10_000)       // 10 us
+) reset_pulse_extender_qsfp (
+  .clk     (CLK),
+  .rst_in  (qsfp_reset),
+  .rst_out (QSFP_RST)
+);
+
+// Latched status
+reg   clk_locked_r, temp_alm_r, lv_alm_r, hv_alm_r, qsfp_alm_r, qsfp_prs_r;
+wire  clk_locked_clr, temp_alm_clr, lv_alm_clr, hv_alm_clr, qsfp_alm_clr, qsfp_prs_clr;
+
+// Latch the level alarms / present flags so a short pulse is kept until
+// the corresponding status register is read (cleared by the read trigger).
+always @(posedge CLK) begin
+  if (RST | clk_locked_clr) clk_locked_r <= 0;
+  else if (CLK_LOCKED)      clk_locked_r <= 1;
+end
+assign CLK_LOCKED_LCH = clk_locked_r;
+
+always @(posedge CLK) begin
+  if (RST | temp_alm_clr) temp_alm_r <= 0;
+  else if (T_ALM)         temp_alm_r <= 1;
+end
+assign T_ALM_LCH = temp_alm_r;
+
+always @(posedge CLK) begin
+  if (RST | lv_alm_clr) lv_alm_r <= 0;
+  else if (LV_ALM)      lv_alm_r <= 1;
+end
+assign LV_ALM_LCH = lv_alm_r;
+
+always @(posedge CLK) begin
+  if (RST | hv_alm_clr) hv_alm_r <= 0;
+  else if (HV_ALM)      hv_alm_r <= 1;
+end
+assign HV_ALM_LCH = hv_alm_r;
+
+always @(posedge CLK) begin
+  if (RST | qsfp_alm_clr) qsfp_alm_r <= 0;
+  else if (QSFP_ALM)      qsfp_alm_r <= 1;
+end
+assign QSFP_ALM_LCH = qsfp_alm_r;
+
+always @(posedge CLK) begin
+  if (RST | qsfp_prs_clr) qsfp_prs_r <= 0;
+  else if (QSFP_PRS)      qsfp_prs_r <= 1;
+end
+assign QSFP_PRS_LCH = qsfp_prs_r;
+
 reg_table #(
   .ADDRESS_WIDTH                (16),
   .USE_STALL                    (1),
@@ -221,17 +318,46 @@ reg_table #(
   .i_rst_n    (~RST),
   .i_wb_cyc   (wb_cyc),
   .i_wb_stb   (wb_stb & reg_cs),
+  .o_wb_stall (),
   .i_wb_adr   (wb_adr),
   .i_wb_we    (wb_we),
   .i_wb_dat   (wb_dat_master),
   .i_wb_sel   (4'b1),
-  .o_wb_dat   (wb_reg_dat),
   .o_wb_ack   (wb_reg_ack),
   .o_wb_err   (),
   .o_wb_rty   (),
-  .o_wb_stall ()
-);
+  .o_wb_dat   (wb_reg_dat),
 
+  // Status & control registers (map in reg_table.xlsx)
+  .o_sys_rst_usr_rst_trigger           (user_reset),
+  .o_sys_rst_ddr_rst_trigger           (ddr_reset),
+  .o_mod_rst_mod_rst_trigger           (mod_reset),
+  .o_mod_rst_qsfp_rst_trigger          (qsfp_reset),
+  .i_sys_sta_clk_lock                  (CLK_LOCKED),
+  .i_sys_sta_lch_clk_lock              (clk_locked_r),
+  .o_sys_sta_lch_clk_lock_read_trigger (clk_locked_clr),
+  .i_mod_sta_temp_alm                  (T_ALM),
+  .i_mod_sta_lv_alm                    (LV_ALM),
+  .i_mod_sta_hv_alm                    (HV_ALM),
+  .i_mod_sta_qsfp_alm                  (QSFP_ALM),
+  .i_mod_sta_qsfp_prs                  (QSFP_PRS),
+  .i_mod_sta_lch_temp_alm              (temp_alm_r),
+  .o_mod_sta_lch_temp_alm_read_trigger (temp_alm_clr),
+  .i_mod_sta_lch_lv_alm                (lv_alm_r),
+  .o_mod_sta_lch_lv_alm_read_trigger   (lv_alm_clr),
+  .i_mod_sta_lch_hv_alm                (hv_alm_r),
+  .o_mod_sta_lch_hv_alm_read_trigger   (hv_alm_clr),
+  .i_mod_sta_lch_qsfp_alm              (qsfp_alm_r),
+  .o_mod_sta_lch_qsfp_alm_read_trigger (qsfp_alm_clr),
+  .i_mod_sta_lch_qsfp_prs              (qsfp_prs_r),
+  .o_mod_sta_lch_qsfp_prs_read_trigger (qsfp_prs_clr),
+  .o_clk_ext_en                        (CLK_EXT_EN),
+  .o_lv_enable                         (LV_EN),
+  .o_lv_ot_auto_off                    (LV_OT_AUTO_OFF),
+  .o_hv_stop                           (HV_STOP),
+  .o_hv_oc_auto_off                    (HV_OC_AUTO_OFF),
+  .o_qsfp_lpmode                       (QSFP_LPMODE)
+);
 
 genvar i;
 

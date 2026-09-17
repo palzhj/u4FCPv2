@@ -46,6 +46,7 @@ set VERILOG_FILES "\
   wishbone/wb_reg/rggen-verilog-rtl/rggen_adapter_common.v \
   wishbone/wb_reg/rggen-verilog-rtl/rggen_mux.v \
   wishbone/wb_reg/rggen-verilog-rtl/rggen_or_reducer.v \
+  wishbone/wb_reg/rggen-verilog-rtl/rggen_bit_field_w01trg.v \
   wishbone/wb_i2c/i2c_master_top.v \
   wishbone/wb_i2c/i2c_master_bit_ctrl.v \
   wishbone/wb_i2c/i2c_master_byte_ctrl.v \
@@ -62,7 +63,8 @@ set VERILOG_FILES "\
   wishbone/wb_uart/raminfr.v \
   "
 
-set VHDL_FILES ""
+set VHDL_FILES "\
+  machine_clock_decode.vhd"
 
 set NGC_FILES "\
   SiTCP/SiTCP_XC7K_32K_BBT_V110.edf"
@@ -73,6 +75,8 @@ set WCFG_FILES ""
 
 set XCI_FILES "\
   ip/clk_wiz.xci \
+  ip/clk_wiz_200Mto64M.xci \
+  ip/clk_wiz_64M.xci \
   ip/ila64.xci \
   ip/sitcp_fifo.xci \
   ip/xadc_wiz.xci \

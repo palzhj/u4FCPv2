@@ -586,7 +586,7 @@
         "ARCHITECTURE": [ { "value": "kintexuplus" } ],
         "BASE_BOARD_PART": [ { "value": "" } ],
         "BOARD_CONNECTIONS": [ { "value": "" } ],
-        "DEVICE": [ { "value": "xcku11p" } ],
+        "DEVICE": [ { "value": "xcku15p" } ],
         "PACKAGE": [ { "value": "ffve1517" } ],
         "PREFHDL": [ { "value": "VERILOG" } ],
         "SILICON_REVISION": [ { "value": "" } ],
