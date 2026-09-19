@@ -532,7 +532,7 @@ BUFG BUFG_200 (
   .I            (clk200_in)
 );
 
-wire clk40_int_bufg, clk100_int_bufg, clk125_int_bufg, clk_local_locked;
+wire clk40_int_bufg, clk100_int_bufg, clk125_int_bufg, clk500_int_bufg, clk_local_locked;
 clk_wiz local_clk_wiz(
   // Clock in ports
   .clk_in1      (clk200_int_bufg),
@@ -540,6 +540,7 @@ clk_wiz local_clk_wiz(
   .clk_out1     (clk40_int_bufg),
   .clk_out2     (clk100_int_bufg),
   .clk_out3     (clk125_int_bufg),
+  .clk_out4     (clk500_int_bufg),
   // Status and control signals
   .resetn       (RST_B),
   .locked       (clk_local_locked)
@@ -613,16 +614,16 @@ IDELAYCTRL #(
   .SIM_DEVICE ("ULTRASCALE")  // Set the device version for simulation functionality (ULTRASCALE)
 )
 IDELAYCTRL_inst (
-  .RDY        (dlyctrl_rdy),  // 1-bit output: Ready output
-  .REFCLK     (clk200_int_bufg),   // 1-bit input: Reference clock input
-  .RST        (~RST_B)        // 1-bit input: Active-High reset input. Asynchronous assert, synchronous deassert to REFCLK.
+  .REFCLK     (clk500_int_bufg),  // 1-bit input: Reference clock input
+  .RST        (~clk_local_locked),// 1-bit input: Active-High reset input. Asynchronous assert, synchronous deassert to REFCLK.
+  .RDY        (dlyctrl_rdy)       // 1-bit output: Ready output
 );
 
 ////////////////////////////////////////////////////////////////////////////////
 // System and User reset
 wire sys_rst;
 async2sync_reset reset_sysclk(
-  .rst_in       (~(clk_local_locked & dlyctrl_rdy)),
+  .rst_in       (~dlyctrl_rdy),
   .clk          (clk125_int_bufg),
   .rst_out      (sys_rst)
 );
