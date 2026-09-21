@@ -571,7 +571,7 @@ BUFGMUX_CTRL BUFGMUX_CTRL_inst (
   .S            (clk_external_enable) // 1-bit input: Clock select (0: internal, 1: external)
 );
 
-wire mmcm_locked;
+wire mmcm_locked, mmcm_rst;
 wire clk64_bufg, clk128_bufg, clk160_bufg, clk640_bufg;
 clk_wiz_64M clk_wiz_64M(
   // Clock in ports
@@ -582,7 +582,7 @@ clk_wiz_64M clk_wiz_64M(
   .clk_out3    (clk160_bufg),         //  160.493760 MHz (160 * 1.003086)
   .clk_out4    (clk640_bufg),         //  641.975040 MHz (640 * 1.003086)
   // Status and control signals
-  .reset       (~clk64_local_locked),
+  .reset       (mmcm_rst|~clk64_local_locked),
   .locked      (mmcm_locked)
 );
 
@@ -798,7 +798,7 @@ RBCP_REG #(
   .UART_RX        (UART_RX),
   .UART_TX        (UART_TX),
   // Reset
-  .USER_RST       (),
+  .USER_RST       (mmcm_rst),
   .DDR_RST        (),
   .MODULE_RST     (),
   .QSFP_RST       (qsfp_rst),
