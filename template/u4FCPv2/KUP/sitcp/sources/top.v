@@ -76,14 +76,14 @@ module top #(
 // FMC0
   input             FMC0_PRSNT_B,
   output            FMC0_CLK_DIR, // High for output
-  input             FMC0_CLK_M2C_P1,
-  input             FMC0_CLK_M2C_N1,
-  input             FMC0_CLK_M2C_P3,
-  input             FMC0_CLK_M2C_N3,
-  output            FMC0_CLK_C2M_P3,
-  output            FMC0_CLK_C2M_N3,
-  input             FMC0_LA_P0,
-  input             FMC0_LA_N0,
+  // input             FMC0_CLK_M2C_P1,
+  // input             FMC0_CLK_M2C_N1,
+  // input             FMC0_CLK_M2C_P3,
+  // input             FMC0_CLK_M2C_N3,
+  // output            FMC0_CLK_C2M_P3,
+  // output            FMC0_CLK_C2M_N3,
+  output            FMC0_LA_P0,
+  output            FMC0_LA_N0,
   input             FMC0_LA_P1,
   input             FMC0_LA_N1,
   input             FMC0_LA_P2,
@@ -117,22 +117,22 @@ module top #(
   input             FMC0_LA_P16,
   input             FMC0_LA_N16,
 
-  inout             FMC0_HB_P0,   // M_SCL
-  input             FMC0_HB_N0,   // T_INTb
-  inout             FMC0_HB_P1,   // M_SDA
-  input             FMC0_HB_N1,   // M_INTb
-  output            FMC0_HB_P2,   // P_EN
-  input             FMC0_HB_N2,   // NC
-  inout             FMC0_HB_P3,   // HV_SCL
-  input             FMC0_HB_N3,   // HV_INTb
-  inout             FMC0_HB_P4,   // HV_SDA
-  output            FMC0_HB_N4,   // HV_STOP
-  inout             FMC0_HB_P5,   // QSFP_SCL
-  input             FMC0_HB_N5,   // QSFP_INTb
-  inout             FMC0_HB_P6,   // QSFP_SDA
-  input             FMC0_HB_N6,   // QSFP_MODPRSL
-  output            FMC0_HB_P7,   // QSFP_RESETL
-  output            FMC0_HB_N7,   // QSFP_LPMODE
+  output            FMC0_HB_P0,  // Module reset
+  input             FMC0_HB_N0,
+  input             FMC0_HB_P1,
+  input             FMC0_HB_N1,
+  input             FMC0_HB_P2,
+  input             FMC0_HB_N2,
+  input             FMC0_HB_P3,
+  input             FMC0_HB_N3,
+  input             FMC0_HB_P4,
+  input             FMC0_HB_N4,
+  input             FMC0_HB_P5,
+  input             FMC0_HB_N5,
+  input             FMC0_HB_P6,
+  input             FMC0_HB_N6,
+  input             FMC0_HB_P7,
+  input             FMC0_HB_N7,
 
   // input             FMC0_DP_M2C_P0,
   // input             FMC0_DP_M2C_N0,
@@ -179,14 +179,14 @@ module top #(
 // FMC1
   input             FMC1_PRSNT_B,
   output            FMC1_CLK_DIR, // High for output
-  input             FMC1_CLK_M2C_P1,
-  input             FMC1_CLK_M2C_N1,
-  input             FMC1_CLK_M2C_P3,
-  input             FMC1_CLK_M2C_N3,
+  // input             FMC1_CLK_M2C_P1,
+  // input             FMC1_CLK_M2C_N1,
+  // input             FMC1_CLK_M2C_P3,
+  // input             FMC1_CLK_M2C_N3,
   output            FMC1_CLK_C2M_P3,
   output            FMC1_CLK_C2M_N3,
-  input             FMC1_LA_P0,
-  input             FMC1_LA_N0,
+  output            FMC1_LA_P0,
+  output            FMC1_LA_N0,
   input             FMC1_LA_P1,
   input             FMC1_LA_N1,
   input             FMC1_LA_P2,
@@ -220,22 +220,22 @@ module top #(
   input             FMC1_LA_P16,
   input             FMC1_LA_N16,
 
-  input             FMC1_HB_P0,
-  input             FMC1_HB_N0,
-  input             FMC1_HB_P1,
-  input             FMC1_HB_N1,
-  input             FMC1_HB_P2,
-  input             FMC1_HB_N2,
-  input             FMC1_HB_P3,
-  input             FMC1_HB_N3,
-  input             FMC1_HB_P4,
-  input             FMC1_HB_N4,
-  input             FMC1_HB_P5,
-  input             FMC1_HB_N5,
-  input             FMC1_HB_P6,
-  input             FMC1_HB_N6,
-  input             FMC1_HB_P7,
-  input             FMC1_HB_N7,
+  inout             FMC1_HB_P0,   // M_SCL
+  input             FMC1_HB_N0,   // T_INTb
+  inout             FMC1_HB_P1,   // M_SDA
+  input             FMC1_HB_N1,   // M_INTb
+  output            FMC1_HB_P2,   // P_EN
+  input             FMC1_HB_N2,   // NC
+  inout             FMC1_HB_P3,   // HV_SCL
+  input             FMC1_HB_N3,   // HV_INTb
+  inout             FMC1_HB_P4,   // HV_SDA
+  output            FMC1_HB_N4,   // HV_STOP
+  inout             FMC1_HB_P5,   // QSFP_SCL
+  input             FMC1_HB_N5,   // QSFP_INTb
+  inout             FMC1_HB_P6,   // QSFP_SDA
+  input             FMC1_HB_N6,   // QSFP_MODPRSL
+  output            FMC1_HB_P7,   // QSFP_RESETL
+  output            FMC1_HB_N7,   // QSFP_LPMODE
 
   // input             FMC1_DP_M2C_P0,
   // input             FMC1_DP_M2C_N0,
@@ -387,7 +387,7 @@ module top #(
   input             AMC_TX17,   // 1.003086 MHz
   input             AMC_TX18,   // PPS+timestamp
   input             AMC_TX19,   // Frame
-  input             AMC_TX20,   // Unused
+  input             AMC_TX20,   // Unused, interlock
   output            AMC_TX_DE17,
   output            AMC_TX_DE18,
   output            AMC_TX_DE19,
@@ -395,7 +395,7 @@ module top #(
   input             AMC_RX17,   // 1.003086 MHz
   input             AMC_RX18,   // 64 * 1.003086 MHz
   input             AMC_RX19,   // Gate
-  input             AMC_RX20,   // Unused
+  input             AMC_RX20,   // Unused, busy
   output            AMC_RX_DE17,
   output            AMC_RX_DE18,
   output            AMC_RX_DE19,
@@ -592,13 +592,13 @@ OBUFDS OBUFDS_clkout (
   .I            (clk125_int_bufg)    // 1-bit input: Buffer input
 );
 
-assign FMC0_CLK_DIR = 1'b1;
+// assign FMC0_CLK_DIR = 1'b1;
 
-OBUFDS OBUFDS_fmc0_clkout3 (
-  .O            (FMC0_CLK_C2M_P3),    // 1-bit output: Diff_p output (connect directly to top-level port)
-  .OB           (FMC0_CLK_C2M_N3),    // 1-bit output: Diff_n output (connect directly to top-level port)
-  .I            (clk640_bufg)    // 1-bit input: Buffer input
-);
+// OBUFDS OBUFDS_fmc0_clkout3 (
+//   .O            (FMC0_CLK_C2M_P3),    // 1-bit output: Diff_p output (connect directly to top-level port)
+//   .OB           (FMC0_CLK_C2M_N3),    // 1-bit output: Diff_n output (connect directly to top-level port)
+//   .I            (clk640_bufg)    // 1-bit input: Buffer input
+// );
 
 assign FMC1_CLK_DIR = 1'b1;
 
@@ -743,27 +743,46 @@ sitcp_fifo sitcp_fifo(
 assign  sitcpFifoRe = ~tcp_tx_full & ~sitcpFifoEmpty;
 
 ////////////////////////////////////////////////////////////////////////////////
-//  Register controll
+//  IO controll
 
 wire [I2C_NUM-1: 0] scl_i, sda_i, scl_o, sda_o, scl_oen, sda_oen;
-wire temp_alarm = ~FMC0_HB_N0;
-wire lv_alarm   = ~FMC0_HB_N1;
-wire hv_alarm   = ~FMC0_HB_N3;
-wire qsfp_alarm = ~FMC0_HB_N5;
-wire qsfp_prs   = ~FMC0_HB_N6;
+wire temp_alarm = ~FMC1_HB_N0;
+wire lv_alarm   = ~FMC1_HB_N1;
+wire hv_alarm   = ~FMC1_HB_N3;
+wire qsfp_alarm = ~FMC1_HB_N5;
+wire qsfp_prs   = ~FMC1_HB_N6;
 
 wire qsfp_rst;
-assign FMC0_HB_P7 = ~qsfp_rst;  // QSFP_RESETL
+assign FMC1_HB_P7 = ~qsfp_rst;  // QSFP_RESETL
 
 wire qsfp_lpmode;
-assign FMC0_HB_N7 = qsfp_lpmode; // QSFP_LPMODE
+assign FMC1_HB_N7 = qsfp_lpmode; // QSFP_LPMODE
 
 wire lv_en, lv_ot_auto_off, lv_alarm_latch;
-assign FMC0_HB_P2 = lv_ot_auto_off ? lv_en & ~lv_alarm_latch : lv_en; // Power enable
+assign FMC1_HB_P2 = lv_ot_auto_off ? lv_en & ~lv_alarm_latch : lv_en; // Power enable
 
 wire hv_stop, hv_oc_auto_off, hv_alarm_latch;
-assign FMC0_HB_N4 = hv_oc_auto_off ? hv_alarm_latch | hv_stop : hv_stop; // HV stop
+assign FMC1_HB_N4 = hv_oc_auto_off ? hv_alarm_latch | hv_stop : hv_stop; // HV stop
 
+////////////////////////////////////////////////////////////////////////////////
+//  Module inout
+wire mod_rst;
+assign FMC0_HB_P0 = ~mod_rst;
+
+OBUFDS OBUFDS_module_frame (
+  .O            (FMC1_LA_P0),    // 1-bit output: Diff_p output (connect directly to top-level port)
+  .OB           (FMC1_LA_N0),    // 1-bit output: Diff_n output (connect directly to top-level port)
+  .I            (clk160_bufg)    // 1-bit input: Buffer input
+);
+
+OBUFDS OBUFDS_module_gate (
+  .O            (FMC0_LA_P0),    // 1-bit output: Diff_p output (connect directly to top-level port)
+  .OB           (FMC0_LA_N0),    // 1-bit output: Diff_n output (connect directly to top-level port)
+  .I            (clk128_bufg)    // 1-bit input: Buffer input
+);
+
+////////////////////////////////////////////////////////////////////////////////
+//  Register controll
 RBCP_REG #(
   .USE_CHIPSCOPE(DEBUG_RBCP_REG & USE_CHIPSCOPE),
   .SYN_DATE     (SYN_DATE),
@@ -800,7 +819,7 @@ RBCP_REG #(
   // Reset
   .USER_RST       (mmcm_rst),
   .DDR_RST        (),
-  .MODULE_RST     (),
+  .MODULE_RST     (mod_rst),
   .QSFP_RST       (qsfp_rst),
   // Status
   .CLK_LOCKED     (mmcm_locked),
@@ -832,28 +851,32 @@ assign sda_i[0] = FPGA_SDA;
 assign FPGA_SDA = sda_oen[0] ? 1'bz : sda_o[0];
 
 // For M_I2C
-assign scl_i[1] = FMC0_HB_P0;
-assign FMC0_HB_P0 = scl_oen[1] ? 1'bz : scl_o[1];
+assign scl_i[1] = FMC1_HB_P0;
+assign FMC1_HB_P0 = scl_oen[1] ? 1'bz : scl_o[1];
 
-assign sda_i[1] = FMC0_HB_P1;
-assign FMC0_HB_P1 = sda_oen[1] ? 1'bz : sda_o[1];
+assign sda_i[1] = FMC1_HB_P1;
+assign FMC1_HB_P1 = sda_oen[1] ? 1'bz : sda_o[1];
 
 // For HV_I2C
-assign scl_i[2] = FMC0_HB_P3;
-assign FMC0_HB_P3 = scl_oen[2] ? 1'bz : scl_o[2];
+assign scl_i[2] = FMC1_HB_P3;
+assign FMC1_HB_P3 = scl_oen[2] ? 1'bz : scl_o[2];
 
-assign sda_i[2] = FMC0_HB_P4;
-assign FMC0_HB_P4 = sda_oen[2] ? 1'bz : sda_o[2];
+assign sda_i[2] = FMC1_HB_P4;
+assign FMC1_HB_P4 = sda_oen[2] ? 1'bz : sda_o[2];
 
 // For QSFP
-assign scl_i[3] = FMC0_HB_P5;
-assign FMC0_HB_P5 = scl_oen[3] ? 1'bz : scl_o[3];
+assign scl_i[3] = FMC1_HB_P5;
+assign FMC1_HB_P5 = scl_oen[3] ? 1'bz : scl_o[3];
 
-assign sda_i[3] = FMC0_HB_P6;
-assign FMC0_HB_P6 = sda_oen[3] ? 1'bz : sda_o[3];
+assign sda_i[3] = FMC1_HB_P6;
+assign FMC1_HB_P6 = sda_oen[3] ? 1'bz : sda_o[3];
 
 //////////////////////////////////////////////////////////////////////////////
 // Set MLVDS as input (driver enable = 0)
+assign AMC_TX_DE17 = 1'b0;
+assign AMC_TX_DE18 = 1'b0;
+assign AMC_TX_DE19 = 1'b0;
+assign AMC_TX_DE20 = 1'b0;
 assign AMC_RX_DE17 = 1'b0;
 assign AMC_RX_DE18 = 1'b0;
 assign AMC_RX_DE19 = 1'b0;
@@ -863,21 +886,23 @@ assign AMC_RX_DE20 = 1'b0;
 // Debug
 
 parameter CLK_FREQ = 64_000_000; // clock frequency in Hz (clk64_bufg = 64.1975 MHz)
-localparam integer COUNT_MAX = CLK_FREQ - 1; // Counter maximum value
-localparam integer CNT_WIDTH = $clog2(CLK_FREQ); // Auto-calculate counter width
-reg sec_toggle;
+localparam integer COUNT_MAX  = CLK_FREQ - 1; // Counter maximum value
+localparam integer COUNT_HALF = CLK_FREQ / 2;
+localparam integer CNT_WIDTH  = $clog2(CLK_FREQ); // Auto-calculate counter width
 reg [CNT_WIDTH-1:0] cnt;
+reg sec_toggle; // Toggle twice per second
 always @(posedge clk64_bufg) begin
-  if (cnt == COUNT_MAX[CNT_WIDTH-1:0]) begin
-      cnt        <= {CNT_WIDTH{1'b0}};
-      sec_toggle <= ~sec_toggle;   // Toggle once per second
+  if((clk_external_enable & timestamp_update) || (cnt == 0)) begin
+    cnt <= COUNT_MAX;
+    sec_toggle <= 1'b1;
   end
   else begin
-      cnt <= cnt + 1'b1;
+    cnt <= cnt - 1'b1;
+    if (cnt == COUNT_HALF) sec_toggle <= 1'b0;
   end
 end
 
-assign BLED_B = sec_toggle;
+assign BLED_B = ~sec_toggle;
 assign GLED_B = ~tcp_open;
 assign RLED_B = mmcm_locked;
 
