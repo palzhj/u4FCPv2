@@ -118,21 +118,21 @@ module top #(
   input             FMC0_LA_N16,
 
   output            FMC0_HB_P0,  // Module reset
-  input             FMC0_HB_N0,
-  input             FMC0_HB_P1,
-  input             FMC0_HB_N1,
-  input             FMC0_HB_P2,
-  input             FMC0_HB_N2,
-  input             FMC0_HB_P3,
-  input             FMC0_HB_N3,
-  input             FMC0_HB_P4,
-  input             FMC0_HB_N4,
-  input             FMC0_HB_P5,
-  input             FMC0_HB_N5,
-  input             FMC0_HB_P6,
-  input             FMC0_HB_N6,
-  input             FMC0_HB_P7,
-  input             FMC0_HB_N7,
+  input             FMC0_HB_N0,  // RES0
+  output            FMC0_HB_P1,  // LOAD_GDAC
+  input             FMC0_HB_N1,  // RES1
+  output            FMC0_HB_P2,  // REFRESH
+  input             FMC0_HB_N2,  // RES2
+  output            FMC0_HB_P3,  // CLK_SPI
+  input             FMC0_HB_N3,  // RES3
+  output            FMC0_HB_P4,  // ARRAY_IN0
+  input             FMC0_HB_N4,  // RES4
+  output            FMC0_HB_P5,  // ARRAY_IN1
+  input             FMC0_HB_N5,  // RES5
+  output            FMC0_HB_P6,  // ARRAY_IN2
+  input             FMC0_HB_N6,  // RES6
+  output            FMC0_HB_P7,  // ARRAY_IN3
+  input             FMC0_HB_N7,  // TP
 
   // input             FMC0_DP_M2C_P0,
   // input             FMC0_DP_M2C_N0,
@@ -780,6 +780,14 @@ OBUFDS OBUFDS_module_gate (
   .OB           (FMC0_LA_N0),    // 1-bit output: Diff_n output (connect directly to top-level port)
   .I            (clk128_bufg)    // 1-bit input: Buffer input
 );
+
+assign  FMC0_HB_P1 = clk64_bufg;  // LOAD_GDAC
+assign  FMC0_HB_P2 = clk64_bufg;  // REFRESH
+assign  FMC0_HB_P3 = clk64_bufg;  // CLK_SPI
+assign  FMC0_HB_P4 = clk64_bufg;  // ARRAY_IN0
+assign  FMC0_HB_P5 = clk64_bufg;  // ARRAY_IN1
+assign  FMC0_HB_P6 = clk64_bufg;  // ARRAY_IN2
+assign  FMC0_HB_P7 = clk64_bufg;  // ARRAY_IN3
 
 ////////////////////////////////////////////////////////////////////////////////
 //  Register controll
