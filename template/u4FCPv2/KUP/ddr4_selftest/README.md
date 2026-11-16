@@ -130,6 +130,38 @@ the controller's read rate. A full 16 GB sweep takes a few seconds
 
 Both controllers can run at the same time (separate `start` bits).
 
+## Programming the FPGA
+
+`scripts/program_fpga.sh` downloads a bit file to the FPGA over JTAG using
+Vivado in batch mode (no GUI). The JTAG clock is set to **10 MHz** by default;
+cables that do not support a programmable clock keep their default and the
+script prints a warning.
+
+```bash
+cd scripts
+
+# output/top.bit at 10 MHz, local hw_server
+./program_fpga.sh
+
+# explicit bit file, 5 MHz
+./program_fpga.sh ../output/top.bit 5000000
+
+# remote hw_server
+./program_fpga.sh ../output/top.bit 10000000 192.168.10.50:3121
+```
+
+The script starts/adopts a local `hw_server` (`localhost:3121`), filters the
+XCKU15P out of the JTAG chain (an attached FMC card may add devices), programs
+the FPGA and loads the `.ltx` probes file when it exists next to the bit file.
+Programming the configuration flash (`top.mcs`) is *not* part of this script.
+
+Equivalent direct call:
+
+```bash
+vivado -mode batch -nojournal -nolog -notrace -source program_fpga.tcl \
+       -tclargs ../output/top.bit 10000000 localhost:3121
+```
+
 ## Running the test
 
 `scripts/ddr4_selftest.py` is a small standalone host tool (it only needs
