@@ -1,0 +1,1136 @@
+`timescale 1ps/1ps
+/*******************************************************************************
+* System      : u4FCP GbE readout                                           *
+* Version     : v 2.1 2026/09/09                                               *
+*                                                                              *
+* Description : Top Module                                                     *
+*                                                                              *
+* Designer    : zhj@ihep.ac.cn                                                 *
+*                                                                              *
+*******************************************************************************/
+module top #(
+  parameter         USE_CHIPSCOPE = 1,
+  parameter [31:0]  SYN_DATE      = 32'h0,         // the date of compiling
+  parameter [7:0]   FPGA_VER      = 8'h1,          // the code version
+  parameter [31:0]  BASE_IP_ADDR  = 32'hC0A8_0A10, // 192.168.10.16
+  parameter [4 :0]  PHY_ADDRESS   = 5'b1,
+  parameter [3 :0]  I2C_NUM       = 4,
+  parameter [3 :0]  SPI_NUM       = 1,
+  parameter [3 :0]  UART_NUM      = 1
+)(
+  input             CLK_IN_200_P,
+  input             CLK_IN_200_N,
+  input             CLK_IN_PL_P,
+  input             CLK_IN_PL_N,
+  input             CLK_IN_SW_P,
+  input             CLK_IN_SW_N,
+  output            CLK_OUT_P,
+  output            CLK_OUT_N,
+// I/O
+  input             RST_B,
+  input             LEMO_IN_P,
+  input             LEMO_IN_N,
+  input             MMCX_TEST_P,
+  input             MMCX_TEST_N,
+  output  [3 : 0]   TESTPIN,        // Test Pin
+  input   [7 : 0]   DIPSW,
+  output            RLED_B,
+  output            GLED_B,
+  output            BLED_B,
+// I2C
+  inout             FPGA_SCL,
+  inout             FPGA_SDA,
+// UART
+  output            UART_TX,
+  input             UART_RX,
+// DDR4 A (C0, non-ECC 64-bit SODIMM)
+  output            C0_DDR4_ACT_B,
+  output  [16: 0]   C0_DDR4_ADDR,
+  output  [1 : 0]   C0_DDR4_BA,
+  output  [1 : 0]   C0_DDR4_BG,
+  output  [1 : 0]   C0_DDR4_CKE,
+  output  [1 : 0]   C0_DDR4_ODT,
+  output  [1 : 0]   C0_DDR4_CS_B,
+  output  [1 : 0]   C0_DDR4_CK_T,
+  output  [1 : 0]   C0_DDR4_CK_C,
+  output            C0_DDR4_RESET_B,
+  inout   [7 : 0]   C0_DDR4_DM,
+  inout   [63: 0]   C0_DDR4_DQ,
+  inout   [7 : 0]   C0_DDR4_DQS_C,
+  inout   [7 : 0]   C0_DDR4_DQS_T,
+// DDR4 B (C1, non-ECC 64-bit SODIMM)
+  output            C1_DDR4_ACT_B,
+  output  [16: 0]   C1_DDR4_ADDR,
+  output  [1 : 0]   C1_DDR4_BA,
+  output  [1 : 0]   C1_DDR4_BG,
+  output  [1 : 0]   C1_DDR4_CKE,
+  output  [1 : 0]   C1_DDR4_ODT,
+  output  [1 : 0]   C1_DDR4_CS_B,
+  output  [1 : 0]   C1_DDR4_CK_T,
+  output  [1 : 0]   C1_DDR4_CK_C,
+  output            C1_DDR4_RESET_B,
+  inout   [7 : 0]   C1_DDR4_DM,
+  inout   [63: 0]   C1_DDR4_DQ,
+  inout   [7 : 0]   C1_DDR4_DQS_C,
+  inout   [7 : 0]   C1_DDR4_DQS_T,
+// FMC0
+  input             FMC0_PRSNT_B,
+  output            FMC0_CLK_DIR, // High for output
+  // input             FMC0_CLK_M2C_P1,
+  // input             FMC0_CLK_M2C_N1,
+  // input             FMC0_CLK_M2C_P3,
+  // input             FMC0_CLK_M2C_N3,
+  // output            FMC0_CLK_C2M_P3,
+  // output            FMC0_CLK_C2M_N3,
+  output            FMC0_LA_P0,
+  output            FMC0_LA_N0,
+  input             FMC0_LA_P1,
+  input             FMC0_LA_N1,
+  input             FMC0_LA_P2,
+  input             FMC0_LA_N2,
+  input             FMC0_LA_P3,
+  input             FMC0_LA_N3,
+  input             FMC0_LA_P4,
+  input             FMC0_LA_N4,
+  input             FMC0_LA_P5,
+  input             FMC0_LA_N5,
+  input             FMC0_LA_P6,
+  input             FMC0_LA_N6,
+  input             FMC0_LA_P7,
+  input             FMC0_LA_N7,
+  input             FMC0_LA_P8,
+  input             FMC0_LA_N8,
+  input             FMC0_LA_P9,
+  input             FMC0_LA_N9,
+  input             FMC0_LA_P10,
+  input             FMC0_LA_N10,
+  input             FMC0_LA_P11,
+  input             FMC0_LA_N11,
+  input             FMC0_LA_P12,
+  input             FMC0_LA_N12,
+  input             FMC0_LA_P13,
+  input             FMC0_LA_N13,
+  input             FMC0_LA_P14,
+  input             FMC0_LA_N14,
+  input             FMC0_LA_P15,
+  input             FMC0_LA_N15,
+  input             FMC0_LA_P16,
+  input             FMC0_LA_N16,
+
+  output            FMC0_HB_P0,  // Module reset
+  input             FMC0_HB_N0,  // RES0
+  output            FMC0_HB_P1,  // LOAD_GDAC
+  input             FMC0_HB_N1,  // RES1
+  output            FMC0_HB_P2,  // REFRESH
+  input             FMC0_HB_N2,  // RES2
+  output            FMC0_HB_P3,  // CLK_SPI
+  input             FMC0_HB_N3,  // RES3
+  output            FMC0_HB_P4,  // ARRAY_IN0
+  input             FMC0_HB_N4,  // RES4
+  output            FMC0_HB_P5,  // ARRAY_IN1
+  input             FMC0_HB_N5,  // RES5
+  output            FMC0_HB_P6,  // ARRAY_IN2
+  input             FMC0_HB_N6,  // RES6
+  output            FMC0_HB_P7,  // ARRAY_IN3
+  input             FMC0_HB_N7,  // TP
+
+  // input             FMC0_DP_M2C_P0,
+  // input             FMC0_DP_M2C_N0,
+  // input             FMC0_DP_M2C_P1,
+  // input             FMC0_DP_M2C_N1,
+  // input             FMC0_DP_M2C_P2,
+  // input             FMC0_DP_M2C_N2,
+  // input             FMC0_DP_M2C_P3,
+  // input             FMC0_DP_M2C_N3,
+  // output            FMC0_DP_C2M_P0,
+  // output            FMC0_DP_C2M_N0,
+  // output            FMC0_DP_C2M_P1,
+  // output            FMC0_DP_C2M_N1,
+  // output            FMC0_DP_C2M_P2,
+  // output            FMC0_DP_C2M_N2,
+  // output            FMC0_DP_C2M_P3,
+  // output            FMC0_DP_C2M_N3,
+  // input             MGTCLK128_P0,
+  // input             MGTCLK128_N0,
+  // input             MGTCLK128_P1,
+  // input             MGTCLK128_N1,
+
+  // input             FMC0_DP_M2C_P4,
+  // input             FMC0_DP_M2C_N4,
+  // input             FMC0_DP_M2C_P5,
+  // input             FMC0_DP_M2C_N5,
+  // input             FMC0_DP_M2C_P6,
+  // input             FMC0_DP_M2C_N6,
+  // input             FMC0_DP_M2C_P7,
+  // input             FMC0_DP_M2C_N7,
+  // output            FMC0_DP_C2M_P4,
+  // output            FMC0_DP_C2M_N4,
+  // output            FMC0_DP_C2M_P5,
+  // output            FMC0_DP_C2M_N5,
+  // output            FMC0_DP_C2M_P6,
+  // output            FMC0_DP_C2M_N6,
+  // output            FMC0_DP_C2M_P7,
+  // output            FMC0_DP_C2M_N7,
+  // input             MGTCLK127_P0,
+  // input             MGTCLK127_N0,
+  // input             MGTCLK127_P1,
+  // input             MGTCLK127_N1,
+
+// FMC1
+  input             FMC1_PRSNT_B,
+  output            FMC1_CLK_DIR, // High for output
+  // input             FMC1_CLK_M2C_P1,
+  // input             FMC1_CLK_M2C_N1,
+  // input             FMC1_CLK_M2C_P3,
+  // input             FMC1_CLK_M2C_N3,
+  output            FMC1_CLK_C2M_P3,
+  output            FMC1_CLK_C2M_N3,
+  output            FMC1_LA_P0,
+  output            FMC1_LA_N0,
+  input             FMC1_LA_P1,
+  input             FMC1_LA_N1,
+  input             FMC1_LA_P2,
+  input             FMC1_LA_N2,
+  input             FMC1_LA_P3,
+  input             FMC1_LA_N3,
+  input             FMC1_LA_P4,
+  input             FMC1_LA_N4,
+  input             FMC1_LA_P5,
+  input             FMC1_LA_N5,
+  input             FMC1_LA_P6,
+  input             FMC1_LA_N6,
+  input             FMC1_LA_P7,
+  input             FMC1_LA_N7,
+  input             FMC1_LA_P8,
+  input             FMC1_LA_N8,
+  input             FMC1_LA_P9,
+  input             FMC1_LA_N9,
+  input             FMC1_LA_P10,
+  input             FMC1_LA_N10,
+  input             FMC1_LA_P11,
+  input             FMC1_LA_N11,
+  input             FMC1_LA_P12,
+  input             FMC1_LA_N12,
+  input             FMC1_LA_P13,
+  input             FMC1_LA_N13,
+  input             FMC1_LA_P14,
+  input             FMC1_LA_N14,
+  input             FMC1_LA_P15,
+  input             FMC1_LA_N15,
+  input             FMC1_LA_P16,
+  input             FMC1_LA_N16,
+
+  inout             FMC1_HB_P0,   // M_SCL
+  input             FMC1_HB_N0,   // T_INTb
+  inout             FMC1_HB_P1,   // M_SDA
+  input             FMC1_HB_N1,   // M_INTb
+  output            FMC1_HB_P2,   // P_EN
+  input             FMC1_HB_N2,   // NC
+  inout             FMC1_HB_P3,   // HV_SCL
+  input             FMC1_HB_N3,   // HV_INTb
+  inout             FMC1_HB_P4,   // HV_SDA
+  output            FMC1_HB_N4,   // HV_STOP
+  inout             FMC1_HB_P5,   // QSFP_SCL
+  input             FMC1_HB_N5,   // QSFP_INTb
+  inout             FMC1_HB_P6,   // QSFP_SDA
+  input             FMC1_HB_N6,   // QSFP_MODPRSL
+  output            FMC1_HB_P7,   // QSFP_RESETL
+  output            FMC1_HB_N7,   // QSFP_LPMODE
+
+  // input             FMC1_DP_M2C_P0,
+  // input             FMC1_DP_M2C_N0,
+  // input             FMC1_DP_M2C_P1,
+  // input             FMC1_DP_M2C_N1,
+  // input             FMC1_DP_M2C_P2,
+  // input             FMC1_DP_M2C_N2,
+  // input             FMC1_DP_M2C_P3,
+  // input             FMC1_DP_M2C_N3,
+  // output            FMC1_DP_C2M_P0,
+  // output            FMC1_DP_C2M_N0,
+  // output            FMC1_DP_C2M_P1,
+  // output            FMC1_DP_C2M_N1,
+  // output            FMC1_DP_C2M_P2,
+  // output            FMC1_DP_C2M_N2,
+  // output            FMC1_DP_C2M_P3,
+  // output            FMC1_DP_C2M_N3,
+  // input             MGTCLK130_P0,
+  // input             MGTCLK130_N0,
+  // input             MGTCLK130_P1,
+  // input             MGTCLK130_N1,
+
+  // input             FMC1_DP_M2C_P4,
+  // input             FMC1_DP_M2C_N4,
+  // input             FMC1_DP_M2C_P5,
+  // input             FMC1_DP_M2C_N5,
+  // input             FMC1_DP_M2C_P6,
+  // input             FMC1_DP_M2C_N6,
+  // input             FMC1_DP_M2C_P7,
+  // input             FMC1_DP_M2C_N7,
+  // output            FMC1_DP_C2M_P4,
+  // output            FMC1_DP_C2M_N4,
+  // output            FMC1_DP_C2M_P5,
+  // output            FMC1_DP_C2M_N5,
+  // output            FMC1_DP_C2M_P6,
+  // output            FMC1_DP_C2M_N6,
+  // output            FMC1_DP_C2M_P7,
+  // output            FMC1_DP_C2M_N7,
+  // input             MGTCLK129_P0,
+  // input             MGTCLK129_N0,
+  // input             MGTCLK129_P1,
+  // input             MGTCLK129_N1,
+
+// Firefly
+  // output            FIREFLY_MODSEL,   // pulled low when I2C are used
+  // input             FIREFLY_MODPRSL,  // low to indicate present
+  // input             FIREFLY_INTL,     // low to indicate a fault condition
+  // output            FIREFLY_RESETL,   // pulled low for more than 200 us when reset
+
+  // input             FIREFLY_M2C_P0,
+  // input             FIREFLY_M2C_N0,
+  // input             FIREFLY_M2C_P1,
+  // input             FIREFLY_M2C_N1,
+  // input             FIREFLY_M2C_P2,
+  // input             FIREFLY_M2C_N2,
+  // input             FIREFLY_M2C_P3,
+  // input             FIREFLY_M2C_N3,
+  // output            FIREFLY_C2M_P0,
+  // output            FIREFLY_C2M_N0,
+  // output            FIREFLY_C2M_P1,
+  // output            FIREFLY_C2M_N1,
+  // output            FIREFLY_C2M_P2,
+  // output            FIREFLY_C2M_N2,
+  // output            FIREFLY_C2M_P3,
+  // output            FIREFLY_C2M_N3,
+  // input             MGTCLK132_P0,
+  // input             MGTCLK132_N0,
+
+// AMC
+  input             AMC_MODE,
+  output            AMC_TX_P0,
+  output            AMC_TX_N0,
+  // output            AMC_TX_P1,
+  // output            AMC_TX_N1,
+  // output            AMC_TX_P2,
+  // output            AMC_TX_N2,
+  // output            AMC_TX_P3,
+  // output            AMC_TX_N3,
+  input             AMC_RX_P0,
+  input             AMC_RX_N0,
+  // input             AMC_RX_P1,
+  // input             AMC_RX_N1,
+  // input             AMC_RX_P2,
+  // input             AMC_RX_N2,
+  // input             AMC_RX_P3,
+  // input             AMC_RX_N3,
+  // input             MGTCLK231_P0,
+  // input             MGTCLK231_N0,
+  // input             MGTCLK231_P1,
+  // input             MGTCLK231_N1,
+
+  // output            AMC_TX_P4,
+  // output            AMC_TX_N4,
+  // output            AMC_TX_P5,
+  // output            AMC_TX_N5,
+  // output            AMC_TX_P6,
+  // output            AMC_TX_N6,
+  // output            AMC_TX_P7,
+  // output            AMC_TX_N7,
+  // input             AMC_RX_P4,
+  // input             AMC_RX_N4,
+  // input             AMC_RX_P5,
+  // input             AMC_RX_N5,
+  // input             AMC_RX_P6,
+  // input             AMC_RX_N6,
+  // input             AMC_RX_P7,
+  // input             AMC_RX_N7,
+  // input             MGTCLK229_P0,
+  // input             MGTCLK229_N0,
+
+  // output            AMC_TX_P8,
+  // output            AMC_TX_N8,
+  // output            AMC_TX_P9,
+  // output            AMC_TX_N9,
+  // output            AMC_TX_P10,
+  // output            AMC_TX_N10,
+  // output            AMC_TX_P11,
+  // output            AMC_TX_N11,
+  // input             AMC_RX_P8,
+  // input             AMC_RX_N8,
+  // input             AMC_RX_P9,
+  // input             AMC_RX_N9,
+  // input             AMC_RX_P10,
+  // input             AMC_RX_N10,
+  // input             AMC_RX_P11,
+  // input             AMC_RX_N11,
+  // input             MGTCLK228_P0,
+  // input             MGTCLK228_N0,
+
+  // output            AMC_TX_P12,
+  // output            AMC_TX_N12,
+  // output            AMC_TX_P13,
+  // output            AMC_TX_N13,
+  // output            AMC_TX_P14,
+  // output            AMC_TX_N14,
+  // output            AMC_TX_P15,
+  // output            AMC_TX_N15,
+  // input             AMC_RX_P12,
+  // input             AMC_RX_N12,
+  // input             AMC_RX_P13,
+  // input             AMC_RX_N13,
+  // input             AMC_RX_P14,
+  // input             AMC_RX_N14,
+  // input             AMC_RX_P15,
+  // input             AMC_RX_N15,
+  // input             MGTCLK230_P0,
+  // input             MGTCLK230_N0,
+
+  input             AMC_TX17,   // 1.003086 MHz
+  input             AMC_TX18,   // PPS+timestamp
+  input             AMC_TX19,   // Frame
+  input             AMC_TX20,   // Unused, interlock
+  output            AMC_TX_DE17,
+  output            AMC_TX_DE18,
+  output            AMC_TX_DE19,
+  output            AMC_TX_DE20,
+  input             AMC_RX17,   // 1.003086 MHz
+  input             AMC_RX18,   // 64 * 1.003086 MHz
+  input             AMC_RX19,   // Gate
+  input             AMC_RX20,   // Unused, busy
+  output            AMC_RX_DE17,
+  output            AMC_RX_DE18,
+  output            AMC_RX_DE19,
+  output            AMC_RX_DE20,
+
+// RTM
+  // input             RTM_PS_B,
+  // input             RTM_IO0,
+  // input             RTM_IO1,
+  // input             RTM_IO2,
+  // input             RTM_IO3,
+
+  // output            AMC2RTM_P0,
+  // output            AMC2RTM_N0,
+  // output            AMC2RTM_P1,
+  // output            AMC2RTM_N1,
+  // output            AMC2RTM_P2,
+  // output            AMC2RTM_N2,
+  // output            AMC2RTM_P3,
+  // output            AMC2RTM_N3,
+  // input             RTM2AMC_P0,
+  // input             RTM2AMC_N0,
+  // input             RTM2AMC_P1,
+  // input             RTM2AMC_N1,
+  // input             RTM2AMC_P2,
+  // input             RTM2AMC_N2,
+  // input             RTM2AMC_P3,
+  // input             RTM2AMC_N3,
+  // input             MGTCLK227_P0,
+  // input             MGTCLK227_N0,
+  // input             MGTCLK227_P1,
+  // input             MGTCLK227_N1,
+
+  // output            AMC2RTM_P4,
+  // output            AMC2RTM_N4,
+  // output            AMC2RTM_P5,
+  // output            AMC2RTM_N5,
+  // output            AMC2RTM_P6,
+  // output            AMC2RTM_N6,
+  // output            AMC2RTM_P7,
+  // output            AMC2RTM_N7,
+  // input             RTM2AMC_P4,
+  // input             RTM2AMC_N4,
+  // input             RTM2AMC_P5,
+  // input             RTM2AMC_N5,
+  // input             RTM2AMC_P6,
+  // input             RTM2AMC_N6,
+  // input             RTM2AMC_P7,
+  // input             RTM2AMC_N7,
+  // input             MGTCLK226_P0,
+  // input             MGTCLK226_N0,
+  // input             MGTCLK226_P1,
+  // input             MGTCLK226_N1,
+
+  // output            AMC2RTM_P8,
+  // output            AMC2RTM_N8,
+  // output            AMC2RTM_P9,
+  // output            AMC2RTM_N9,
+  // output            AMC2RTM_P10,
+  // output            AMC2RTM_N10,
+  // output            AMC2RTM_P11,
+  // output            AMC2RTM_N11,
+  // input             RTM2AMC_P8,
+  // input             RTM2AMC_N8,
+  // input             RTM2AMC_P9,
+  // input             RTM2AMC_N9,
+  // input             RTM2AMC_P10,
+  // input             RTM2AMC_N10,
+  // input             RTM2AMC_P11,
+  // input             RTM2AMC_N11,
+  // input             MGTCLK225_P0,
+  // input             MGTCLK225_N0,
+  // input             MGTCLK225_P1,
+  // input             MGTCLK225_N1,
+
+  // output            AMC2RTM_P12,
+  // output            AMC2RTM_N12,
+  // output            AMC2RTM_P13,
+  // output            AMC2RTM_N13,
+  // output            AMC2RTM_P14,
+  // output            AMC2RTM_N14,
+  // output            AMC2RTM_P15,
+  // output            AMC2RTM_N15,
+  // input             RTM2AMC_P12,
+  // input             RTM2AMC_N12,
+  // input             RTM2AMC_P13,
+  // input             RTM2AMC_N13,
+  // input             RTM2AMC_P14,
+  // input             RTM2AMC_N14,
+  // input             RTM2AMC_P15,
+  // input             RTM2AMC_N15,
+  // input             MGTCLK224_P0,
+  // input             MGTCLK224_N0,
+  // input             MGTCLK224_P1,
+  // input             MGTCLK224_N1,
+
+  // output            AMC2RTM_P16,
+  // output            AMC2RTM_N16,
+  // output            AMC2RTM_P17,
+  // output            AMC2RTM_N17,
+  // output            AMC2RTM_P18,
+  // output            AMC2RTM_N18,
+  // output            AMC2RTM_P19,
+  // output            AMC2RTM_N19,
+  // input             RTM2AMC_P16,
+  // input             RTM2AMC_N16,
+  // input             RTM2AMC_P17,
+  // input             RTM2AMC_N17,
+  // input             RTM2AMC_P18,
+  // input             RTM2AMC_N18,
+  // input             RTM2AMC_P19,
+  // input             RTM2AMC_N19,
+  // input             MGTCLK131_P0,
+  // input             MGTCLK131_N0,
+
+  output            TP24
+);
+
+localparam DEBUG_SITCP    = 0;
+localparam DEBUG_RBCP_REG = 1;
+
+////////////////////////////////////////////////////////////////////////////////
+//  Clock
+wire clk200_in, clk200_int_bufg;
+IBUFDS #(
+  .DIFF_TERM    ("FALSE")
+) IBUFDS_clk200 (
+  .O            (clk200_in),
+  .I            (CLK_IN_200_P),
+  .IB           (CLK_IN_200_N)
+);
+BUFG BUFG_200 (
+  .O            (clk200_int_bufg),
+  .I            (clk200_in)
+);
+
+////////////////////////////////////////////////////////////////////////////////
+// DDR4 reference clock
+// 125 MHz from PLL1 out1, shared by both DDR4 controllers. The ddr4 MIG IPs
+// are configured with "No Buffer" system clock, so this single input buffer
+// feeds both MMCMs inside the MIGs.
+wire clk_pl_in, clk125_pl;
+IBUFDS #(
+  .DIFF_TERM    ("FALSE")
+) IBUFDS_clkpl (
+  .O            (clk_pl_in),
+  .I            (CLK_IN_PL_P),
+  .IB           (CLK_IN_PL_N)
+);
+BUFG BUFG_clkpl (
+  .O            (clk125_pl),
+  .I            (clk_pl_in)
+);
+
+wire clk40_int_bufg, clk100_int_bufg, clk125_int_bufg, clk500_int_bufg, clk_local_locked;
+clk_wiz local_clk_wiz(
+  // Clock in ports
+  .clk_in1      (clk200_int_bufg),
+  // Clock out ports
+  .clk_out1     (clk40_int_bufg),
+  .clk_out2     (clk100_int_bufg),
+  .clk_out3     (clk125_int_bufg),
+  .clk_out4     (clk500_int_bufg),
+  // Status and control signals
+  .resetn       (RST_B),
+  .locked       (clk_local_locked)
+);
+
+wire clk64_int, clk64_local_locked; // For SHINE WR
+clk_wiz_200Mto64M clk_wiz_200Mto64M(
+  // Clock in ports
+  .clk_in1     (clk200_int_bufg),
+  // Clock out ports
+  .clk_out1    (clk64_int),           // 64.197504 MHz (64 * 1.003086)
+  // Status and control signals
+  .reset       (~clk_local_locked),
+  .locked      (clk64_local_locked)
+);
+
+wire clk64_ext_bufg;
+BUFG BUFG_clk_ext (
+  .O            (clk64_ext_bufg),     // 1-bit output: Clock output
+  .I            (AMC_RX18)            // 1-bit input: External 64 MHz clock (AMC_RX18)
+);
+
+wire clk64_mux_bufg, clk_external_enable;
+BUFGMUX_CTRL BUFGMUX_CTRL_inst (
+  .O            (clk64_mux_bufg),     // 1-bit output: Clock output
+  .I0           (clk64_int),          // 1-bit input: Clock input (selected when S=0)
+  .I1           (clk64_ext_bufg),     // 1-bit input: Clock input (selected when S=1)
+  .S            (clk_external_enable) // 1-bit input: Clock select (0: internal, 1: external)
+);
+
+wire mmcm_locked, mmcm_rst;
+wire clk64_bufg, clk128_bufg, clk160_bufg, clk640_bufg;
+clk_wiz_64M clk_wiz_64M(
+  // Clock in ports
+  .clk_in1     (clk64_mux_bufg),
+  // Clock out ports
+  .clk_out1    (clk64_bufg),          //   64.197504 MHz (64  * 1.003086)
+  .clk_out2    (clk128_bufg),         //  128.395008 MHz (128 * 1.003086)
+  .clk_out3    (clk160_bufg),         //  160.493760 MHz (160 * 1.003086)
+  .clk_out4    (clk640_bufg),         //  641.975040 MHz (640 * 1.003086)
+  // Status and control signals
+  .reset       (mmcm_rst|~clk64_local_locked),
+  .locked      (mmcm_locked)
+);
+
+OBUFDS OBUFDS_clkout (
+  .O            (CLK_OUT_P),    // 1-bit output: Diff_p output (connect directly to top-level port)
+  .OB           (CLK_OUT_N),    // 1-bit output: Diff_n output (connect directly to top-level port)
+  .I            (clk125_int_bufg)    // 1-bit input: Buffer input
+);
+
+// assign FMC0_CLK_DIR = 1'b1;
+
+// OBUFDS OBUFDS_fmc0_clkout3 (
+//   .O            (FMC0_CLK_C2M_P3),    // 1-bit output: Diff_p output (connect directly to top-level port)
+//   .OB           (FMC0_CLK_C2M_N3),    // 1-bit output: Diff_n output (connect directly to top-level port)
+//   .I            (clk640_bufg)    // 1-bit input: Buffer input
+// );
+
+assign FMC1_CLK_DIR = 1'b1;
+
+OBUFDS OBUFDS_fmc1_clkout3 (
+  .O            (FMC1_CLK_C2M_P3),    // 1-bit output: Diff_p output (connect directly to top-level port)
+  .OB           (FMC1_CLK_C2M_N3),    // 1-bit output: Diff_n output (connect directly to top-level port)
+  .I            (clk640_bufg)    // 1-bit input: Buffer input
+);
+
+// An IDELAYCTRL primitive needs to be instantiated for the Fixed Tap Delay mode of the IDELAY.
+wire dlyctrl_rdy;
+IDELAYCTRL #(
+  .SIM_DEVICE ("ULTRASCALE")  // Set the device version for simulation functionality (ULTRASCALE)
+)
+IDELAYCTRL_inst (
+  .REFCLK     (clk500_int_bufg),  // 1-bit input: Reference clock input
+  .RST        (~clk_local_locked),// 1-bit input: Active-High reset input. Asynchronous assert, synchronous deassert to REFCLK.
+  .RDY        (dlyctrl_rdy)       // 1-bit output: Ready output
+);
+
+////////////////////////////////////////////////////////////////////////////////
+// System and User reset
+wire sys_rst;
+async2sync_reset reset_sysclk(
+  .rst_in       (~dlyctrl_rdy),
+  .clk          (clk125_int_bufg),
+  .rst_out      (sys_rst)
+);
+
+wire usr_rst;
+async2sync_reset reset_usrclk(
+  .rst_in       (~(mmcm_locked & dlyctrl_rdy)),
+  .clk          (clk64_bufg),
+  .rst_out      (usr_rst)
+);
+
+////////////////////////////////////////////////////////////////////////////////
+// PPS from SHINE WR
+wire timestamp_update, bunchid_update;
+wire [15:0] timestamp;
+wire [47:0] bunchid;
+machine_clock_decode machine_clock_decode(
+  .clk_i (clk64_bufg),
+  .rst_i (usr_rst),
+  .serial_data_i (AMC_TX18),
+  .pps_update_o (timestamp_update),
+  .seconds_o (timestamp),
+  .bunchid_update_o (bunchid_update),
+  .bunchid_o (bunchid)
+);
+
+////////////////////////////////////////////////////////////////////////////////
+// DDR4 self-test
+//
+// Both SODIMMs are 64-bit non-ECC DDR4 modules. Each one is driven by its own
+// ddr4 MIG (4:1, 512-bit APP data bus, 16 GB address range) running from the
+// shared 125 MHz reference clock.
+//
+// Reset: a power-on counter and the "ddr_rst" trigger of the register file
+// (RBCP 0x0000_0005 bit 1) reset both controllers, which restarts the memory
+// calibration.
+wire ddr_rst_req;
+
+reg  [1:0] ddr_rst_sync_pl;
+always @(posedge clk125_pl)
+  ddr_rst_sync_pl <= {ddr_rst_sync_pl[0], ddr_rst_req | ~RST_B};
+
+reg  [15:0] ddr_por_cnt = 16'h0000;
+wire        ddr_por_done = ddr_por_cnt[15];
+always @(posedge clk125_pl)
+  if (!ddr_por_done) ddr_por_cnt <= ddr_por_cnt + 16'd1;
+
+wire ddr_sys_rst = ddr_rst_sync_pl[1] | ~ddr_por_done;
+
+//------------------------------------------------------------------------------
+// Controller 0 (DDR4 SOCKET A)
+wire         c0_calib;
+wire         clk_c0, rst_c0;
+wire [30:0]  c0_app_addr;
+wire [2 :0]  c0_app_cmd;
+wire         c0_app_en;
+wire [511:0] c0_app_wdf_data;
+wire         c0_app_wdf_wren;
+wire [511:0] c0_app_rd_data;
+wire         c0_app_rd_data_valid;
+wire         c0_app_rdy, c0_app_wdf_rdy;
+
+ddr4_0 u_ddr4_c0 (
+  .c0_init_calib_complete   (c0_calib),
+  .dbg_clk                  (),
+  .c0_sys_clk_i             (clk125_pl),
+  .dbg_bus                  (),
+  // DDR4 pins
+  .c0_ddr4_adr              (C0_DDR4_ADDR),
+  .c0_ddr4_ba               (C0_DDR4_BA),
+  .c0_ddr4_cke              (C0_DDR4_CKE),
+  .c0_ddr4_cs_n             (C0_DDR4_CS_B),
+  .c0_ddr4_dm_dbi_n         (C0_DDR4_DM),
+  .c0_ddr4_dq               (C0_DDR4_DQ),
+  .c0_ddr4_dqs_c            (C0_DDR4_DQS_C),
+  .c0_ddr4_dqs_t            (C0_DDR4_DQS_T),
+  .c0_ddr4_odt              (C0_DDR4_ODT),
+  .c0_ddr4_bg               (C0_DDR4_BG),
+  .c0_ddr4_reset_n          (C0_DDR4_RESET_B),
+  .c0_ddr4_act_n            (C0_DDR4_ACT_B),
+  .c0_ddr4_ck_c             (C0_DDR4_CK_C),
+  .c0_ddr4_ck_t             (C0_DDR4_CK_T),
+  // user interface
+  .c0_ddr4_ui_clk           (clk_c0),
+  .c0_ddr4_ui_clk_sync_rst  (rst_c0),
+  .c0_ddr4_app_en           (c0_app_en),
+  .c0_ddr4_app_hi_pri       (1'b0),
+  .c0_ddr4_app_wdf_end      (1'b1),
+  .c0_ddr4_app_wdf_wren     (c0_app_wdf_wren),
+  .c0_ddr4_app_rd_data_end  (),
+  .c0_ddr4_app_rd_data_valid(c0_app_rd_data_valid),
+  .c0_ddr4_app_rdy          (c0_app_rdy),
+  .c0_ddr4_app_wdf_rdy      (c0_app_wdf_rdy),
+  .c0_ddr4_app_addr         (c0_app_addr),
+  .c0_ddr4_app_cmd          (c0_app_cmd),
+  .c0_ddr4_app_wdf_data     (c0_app_wdf_data),
+  .c0_ddr4_app_wdf_mask     (64'd0),
+  .c0_ddr4_app_rd_data      (c0_app_rd_data),
+  .sys_rst                  (ddr_sys_rst)
+);
+
+//------------------------------------------------------------------------------
+// Controller 1 (DDR4 SOCKET B)
+wire         c1_calib;
+wire         clk_c1, rst_c1;
+wire [30:0]  c1_app_addr;
+wire [2 :0]  c1_app_cmd;
+wire         c1_app_en;
+wire [511:0] c1_app_wdf_data;
+wire         c1_app_wdf_wren;
+wire [511:0] c1_app_rd_data;
+wire         c1_app_rd_data_valid;
+wire         c1_app_rdy, c1_app_wdf_rdy;
+
+ddr4_1 u_ddr4_c1 (
+  .c0_init_calib_complete   (c1_calib),
+  .dbg_clk                  (),
+  .c0_sys_clk_i             (clk125_pl),
+  .dbg_bus                  (),
+  // DDR4 pins
+  .c0_ddr4_adr              (C1_DDR4_ADDR),
+  .c0_ddr4_ba               (C1_DDR4_BA),
+  .c0_ddr4_cke              (C1_DDR4_CKE),
+  .c0_ddr4_cs_n             (C1_DDR4_CS_B),
+  .c0_ddr4_dm_dbi_n         (C1_DDR4_DM),
+  .c0_ddr4_dq               (C1_DDR4_DQ),
+  .c0_ddr4_dqs_c            (C1_DDR4_DQS_C),
+  .c0_ddr4_dqs_t            (C1_DDR4_DQS_T),
+  .c0_ddr4_odt              (C1_DDR4_ODT),
+  .c0_ddr4_bg               (C1_DDR4_BG),
+  .c0_ddr4_reset_n          (C1_DDR4_RESET_B),
+  .c0_ddr4_act_n            (C1_DDR4_ACT_B),
+  .c0_ddr4_ck_c             (C1_DDR4_CK_C),
+  .c0_ddr4_ck_t             (C1_DDR4_CK_T),
+  // user interface
+  .c0_ddr4_ui_clk           (clk_c1),
+  .c0_ddr4_ui_clk_sync_rst  (rst_c1),
+  .c0_ddr4_app_en           (c1_app_en),
+  .c0_ddr4_app_hi_pri       (1'b0),
+  .c0_ddr4_app_wdf_end      (1'b1),
+  .c0_ddr4_app_wdf_wren     (c1_app_wdf_wren),
+  .c0_ddr4_app_rd_data_end  (),
+  .c0_ddr4_app_rd_data_valid(c1_app_rd_data_valid),
+  .c0_ddr4_app_rdy          (c1_app_rdy),
+  .c0_ddr4_app_wdf_rdy      (c1_app_wdf_rdy),
+  .c0_ddr4_app_addr         (c1_app_addr),
+  .c0_ddr4_app_cmd          (c1_app_cmd),
+  .c0_ddr4_app_wdf_data     (c1_app_wdf_data),
+  .c0_ddr4_app_wdf_mask     (64'd0),
+  .c0_ddr4_app_rd_data      (c1_app_rd_data),
+  .sys_rst                  (ddr_sys_rst)
+);
+
+//------------------------------------------------------------------------------
+// Self-test register files (RBCP device 0x0005, 64 bytes per controller)
+wire [15:0] ddr_wb_adr;
+wire        ddr_wb_stb, ddr_wb_we, ddr_wb_cyc;
+wire [7 :0] ddr_wb_dat;
+wire [7 :0] ddr_test_rd0, ddr_test_rd1;
+wire        ddr_test_ack0, ddr_test_ack1;
+
+ddr4_test #(
+  .BASE_ADDR (8'h00)
+) u_ddr4_test_c0 (
+  .CLK        (clk125_int_bufg),
+  .RST        (sys_rst),
+  .WB_STB     (ddr_wb_stb),
+  .WB_WE      (ddr_wb_we),
+  .WB_ADR     (ddr_wb_adr),
+  .WB_DAT     (ddr_wb_dat),
+  .WB_RD      (ddr_test_rd0),
+  .WB_ACK     (ddr_test_ack0),
+  .CLK_UI     (clk_c0),
+  .RST_UI     (rst_c0),
+  .APP_ADDR   (c0_app_addr),
+  .APP_CMD    (c0_app_cmd),
+  .APP_EN     (c0_app_en),
+  .APP_WDF_DATA  (c0_app_wdf_data),
+  .APP_WDF_WREN  (c0_app_wdf_wren),
+  .APP_RDY       (c0_app_rdy),
+  .APP_WDF_RDY   (c0_app_wdf_rdy),
+  .APP_RD_DATA   (c0_app_rd_data),
+  .APP_RD_DATA_VALID (c0_app_rd_data_valid),
+  .CALIB_DONE    (c0_calib)
+);
+
+ddr4_test #(
+  .BASE_ADDR (8'h40)
+) u_ddr4_test_c1 (
+  .CLK        (clk125_int_bufg),
+  .RST        (sys_rst),
+  .WB_STB     (ddr_wb_stb),
+  .WB_WE      (ddr_wb_we),
+  .WB_ADR     (ddr_wb_adr),
+  .WB_DAT     (ddr_wb_dat),
+  .WB_RD      (ddr_test_rd1),
+  .WB_ACK     (ddr_test_ack1),
+  .CLK_UI     (clk_c1),
+  .RST_UI     (rst_c1),
+  .APP_ADDR   (c1_app_addr),
+  .APP_CMD    (c1_app_cmd),
+  .APP_EN     (c1_app_en),
+  .APP_WDF_DATA  (c1_app_wdf_data),
+  .APP_WDF_WREN  (c1_app_wdf_wren),
+  .APP_RDY       (c1_app_rdy),
+  .APP_WDF_RDY   (c1_app_wdf_rdy),
+  .APP_RD_DATA   (c1_app_rd_data),
+  .APP_RD_DATA_VALID (c1_app_rd_data_valid),
+  .CALIB_DONE    (c1_calib)
+);
+
+////////////////////////////////////////////////////////////////////////////////
+// SiTCP interface
+wire            tim_1s;
+
+wire            tcp_open;
+wire            tcp_error;
+wire            tcp_rst;
+wire            tcp_close;
+
+wire            tcp_rx_wr;
+wire    [7 : 0] tcp_rx_data;
+wire    [15: 0] tcp_rx_wc;
+
+wire            tcp_tx_wr;
+wire    [7 : 0] tcp_tx_data;
+wire            tcp_tx_full;
+
+wire    [31: 0] rbcp_addr;
+wire            rbcp_we;
+wire    [7 : 0] rbcp_wd;
+wire            rbcp_re;
+wire            rbcp_act;
+wire            rbcp_ack;
+wire    [7 : 0] rbcp_rd;
+
+SITCP #(
+  .USE_CHIPSCOPE(DEBUG_SITCP & USE_CHIPSCOPE),
+  .BASE_IP_ADDR (BASE_IP_ADDR),
+  .PHY_ADDRESS  (PHY_ADDRESS),
+  .MAC_IP_WIDTH (4)
+)sitcp(
+  .RST          (sys_rst),
+  .USRCLK       (clk125_int_bufg),
+  .CLK40        (clk40_int_bufg),
+  .CLKOUT       (),
+  .MAC_SELECT   (0),
+  .IP_SELECT    (0),
+  .TIM_1US      (),         // out: 1 us interval
+  .TIM_10US     (),
+  .TIM_100US    (),
+  .TIM_1MS      (),         // out: 1 ms interval
+  .TIM_10MS     (),
+  .TIM_100MS    (),
+  .TIM_1S       (tim_1s),   // out: 1 s interval
+  .TIM_1M       (),         // out: 1 min interval
+  // TCP
+  .TCP_OPEN     (tcp_open),
+  .TCP_ERROR    (tcp_error),
+  .TCP_RST      (tcp_rst),
+  .TCP_CLOSE    (tcp_close),
+  .TCP_RX_WC    (tcp_rx_wc[15:0]),
+  .TCP_RX_WR    (tcp_rx_wr),
+  .TCP_RX_DATA  (tcp_rx_data),
+  .TCP_TX_FULL  (tcp_tx_full),
+  .TCP_TX_WR    (tcp_tx_wr),
+  .TCP_TX_DATA  (tcp_tx_data),
+  // UDP
+  .RBCP_ADDR    (rbcp_addr),
+  .RBCP_WE      (rbcp_we),
+  .RBCP_WD      (rbcp_wd),
+  .RBCP_RE      (rbcp_re),
+  .RBCP_ACT     (rbcp_act),
+  .RBCP_ACK     (rbcp_ack),
+  .RBCP_RD      (rbcp_rd),
+  // PHY
+  .GT_TXP       (AMC_TX_P0),
+  .GT_TXN       (AMC_TX_N0),
+  .GT_RXP       (AMC_RX_P0),
+  .GT_RXN       (AMC_RX_N0),
+  .GT_DETECT    (1'b1)
+);
+
+////////////////////////////////////////////////////////////////////////////////
+//  TCP loopback FIFO
+wire sitcpFifoEmpty, sitcpFifoRe;
+assign tcp_rx_wc[15:11] = 5'b11111;
+
+sitcp_fifo sitcp_fifo(
+  .clk          (clk125_int_bufg),
+  .srst         (~tcp_open),
+  .data_count   (tcp_rx_wc[10:0]),
+  .full         (),
+  .wr_en        (tcp_rx_wr),
+  .din          (tcp_rx_data[7:0]),
+  .empty        (sitcpFifoEmpty),
+  .rd_en        (sitcpFifoRe),
+  .dout         (tcp_tx_data[7:0]),
+  .valid        (tcp_tx_wr)
+);
+
+assign  sitcpFifoRe = ~tcp_tx_full & ~sitcpFifoEmpty;
+
+////////////////////////////////////////////////////////////////////////////////
+//  IO controll
+
+wire [I2C_NUM-1: 0] scl_i, sda_i, scl_o, sda_o, scl_oen, sda_oen;
+wire temp_alarm = ~FMC1_HB_N0;
+wire lv_alarm   = ~FMC1_HB_N1;
+wire hv_alarm   = ~FMC1_HB_N3;
+wire qsfp_alarm = ~FMC1_HB_N5;
+wire qsfp_prs   = ~FMC1_HB_N6;
+
+wire qsfp_rst;
+assign FMC1_HB_P7 = ~qsfp_rst;  // QSFP_RESETL
+
+wire qsfp_lpmode;
+assign FMC1_HB_N7 = qsfp_lpmode; // QSFP_LPMODE
+
+wire lv_en, lv_ot_auto_off, lv_alarm_latch;
+assign FMC1_HB_P2 = lv_ot_auto_off ? lv_en & ~lv_alarm_latch : lv_en; // Power enable
+
+wire hv_stop, hv_oc_auto_off, hv_alarm_latch;
+assign FMC1_HB_N4 = hv_oc_auto_off ? hv_alarm_latch | hv_stop : hv_stop; // HV stop
+
+////////////////////////////////////////////////////////////////////////////////
+//  Module inout
+wire mod_rst;
+assign FMC0_HB_P0 = ~mod_rst;
+
+OBUFDS OBUFDS_module_frame (
+  .O            (FMC1_LA_P0),    // 1-bit output: Diff_p output (connect directly to top-level port)
+  .OB           (FMC1_LA_N0),    // 1-bit output: Diff_n output (connect directly to top-level port)
+  .I            (clk160_bufg)    // 1-bit input: Buffer input
+);
+
+OBUFDS OBUFDS_module_gate (
+  .O            (FMC0_LA_P0),    // 1-bit output: Diff_p output (connect directly to top-level port)
+  .OB           (FMC0_LA_N0),    // 1-bit output: Diff_n output (connect directly to top-level port)
+  .I            (clk128_bufg)    // 1-bit input: Buffer input
+);
+
+assign  FMC0_HB_P1 = clk40_int_bufg;  // LOAD_GDAC
+assign  FMC0_HB_P2 = clk40_int_bufg;  // REFRESH
+assign  FMC0_HB_P3 = clk40_int_bufg;  // CLK_SPI
+assign  FMC0_HB_P4 = clk40_int_bufg;  // ARRAY_IN0
+assign  FMC0_HB_P5 = clk40_int_bufg;  // ARRAY_IN1
+assign  FMC0_HB_P6 = clk40_int_bufg;  // ARRAY_IN2
+assign  FMC0_HB_P7 = clk40_int_bufg;  // ARRAY_IN3
+
+////////////////////////////////////////////////////////////////////////////////
+//  Register controll
+RBCP_REG #(
+  .USE_CHIPSCOPE(DEBUG_RBCP_REG & USE_CHIPSCOPE),
+  .SYN_DATE     (SYN_DATE),
+  .FPGA_VER     (FPGA_VER),
+  .I2C_NUM      (I2C_NUM),
+  .SPI_NUM      (SPI_NUM),
+  .UART_NUM     (UART_NUM)
+)RBCP_REG(
+  // System
+  .CLK            (clk125_int_bufg),        // in : System clock
+  .RST            (tcp_rst),                // in : System reset
+  // RBCP I/F
+  .RBCP_ACT       (rbcp_act),               // in : Active
+  .RBCP_ADDR      (rbcp_addr),              // in : Address[31:0]
+  .RBCP_WE        (rbcp_we),                // in : Write enable
+  .RBCP_WD        (rbcp_wd),                // in : Write data[7:0]
+  .RBCP_RE        (rbcp_re),                // in : Read enable
+  .RBCP_RD        (rbcp_rd),                // out  : Read data[7:0]
+  .RBCP_ACK       (rbcp_ack),               // out  : Acknowledge
+  // User IO
+  .VP_IN          (),
+  .VN_IN          (),
+  .SCL            (scl_i),
+  .SCL_OEN        (scl_oen),
+  .SCL_O          (scl_o),
+  .SDA            (sda_i),
+  .SDA_OEN        (sda_oen),
+  .SDA_O          (sda_o),
+  .SCK            (),
+  .MOSI_O         (),
+  .MISO_I         (1'b0),
+  .UART_RX        (UART_RX),
+  .UART_TX        (UART_TX),
+  // Reset
+  .USER_RST       (mmcm_rst),
+  .DDR_RST        (ddr_rst_req),
+  .MODULE_RST     (mod_rst),
+  .QSFP_RST       (qsfp_rst),
+  // Status
+  .CLK_LOCKED     (mmcm_locked),
+  .T_ALM          (temp_alarm),
+  .LV_ALM         (lv_alarm),
+  .HV_ALM         (hv_alarm),
+  .QSFP_ALM       (qsfp_alarm),
+  .QSFP_PRS       (qsfp_prs),
+  .CLK_LOCKED_LCH (),
+  .T_ALM_LCH      (),
+  .LV_ALM_LCH     (lv_alarm_latch),
+  .HV_ALM_LCH     (hv_alarm_latch),
+  .QSFP_ALM_LCH   (),
+  .QSFP_PRS_LCH   (),
+  // Control
+  .CLK_EXT_EN     (clk_external_enable),
+  .LV_EN          (lv_en),
+  .LV_OT_AUTO_OFF (lv_ot_auto_off),
+  .HV_STOP        (hv_stop),
+  .HV_OC_AUTO_OFF (hv_oc_auto_off),
+  .QSFP_LPMODE    (qsfp_lpmode),
+  // User wishbone device: DDR4 self-test
+  .USR_WB_CYC     (ddr_wb_cyc),
+  .USR_WB_STB     (ddr_wb_stb),
+  .USR_WB_WE      (ddr_wb_we),
+  .USR_WB_ADR     (ddr_wb_adr),
+  .USR_WB_DAT     (ddr_wb_dat),
+  .USR_WB_RD      (ddr_test_rd0 | ddr_test_rd1),
+  .USR_WB_ACK     (ddr_test_ack0 | ddr_test_ack1 | (ddr_wb_stb & (ddr_wb_adr[7:6] >= 2'b10)))
+);
+
+// For JTAG
+assign scl_i[0] = FPGA_SCL;
+assign FPGA_SCL = scl_oen[0] ? 1'bz : scl_o[0];
+
+assign sda_i[0] = FPGA_SDA;
+assign FPGA_SDA = sda_oen[0] ? 1'bz : sda_o[0];
+
+// For M_I2C
+assign scl_i[1] = FMC1_HB_P0;
+assign FMC1_HB_P0 = scl_oen[1] ? 1'bz : scl_o[1];
+
+assign sda_i[1] = FMC1_HB_P1;
+assign FMC1_HB_P1 = sda_oen[1] ? 1'bz : sda_o[1];
+
+// For HV_I2C
+assign scl_i[2] = FMC1_HB_P3;
+assign FMC1_HB_P3 = scl_oen[2] ? 1'bz : scl_o[2];
+
+assign sda_i[2] = FMC1_HB_P4;
+assign FMC1_HB_P4 = sda_oen[2] ? 1'bz : sda_o[2];
+
+// For QSFP
+assign scl_i[3] = FMC1_HB_P5;
+assign FMC1_HB_P5 = scl_oen[3] ? 1'bz : scl_o[3];
+
+assign sda_i[3] = FMC1_HB_P6;
+assign FMC1_HB_P6 = sda_oen[3] ? 1'bz : sda_o[3];
+
+//////////////////////////////////////////////////////////////////////////////
+// Set MLVDS as input (driver enable = 0)
+assign AMC_TX_DE17 = 1'b0;
+assign AMC_TX_DE18 = 1'b0;
+assign AMC_TX_DE19 = 1'b0;
+assign AMC_TX_DE20 = 1'b0;
+assign AMC_RX_DE17 = 1'b0;
+assign AMC_RX_DE18 = 1'b0;
+assign AMC_RX_DE19 = 1'b0;
+assign AMC_RX_DE20 = 1'b0;
+
+//////////////////////////////////////////////////////////////////////////////
+// Debug
+
+parameter CLK_FREQ = 64_000_000; // clock frequency in Hz (clk64_bufg = 64.1975 MHz)
+localparam integer COUNT_MAX  = CLK_FREQ - 1; // Counter maximum value
+localparam integer COUNT_HALF = CLK_FREQ / 2;
+localparam integer CNT_WIDTH  = $clog2(CLK_FREQ); // Auto-calculate counter width
+
+// clk_external_enable is generated in the 125 MHz register clock domain, the
+// counter below runs in the 64 MHz domain: synchronize the static control bit
+reg [1:0] clk_ext_en_64;
+always @(posedge clk64_bufg)
+  clk_ext_en_64 <= {clk_ext_en_64[0], clk_external_enable};
+wire clk_ext_en_64_s = clk_ext_en_64[1];
+
+reg [CNT_WIDTH-1:0] cnt;
+reg sec_toggle; // Toggle twice per second
+always @(posedge clk64_bufg) begin
+  if((clk_ext_en_64_s & timestamp_update) || (cnt == 0)) begin
+    cnt <= COUNT_MAX;
+    sec_toggle <= 1'b1;
+  end
+  else begin
+    cnt <= cnt - 1'b1;
+    if (cnt == COUNT_HALF) sec_toggle <= 1'b0;
+  end
+end
+
+assign BLED_B = ~sec_toggle;
+assign GLED_B = ~tcp_open;
+assign RLED_B = mmcm_locked;
+
+endmodule

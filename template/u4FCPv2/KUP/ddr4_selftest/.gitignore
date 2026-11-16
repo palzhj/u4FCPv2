@@ -1,0 +1,13 @@
+Projects
+
+# simulation / vivado scratch
+*.wdb
+*.pb
+*.backup.log
+*.backup.jou
+xsim.dir/
+.Xil/
+.cache/
+.vivado-ai/
+__pycache__/
+*.pyc
